@@ -1,0 +1,140 @@
+body{
+  color: #1d1d1d;
+}
+
+section {
+  padding: 20px;
+  
+}
+
+.background-conteudo{
+  background-color: #f6f7fb;
+  border-radius: 10px;
+  padding: 1.2rem;
+  overflow: auto;
+  word-wrap: break-word;
+  
+}
+
+.container-conteudo{
+  background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295));
+  background-size: cover;
+  
+}
+
+.titulo-conteudo{
+  margin: 2rem;
+}
+
+.titulo-conteudo::after{
+  content: ":";
+}
+
+.texto-conteudo{
+  margin: 2rem;
+}
+
+.item-conteudo{
+  margin: 2rem;
+}
+
+.item-conteudo::before{
+  content: "➡️";
+}
+
+.link-conteudo{
+  color: #ff0157;
+  text-decoration: none;
+}
+
+.link-conteudo:hover,
+.link-conteudo:focus{
+  text-decoration: underline;
+}
+
+.banner-conteudo {
+  position: relative;
+  width: calc(min(90rem, 90%));
+  margin: 0 auto;
+  min-height: 100vh;
+  column-gap: 3rem;
+  padding-block: min(20vh, 3rem);
+  
+}
+
+.banner-container {
+  background: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.295));
+  background-size: cover;
+}
+
+.banner-conteudo > div span {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+}
+
+.banner-conteudo > div h1 {
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
+  background-color: #005baa;
+  background-image: linear-gradient(45deg, #005baa, #000000);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.banner-conteudo > div hr {
+  display: block;
+  background: #005baa;
+  height: 0.25rem;
+  width: 6.25rem;
+  border: none;
+  margin: 1.125rem 0 1.875rem 0;
+}
+
+.banner-conteudo > div p {
+  line-height: 1.6;
+}
+
+
+.banner-conteudo a {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #717171;
+  font-weight: 500;
+  background: #fff;
+  border-radius: 3.125rem;
+  transition: 0.3s ease-in-out;
+}
+
+.banner-conteudo > div > a {
+  border: 2px solid #c2c2c2;
+  margin-top: 2.188rem;
+  padding: 0.625rem 1.875rem;
+}
+
+.banner-conteudo > div > a:hover {
+  border: 0.125rem solid #005baa;
+  color: #005baa;
+}
+
+@media screen and (min-width: 48rem) {
+  .banner-conteudo {
+    display: flex;
+    align-items: center;
+  }
+  
+}  
+
+@media (max-width: 991px) {
+  .banner-conteudo { 
+    padding-block: min(20vh, 20rem);
+  }
+}
