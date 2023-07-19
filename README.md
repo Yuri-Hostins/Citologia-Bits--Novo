@@ -1,3 +1,3 @@
-<h1>Novo site do Citologia Bits</h1>
+<h1>Novo site do CitologiaBits</h1>
 
 > Status do projeto: Em desenvolvimento
