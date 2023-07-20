@@ -1,11 +1,11 @@
 # Novo site do CitologiaBits
-
-<!-- ![Status do Projeto](https://img.shields.io/badge/status-em%20desenvolvimento-brightgreen) -->
 > Status do projeto: Em desenvolvimento
 
 ## Descrição
 
 Este é o repositório do novo site do CitologiaBits, um projeto dedicado a fornecer um conteúdo abrangente sobre citologia para estudantes e entusiastas. O objetivo principal deste projeto é criar um site organizado, intuitivo e repleto de informações precisas e atualizadas sobre o citoplasma e outros tópicos relevantes.
+
+![Status do Projeto](https://github.com/Yuri-Hostins/CitologiaBits--Novo/assets/107286916/12cd3bbc-d007-47b5-947c-6994cfaabd94)
 
 ## Funcionalidades
 
