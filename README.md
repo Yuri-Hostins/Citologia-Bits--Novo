@@ -4,7 +4,7 @@
 ## Descrição
 Este é o repositório do novo site do CitologiaBits, um projeto dedicado a fornecer um conteúdo abrangente sobre citologia para estudantes e entusiastas. O objetivo principal deste projeto é criar um site organizado, intuitivo e repleto de informações precisas e atualizadas sobre o citoplasma e outros tópicos relevantes.
 
-![CitologiaBits Screenshot](https://github.com/Yuri-Hostins/CitologiaBits--Novo/assets/107286916/12cd3bbc-d007-47b5-947c-6994cfaabd94)
+![CitologiaBits Screenshot](https://github.com/Yuri-Hostins/Alguma-Coisa/blob/main/imagens/CitologiaBits(Novo).png)
 
 ## Conteúdos:
 1. Citoplasma: O citoplasma é uma região celular que compreende todo o espaço entre a membrana plasmática e o núcleo. Ele contém diversas estruturas celulares, como organelas e inclusões celulares, desempenhando funções essenciais para a célula.
