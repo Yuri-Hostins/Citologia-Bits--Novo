@@ -43,8 +43,4 @@ Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato
 - Nome: [ Yuri Hostins Raimundo ]
 - Email: [ YuriVn21@outlook.com ]
 - Instagram: [ https://instagram.com/dev._.yuri ]
-- Website: [ https://citologiabits.netlify.app ]
-
-<!-- ## Licença
-
-Este projeto está sob a Licença [Nome da Licença]. Consulte o arquivo LICENSE.md para obter mais detalhes. -->
+<!-- - Website: [ https://citologiabits.netlify.app ] -->
