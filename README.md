@@ -36,6 +36,9 @@ Contribuições são bem-vindas! Se você deseja contribuir para o projeto, siga
 - CSS3
 - JavaScript
 
+# Como Acessar
+Você pode acessar o "CitologiaBits" através do seguinte link: [citologiabits.netlify.app](https://citologiabits.netlify.app)
+
 ## Contato
 
 Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
@@ -43,4 +46,3 @@ Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato
 - Nome: [ Yuri Hostins Raimundo ]
 - Email: [ YuriVn21@outlook.com ]
 - Instagram: [ https://instagram.com/dev._.yuri ]
-<!-- - Website: [ https://citologiabits.netlify.app ] -->
