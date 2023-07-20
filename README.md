@@ -2,36 +2,18 @@
 > Status do projeto: Em desenvolvimento
 
 ## Descrição
-
 Este é o repositório do novo site do CitologiaBits, um projeto dedicado a fornecer um conteúdo abrangente sobre citologia para estudantes e entusiastas. O objetivo principal deste projeto é criar um site organizado, intuitivo e repleto de informações precisas e atualizadas sobre o citoplasma e outros tópicos relevantes.
 
-![Status do Projeto](https://github.com/Yuri-Hostins/CitologiaBits--Novo/assets/107286916/12cd3bbc-d007-47b5-947c-6994cfaabd94)
+![CitologiaBits Screenshot](https://github.com/Yuri-Hostins/CitologiaBits--Novo/assets/107286916/12cd3bbc-d007-47b5-947c-6994cfaabd94)
 
-## Funcionalidades
+## Conteúdos:
+1. Citoplasma: O citoplasma é uma região celular que compreende todo o espaço entre a membrana plasmática e o núcleo. Ele contém diversas estruturas celulares, como organelas e inclusões celulares, desempenhando funções essenciais para a célula.
 
-- Conteúdo sobre Introdução ao Citoplasma
-- Composição e Estrutura do Citoplasma
-- Funções do Citoplasma
-- Citoesqueleto e Movimento Celular
-- Citoplasma e Metabolismo Celular
-- Transporte no Citoplasma
-- Citoplasma e Divisão Celular
-- Alterações do Citoplasma em Doenças Celulares
-- Importância do Citoplasma para a Sobrevivência Celular
-- Vídeo explicativo complementar
+2. Organelas: As organelas são estruturas celulares especializadas que desempenham funções específicas dentro da célula. Exemplos incluem mitocôndrias, ribossomos, complexo de Golgi, retículo endoplasmático e muitas outras.
 
-## Contribuição
-
-Contribuições são bem-vindas! Se você deseja contribuir para o projeto, siga os passos abaixo:
-
-1. Faça um fork deste repositório
-2. Crie um branch com a sua feature (`git checkout -b feature/nova-feature`)
-3. Faça commit das suas alterações (`git commit -m 'Adicionar nova feature'`)
-4. Envie o branch para o repositório remoto (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
+3. [Outros tópicos relevantes] - Aqui você encontrará uma variedade de conteúdos adicionais relacionados à citologia que são abordados em nosso site. Temos uma ampla gama de informações para explorar, incluindo mais organelas celulares, tipos de células, processos biológicos e muito mais.
 
 ## Tecnologias Utilizadas
-
 - HTML5
 - CSS3
 - JavaScript
@@ -40,9 +22,7 @@ Contribuições são bem-vindas! Se você deseja contribuir para o projeto, siga
 Você pode acessar o "CitologiaBits" através do seguinte link: [citologiabits.netlify.app](https://citologiabits.netlify.app)
 
 ## Contato
-
 Se tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
-
-- Nome: [ Yuri Hostins Raimundo ]
-- Email: [ YuriVn21@outlook.com ]
-- Instagram: [ https://instagram.com/dev._.yuri ]
+- Nome: Yuri Hostins Raimundo
+- Email: YuriVn21@outlook.com
+- Instagram: [dev._.yuri](https://instagram.com/dev._.yuri)
