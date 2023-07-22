@@ -1,0 +1,14 @@
+@import url("reset.css");  /* Importa o arquivo "reset.css" para redefinir os estilos padrão do navegador */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");  /* Importa a fonte Poppins do Google Fonts com diferentes pesos (400, 500, 600) */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap"); /* Importa a fonte Open Sans do Google Fonts com diferentes pesos (400, 500, 600) */
+@import url("loader.css");  /* Importa o arquivo "loader.css" específico para a página inicial */
+@import url("navbar.css");  /* Importa o arquivo "navbar.css" para estilizar a barra de navegação */
+@import url("homepage/homepage.css");  /* Importa o arquivo "homepage.css" específico para a página inicial */
+@import url("conteudo/conteudo.css");  /* Importa o arquivo "conteudo.css" específico para a página inicial */
+@import url("footer.css");  /* Importa o arquivo "footer.css" para estilizar o rodapé */
+
+
+
+:root{
+  --branco: #fff
+}
