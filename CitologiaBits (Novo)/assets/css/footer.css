@@ -1,0 +1,18 @@
+.footer {
+  background: #ff0157;  /* Define o plano de fundo do rodapé como um tom de rosa (#ff0157) */
+  width: 100%;  /* Define a largura do rodapé como 100% do elemento pai */
+  height: 70px;  /* Define a altura do rodapé como 70 pixels */
+  display: flex;  /* Define o rodapé como um contêiner flexível */
+  justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro do rodapé */
+  align-items: center;  /* Centraliza o conteúdo verticalmente dentro do rodapé */
+  flex-direction: column;  /* Define a direção do fluxo de itens dentro do rodapé como coluna */
+}
+
+.footer p {
+  color: #fff;  /* Define a cor do texto dos parágrafos dentro do rodapé como branco */
+  font-weight: 300;  /* Define o peso da fonte dos parágrafos como 300 (mais leve) */
+}
+
+.footer .icons a {
+  color: #fff;  /* Define a cor dos links dentro do elemento com a classe "icons" como branco */
+}

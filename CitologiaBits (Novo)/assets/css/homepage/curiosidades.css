@@ -1,0 +1,67 @@
+.curiosidades {
+  background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("../../img/background/background-curiosidades.png");
+  background-size: cover;  /* Define o tamanho do plano de fundo das curiosidades como cobrindo todo o elemento */
+}
+
+.curiosidades .contente {
+  display: flex;  /* Define o elemento de conteúdo das curiosidades como um contêiner flexível */
+  justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro do elemento de conteúdo */
+  flex-wrap: wrap;  /* Permite que o conteúdo quebre para uma nova linha, caso não caiba horizontalmente */
+  flex-direction: linha;  /* Define a direção do fluxo de itens como linha (provavelmente um erro, pois deveria ser "row") */
+  margin-top: 40px;  /* Adiciona um espaçamento de 40 pixels acima para o elemento de conteúdo das curiosidades */
+}
+
+.curiosidades .contente .caixa {
+  width: 350px;  /* Define a largura das caixas de curiosidades como 350 pixels */
+  margin: 20px;  /* Adiciona um espaçamento externo de 20 pixels em todas as direções para as caixas */
+  padding: 40px;  /* Adiciona um espaçamento interno de 40 pixels em todas as direções para as caixas */
+  background: #fff;  /* Define o plano de fundo das caixas como branco */
+  display: flex;  /* Define as caixas como contêineres flexíveis */
+  justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro das caixas */
+  align-items: center;  /* Centraliza o conteúdo verticalmente dentro das caixas */
+  flex-direction: column;  /* Define a direção do fluxo de itens dentro das caixas como coluna */
+}
+
+.curiosidades .contente .caixa img {
+  position: absolute;  /* Define a posição da imagem como absoluta, em relação ao elemento pai */
+  top: 0;  /* Posiciona a imagem no topo do elemento pai */
+  left: 0;  /* Posiciona a imagem à esquerda do elemento pai */
+  width: 100%;  /* Define a largura da imagem como 100% do elemento pai */
+  height: 100%;  /* Define a altura da imagem como 100% do elemento pai */
+  object-fit: cover;  /* Redimensiona a imagem para cobrir todo o espaço disponível no elemento pai */
+  border-radius: 48%;  /* Adiciona um raio de borda de 48% para a imagem, tornando-a arredondada */
+}
+
+.curiosidades .contente .caixa .texto {
+  text-align: center;  /* Centraliza o texto horizontalmente dentro das caixas de curiosidades */
+}
+
+.curiosidades .contente .caixa .texto p {
+  color: #666;  /* Define a cor do texto como um tom de cinza (#666) */
+  font-style: italic;  /* Define o estilo da fonte como itálico */
+}
+
+.curiosidades .contente .caixa .texto h2 {
+  margin-top: 20px;  /* Adiciona um espaçamento de 20 pixels acima para os títulos das caixas */
+  color: #111;  /* Define a cor dos títulos como um tom de cinza escuro (#111) */
+  font-size: 1.5em;  /* Define o tamanho da fonte dos títulos como 1.5em (em relação ao tamanho da fonte padrão) */
+  color: #ff0157;  /* Define a cor dos títulos como rosa (#ff0157) */
+  font-weight: 600;  /* Define o peso da fonte dos títulos como 600 (mais ousado) */
+}
+
+.branco .titulo-texto,
+.branco p {
+  color: #fff;  /* Define a cor do texto para os elementos com a classe "branco" como branco */
+}
+
+@media screen and (max-width: 991px) {
+  .curiosidades .contente .caixa {
+    margin: 10px;  /* Reduz o espaçamento externo das caixas de curiosidades para 10 pixels em todas as direções */
+    padding: 30px;  /* Reduz o espaçamento interno das caixas de curiosidades para 30 pixels em todas as direções */
+  }
+
+  .branco p {
+    text-align: center;  /* Centraliza o texto horizontalmente para os elementos com a classe "branco" */
+    margin-top: 1rem;  /* Adiciona um espaçamento de 1 rem (tamanho relativo à fonte) acima para os elementos com a classe "branco" */
+  }
+}
