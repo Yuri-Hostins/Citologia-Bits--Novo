@@ -1,3 +1,4 @@
+/* Importando estilos de arquivos externos */
 @import url("reset.css");  /* Importa o arquivo "reset.css" para redefinir os estilos padrão do navegador */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");  /* Importa a fonte Poppins do Google Fonts com diferentes pesos (400, 500, 600) */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap"); /* Importa a fonte Open Sans do Google Fonts com diferentes pesos (400, 500, 600) */
@@ -7,8 +8,13 @@
 @import url("conteudo/conteudo.css");  /* Importa o arquivo "conteudo.css" específico para a página inicial */
 @import url("footer.css");  /* Importa o arquivo "footer.css" para estilizar o rodapé */
 
-
-
+/* Definição de variáveis de cores */
 :root{
-  --branco: #fff
+  --branco: #fff; /* Define a variável "branco" como branco (#fff) */
+  
+  --color-loader--ciano--antes: #1cffb3; /* Define a variável "color-loader--ciano--antes" como um tom de ciano (#1cffb3) */
+  --color-loader--ciano--depois: #0ff; /* Define a variável "color-loader--ciano--depois" como ciano (#0ff) */
+  --color-loader--branco: #e7e7e7; /* Define a variável "color-loader--branco" como um tom de branco (#e7e7e7) */
+  --color-navbar--preto: #111; /* Define a variável "color-navbar--preto" como um tom de preto (#111) */
+  --color-link: #ff0157; /* Define a variável "color-link" como um tom de rosa (#ff0157) */
 }

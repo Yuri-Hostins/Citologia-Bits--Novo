@@ -1,140 +1,194 @@
-#preloader{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background-color: var(--preto);
+/* Definindo as propriedades do preloader */
+#preloader {
+  position: fixed;
+  /* Fixa o elemento na tela */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 9999999999;
+  /* Define a ordem de empilhamento (maior valor para ficar acima de outros elementos) */
 }
 
-#preloader .inner{
+/* Centralizando o conteúdo do preloader verticalmente e horizontalmente */
+#preloader .inner {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
 }
 
+/* Estilizando o texto do loader */
 .texto-loader {
-	color: var(--branco);
-	font-weight: 300;
+  color: var(--branco);
+  /* Cor do texto (presumivelmente branca) */
+  font-weight: 300;
+  /* Peso da fonte (light) */
   text-align: center;
+  /* Centraliza o texto no elemento */
   margin-top: 5rem;
+  /* Espaçamento superior de 5rem em relação ao conteúdo anterior */
 }
 
-
-/* Animation */
-
+/* Estilizando a animação do preloader */
 #preloader {
-	background: linear-gradient(45deg, #000000, #18122B, #443C68);
-	background-size: 300%;
-	background-position: center;
-	animation: sky 30s ease-in-out infinite;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
-	place-items: center;
-	place-content: center;
+  background: linear-gradient(45deg, #000000, #18122B, #443C68);
+  /* Gradiente de fundo */
+  background-size: 300%;
+  background-position: center;
+  animation: sky 30s ease-in-out infinite;
+  /* Animando a mudança de cores do gradiente */
+  width: 100vw;
+  /* Largura 100% da viewport */
+  height: 100vh;
+  /* Altura 100% da viewport */
+  display: flex;
+  /* Exibindo o conteúdo como flexbox */
+  flex-direction: column;
+  /* Organiza o conteúdo em coluna */
+  gap: 1em;
+  /* Espaçamento entre os elementos filhos (1em) */
+  place-items: center;
+  /* Centraliza os itens (filhos) horizontalmente e verticalmente */
+  place-content: center;
 }
 
+/* Estilizando o DNA, que é o elemento animado */
 .material {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transform-style: preserve-3d;
-	transform: rotateZ(-20deg);
+  position: relative;
+  /* Posicionamento relativo para controlar elementos filhos */
+  display: flex;
+  /* Exibindo o conteúdo como flexbox */
+  justify-content: center;
+  /* Centraliza horizontalmente os elementos filhos */
+  align-items: center;
+  /* Centraliza verticalmente os elementos filhos */
+  transform-style: preserve-3d;
+  /* Mantém a perspectiva 3D do conteúdo */
+  transform: rotateZ(-20deg);
+  /* Rotaciona o conteúdo em 20 graus no eixo Z */
 }
 
+/* Animação de rotação do DNA */
 @keyframes rotate {
-	0% {
-		transform: rotateX(0deg);
-	}
-	100% {
-		transform: rotateX(360deg);
-	}
+  0% {
+    transform: rotateX(0deg);
+    /* Rotação inicial no eixo X (0 graus) */
+  }
+
+  100% {
+    transform: rotateX(360deg);
+    /* Rotação final no eixo X (360 graus) */
+  }
 }
 
-.dna {/*line*/
-	position: relative;
-	width: 1px;
-	height: 100px;
-	border: 1px dotted #e7e7e7;
-	box-shadow: 0 0 15px #e7e7e7;
-	background: transparent;
-	margin: 0px 10px;
-	animation: rotate 3s linear infinite;
-}
-.dna::before {/*top dot*/
-	content: '';
-	position: absolute;
-	top: -2px;
-	left: -5px;
-	width: 10px;
-	height: 10px;
-	background: #1cffb3;
-	border-radius: 50%;
-	box-shadow: 0 0 15px #1cffb3;
-}
-.dna::after {/*bottom dot*/
-	content: '';
-	position: absolute;
-	bottom: -2px;
-	left: -5px;
-	width: 10px;
-	height: 10px;
-	background: #0ff;
-	border-radius: 50%;
-	box-shadow: 0 0 12px #0ff;
+/* Estilizando as hastes do DNA (elementos .dna) */
+.dna {
+  position: relative;
+  width: 1px;
+  height: 100px;
+  /* Altura da haste do DNA */
+  border: 1px dotted var(--color-loader--branco);
+  /* Borda pontilhada branca */
+  box-shadow: 0 0 15px var(--color-loader--branco);
+  /* Sombra branca */
+  background: transparent;
+  margin: 0px 10px;
+  /* Espaçamento horizontal entre as hastes do DNA */
+  animation: rotate 3s linear infinite;
+  /* Animação de rotação aplicada */
 }
 
+/* Estilizando os pontos superiores e inferiores das hastes do DNA */
+.dna::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-loader--ciano--antes);
+  /* Cor do ponto superior */
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--color-loader--ciano--antes);
+  /* Sombra do ponto superior */
+}
+
+.dna::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-loader--ciano--depois);
+  /* Cor do ponto inferior */
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--color-loader--ciano--depois);
+  /* Sombra do ponto inferior */
+}
+
+/* Aplicando atrasos na animação do DNA para criar um efeito de movimento */
 .dna:nth-child(1) {
   animation-delay: -0.15s;
 }
+
 .dna:nth-child(2) {
   animation-delay: -0.3s;
 }
+
 .dna:nth-child(3) {
   animation-delay: -0.45s;
 }
+
 .dna:nth-child(4) {
   animation-delay: -0.6s;
 }
+
 .dna:nth-child(5) {
   animation-delay: -0.75s;
 }
+
 .dna:nth-child(6) {
   animation-delay: -0.9s;
 }
+
 .dna:nth-child(7) {
   animation-delay: -1.05s;
 }
+
 .dna:nth-child(8) {
   animation-delay: -1.2s;
 }
+
 .dna:nth-child(9) {
   animation-delay: -1.35s;
 }
+
 .dna:nth-child(10) {
   animation-delay: -1.5s;
 }
+
 .dna:nth-child(11) {
   animation-delay: -1.65s;
 }
+
 .dna:nth-child(12) {
   animation-delay: -1.8s;
 }
+
 .dna:nth-child(13) {
   animation-delay: -1.95s;
 }
+
 .dna:nth-child(14) {
   animation-delay: -2.1s;
 }
+
 .dna:nth-child(15) {
   animation-delay: -2.25s;
 }
+
 .dna:nth-child(16) {
   animation-delay: -2.3s;
 }

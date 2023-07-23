@@ -1,27 +1,41 @@
+/* Estilos para a classe "linha" */
 .linha {
-  position: relative;  /* Define a posição como relativa para o elemento de classe "linha" */
-  width: 100%;  /* Define a largura como 100% do elemento pai */
-  display: flex;  /* Define o elemento como um contêiner flexível */
-  justify-content: space-between;  /* Distribui o espaço disponível entre os elementos filho, criando um espaçamento igual entre eles */
+  position: relative;
+  /* Define a posição como relativa para o elemento de classe "linha" */
+  width: 100%;
+  /* Define a largura como 100% do elemento pai */
+  display: flex;
+  /* Define o elemento como um contêiner flexível */
+  justify-content: space-between;
+  /* Distribui o espaço disponível entre os elementos filho, criando um espaçamento igual entre eles */
 }
 
+/* Estilos para a classe "coluna50" */
 .linha .coluna50 {
-  position: relative;  /* Define a posição como relativa para o elemento de classe "coluna50" */
-  width: 48%;  /* Define a largura como 48% do elemento pai */
+  position: relative;
+  /* Define a posição como relativa para o elemento de classe "coluna50" */
+  width: 48%;
+  /* Define a largura como 48% do elemento pai */
 }
 
+/* Estilos aplicados quando a largura da tela é igual ou inferior a 991 pixels */
 @media screen and (max-width: 991px) {
   .linha {
-    flex-direction: column;  /* Altera a direção do fluxo de elementos para coluna quando a largura da tela é igual ou inferior a 991 pixels */
+    flex-direction: column;
+    /* Altera a direção do fluxo de elementos para coluna quando a largura da tela é igual ou inferior a 991 pixels */
   }
-  
+
   .linha .coluna50 {
-    position: relative;  /* Mantém a posição relativa para o elemento de classe "coluna50" */
-    width: 100%;  /* Define a largura como 100% do elemento pai quando a largura da tela é igual ou inferior a 991 pixels */
+    position: relative;
+    /* Mantém a posição relativa para o elemento de classe "coluna50" */
+    width: 100%;
+    /* Define a largura como 100% do elemento pai quando a largura da tela é igual ou inferior a 991 pixels */
   }
-  
+
   .linha .coluna50 .imagem-caixa {
-    height: 300px;  /* Define a altura como 300 pixels para o elemento de classe "imagem-caixa" */
-    margin-top: 20px;  /* Adiciona um espaçamento de 20 pixels acima para o elemento de classe "imagem-caixa" */
+    height: 300px;
+    /* Define a altura como 300 pixels para o elemento de classe "imagem-caixa" dentro das colunas */
+    margin-top: 20px;
+    /* Adiciona um espaçamento de 20 pixels acima para o elemento de classe "imagem-caixa" */
   }
 }

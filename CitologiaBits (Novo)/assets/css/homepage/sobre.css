@@ -1,26 +1,43 @@
+/* Estilos para a seção de imagem no conteúdo "Sobre" */
 .sobre-imagem {
   position: relative;
+  /* Define a posição relativa para permitir posicionamento absoluto dos elementos filhos */
   width: 100%;
+  /* Define a largura da seção de imagem como 100% do elemento pai */
   min-height: 400px;
+  /* Define a altura mínima da seção de imagem como 400 pixels */
 }
 
+/* Estilos para a imagem na seção "Sobre" */
 .sobre-imagem img {
   position: absolute;
+  /* Define a posição absoluta para que a imagem fique posicionada em relação ao seu elemento pai */
   top: 0;
+  /* Posiciona a imagem no topo da seção de imagem */
   left: 0;
+  /* Posiciona a imagem no lado esquerdo da seção de imagem */
   width: 100%;
+  /* Define a largura da imagem como 100% da seção de imagem */
   height: 100%;
+  /* Define a altura da imagem como 100% da seção de imagem */
   object-fit: cover;
+  /* Redimensiona a imagem para preencher todo o espaço da seção de imagem, mantendo a proporção e recortando a imagem, se necessário */
 }
 
+/* Estilos para o texto na seção "Sobre" */
 .sobre-texto {
   margin: 1rem;
+  /* Define uma margem de 1rem (unidade relativa ao tamanho do texto) em todos os lados do texto na seção "Sobre" */
 }
 
+/* Estilos aplicados quando a largura da tela é igual ou inferior a 991 pixels */
 @media screen and (max-width: 991px) {
-  .sobre-imagem{
+  .sobre-imagem {
     display: none;
+    /* Oculta a seção de imagem quando a tela é igual ou inferior a 991 pixels */
     width: 0px;
+    /* Define a largura da seção de imagem como 0 pixels para garantir que ela não ocupe espaço na página */
     height: 0px;
+    /* Define a altura da seção de imagem como 0 pixels para garantir que ela não ocupe espaço na página */
   }
-}  
+}

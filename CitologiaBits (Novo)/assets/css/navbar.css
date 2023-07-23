@@ -1,170 +1,274 @@
+/* Estilizando o cabeçalho fixo no topo da página */
 header {
-  position: fixed;  /* Define o cabeçalho como uma posição fixa, mantendo-o no topo da página mesmo durante a rolagem */
-  top: 0;  /* Posiciona o cabeçalho no topo da página */
-  left: 0;  /* Posiciona o cabeçalho no lado esquerdo da página */
-  width: 100%;  /* Define a largura do cabeçalho como 100% da largura da página */
-  padding: 40px 100px;  /* Adiciona um espaçamento interno de 40 pixels acima/abaixo e 100 pixels à direita/esquerda para o cabeçalho */
-  z-index: 1;  /* Define a ordem de empilhamento do cabeçalho acima dos outros elementos */
-  display: flex;  /* Define o cabeçalho como um contêiner flexível */
-  justify-content: space-between;  /* Distribui o espaço disponível entre os elementos filho, criando um espaçamento igual entre eles */
-  align-items: center;  /* Centraliza verticalmente o conteúdo do cabeçalho */
-  transition: .5s;  /* Define uma transição suave de 0,5 segundos para as propriedades que sofrerem alteração */
+  position: fixed;
+  /* Define a posição do cabeçalho como fixa */
+  top: 0;
+  /* Posiciona o cabeçalho no topo da página */
+  left: 0;
+  /* Posiciona o cabeçalho no lado esquerdo da página */
+  width: 100%;
+  /* Define a largura do cabeçalho como 100% da largura da página */
+  padding: 40px 100px;
+  /* Adiciona espaçamento interno de 40 pixels acima/abaixo e 100 pixels à direita/esquerda para o cabeçalho */
+  z-index: 1;
+  /* Define a ordem de empilhamento do cabeçalho acima de outros elementos */
+  display: flex;
+  /* Define o cabeçalho como um contêiner flexível */
+  justify-content: space-between;
+  /* Distribui o espaço disponível entre os elementos filho, criando espaçamento igual entre eles */
+  align-items: center;
+  /* Centraliza verticalmente o conteúdo do cabeçalho */
+  transition: .5s;
+  /* Define uma transição suave de 0,5 segundos para as propriedades que sofrerem alteração */
 }
 
+/* Estilizando a navegação fixa */
 .navegacao-fixa {
-  background: #fff;  /* Define o plano de fundo da navegação fixa como branco */
-  padding: 10px 100px;  /* Adiciona um espaçamento interno de 10 pixels acima/abaixo e 100 pixels à direita/esquerda para a navegação fixa */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);  /* Adiciona uma sombra suave à navegação fixa */
+  background: var(--branco);
+  /* Define o plano de fundo da navegação fixa como branco */
+  padding: 10px 100px;
+  /* Adiciona espaçamento interno de 10 pixels acima/abaixo e 100 pixels à direita/esquerda para a navegação fixa */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  /* Adiciona uma sombra suave à navegação fixa */
 }
 
+/* Estilizando o logotipo da navegação fixa */
 .navegacao-fixa .logo {
-  color: #111;  /* Define a cor do texto do logotipo da navegação fixa como um tom de cinza escuro (#111) */
+  color: var(--color-navbar--preto);
+  /* Define a cor do texto do logotipo da navegação fixa como um tom de cinza escuro (var(--color-navbar--preto)) */
 }
 
+/* Estilizando os links da navegação fixa */
 .navegacao-fixa .navegacao li a {
-  color: #111;  /* Define a cor dos links na navegação fixa como um tom de cinza escuro (#111) */
+  color: var(--color-navbar--preto);
+  /* Define a cor do texto dos links na navegação fixa como um tom de cinza escuro (var(--color-navbar--preto)) */
 }
 
+/* Estilizando o logotipo no cabeçalho */
 header .logo {
-  color: #fff;  /* Define a cor do texto do logotipo como branco */
-  font-weight: bold;  /* Define o peso da fonte do logotipo como negrito */
-  font-size: 2.5em;  /* Define o tamanho da fonte do logotipo como 2.5em (em relação ao tamanho da fonte padrão) */
-  text-decoration: none;  /* Remove a decoração de texto (como sublinhado) do logotipo */
+  color: var(--branco);
+  /* Define a cor do texto do logotipo como branco */
+  font-weight: bold;
+  /* Define o peso da fonte do logotipo como negrito */
+  font-size: 2.5em;
+  /* Define o tamanho da fonte do logotipo como 2.5em (em relação ao tamanho da fonte padrão) */
+  text-decoration: none;
+  /* Remove a decoração de texto (como sublinhado) do logotipo */
 }
 
+/* Estilizando o texto dentro da tag span no logotipo */
 header .logo span {
-  color: #ff0157;  /* Define a cor do texto dentro da tag span do logotipo como rosa (#ff0157) */
+  color: var(--color-link);
+  /* Define a cor do texto dentro da tag span do logotipo como rosa (var(--color-link)) */
 }
 
+/* Estilizando a navegação no cabeçalho */
 header .navegacao {
-  position: relative;  /* Define a posição da navegação como relativa */
-  display: flex;  /* Define a navegação como um contêiner flexível */
+  position: relative;
+  /* Define a posição da navegação como relativa */
+  display: flex;
+  /* Define a navegação como um contêiner flexível */
 }
 
+/* Estilizando os itens da navegação no cabeçalho */
 header .navegacao li {
-  list-style: none;  /* Remove os marcadores de lista padrão nos itens da navegação */
-  margin-left: 30px;  /* Adiciona um espaçamento à esquerda de 30 pixels para os itens da navegação */
+  list-style: none;
+  /* Remove os marcadores de lista padrão nos itens da navegação */
+  margin-left: 30px;
+  /* Adiciona espaçamento à esquerda de 30 pixels para os itens da navegação */
 }
 
+/* Estilizando os links na navegação do cabeçalho */
 header .navegacao li a {
-  text-decoration: none;  /* Remove a decoração de texto (como sublinhado) nos links da navegação */
-  color: #fff;  /* Define a cor do texto dos links da navegação como branco */
-  font-weight: 300;  /* Define o peso da fonte dos links da navegação como 300 (mais leve) */
-  font-size: 1.5em;  /* Define o tamanho da fonte dos links da navegação como 1.5em (em relação ao tamanho da fonte padrão) */
-  transition: .5s;  /* Define uma transição suave de 0,5 segundos para as propriedades que sofrerem alteração */
+  text-decoration: none;
+  /* Remove a decoração de texto (como sublinhado) nos links da navegação */
+  color: var(--branco);
+  /* Define a cor do texto dos links da navegação como branco */
+  font-weight: 300;
+  /* Define o peso da fonte dos links da navegação como 300 (mais leve) */
+  font-size: 1.5em;
+  /* Define o tamanho da fonte dos links da navegação como 1.5em (em relação ao tamanho da fonte padrão) */
+  transition: .5s;
+  /* Define uma transição suave de 0,5 segundos para as propriedades que sofrerem alteração */
 }
 
+/* Estilizando o hover nos links da navegação do cabeçalho */
 header .navegacao li a:hover {
-  color: #ff0157;  /* Define a cor do texto dos links da navegação quando o cursor do mouse passa por cima como rosa (#ff0157) */
+  color: var(--color-link);
+  /* Define a cor do texto dos links da navegação quando o cursor do mouse passa por cima como rosa (var(--color-link)) */
 }
 
+/* Estilizando o título do conteúdo */
 .titulo-texto {
-  color: #111;  /* Define a cor do texto do título como um tom de cinza escuro (#111) */
-  font-size: 2em;  /* Define o tamanho da fonte do título como 2em (em relação ao tamanho da fonte padrão) */
-  font-weight: 300;  /* Define o peso da fonte do título como 300 (mais leve) */
+  color: var(--color-navbar--preto);
+  /* Define a cor do texto do título como um tom de cinza escuro (var(--color-navbar--preto)) */
+  font-size: 2em;
+  /* Define o tamanho da fonte do título como 2em (em relação ao tamanho da fonte padrão) */
+  font-weight: 300;
+  /* Define o peso da fonte do título como 300 (mais leve) */
 }
 
+/* Estilizando o texto dentro da tag span no título */
 .titulo-texto span {
-  color: #ff0157;  /* Define a cor do texto dentro da tag span do título como rosa (#ff0157) */
-  font-weight: 700;  /* Define o peso da fonte dentro da tag span do título como 700 (negrito) */
-  font-size: 1.5em;  /* Define o tamanho da fonte dentro da tag span do título como 1.5em (em relação ao tamanho da fonte padrão) */
+  color: var(--color-link);
+  /* Define a cor do texto dentro da tag span do título como rosa (var(--color-link)) */
+  font-weight: 700;
+  /* Define o peso da fonte dentro da tag span do título como 700 (negrito) */
+  font-size: 1.5em;
+  /* Define o tamanho da fonte dentro da tag span do título como 1.5em (em relação ao tamanho da fonte padrão) */
 }
 
+/* Estilizando o elemento título */
 .titulo {
-  width: 100%;  /* Define a largura do elemento título como 100% */
-  display: flex;  /* Define o elemento título como um contêiner flexível */
-  justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro do elemento título */
-  align-items: center;  /* Centraliza o conteúdo verticalmente dentro do elemento título */
-  flex-direction: column;  /* Define a direção do fluxo de itens dentro do elemento título como coluna */
+  width: 100%;
+  /* Define a largura do elemento título como 100% */
+  display: flex;
+  /* Define o elemento título como um contêiner flexível */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente dentro do elemento título */
+  align-items: center;
+  /* Centraliza o conteúdo verticalmente dentro do elemento título */
+  flex-direction: column;
+  /* Define a direção do fluxo de itens dentro do elemento título como coluna */
 }
 
+/* Estilizando o conteúdo do menu */
 .menu .contente {
-  display: flex;  /* Define o elemento de conteúdo do menu como um contêiner flexível */
-  justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro do elemento de conteúdo */
-  flex-direction: linha-reverse;  /* Define a direção do fluxo de itens dentro do elemento de conteúdo como linha-reverse (provavelmente um erro, pois deveria ser "row-reverse") */
-  flex-wrap: wrap;  /* Permite que o conteúdo quebre para uma nova linha, caso não caiba horizontalmente */
-  margin-top: 40px;  /* Adiciona um espaçamento de 40 pixels acima para o elemento de conteúdo do menu */
+  display: flex;
+  /* Define o elemento de conteúdo do menu como um contêiner flexível */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente dentro do elemento de conteúdo */
+  flex-direction: linha-reverse;
+  /* Define a direção do fluxo de itens dentro do elemento de conteúdo como linha-reverse (provavelmente um erro, pois deveria ser "row-reverse") */
+  flex-wrap: wrap;
+  /* Permite que o conteúdo quebre para uma nova linha, caso não caiba horizontalmente */
+  margin-top: 40px;
+  /* Adiciona espaçamento acima para o elemento de conteúdo do menu */
 }
 
+/* Estilizando as caixas do menu */
 .menu .contente .caixa {
-  width: 340px;  /* Define a largura das caixas de menu como 340 pixels */
-  margin: 20px;  /* Adiciona um espaçamento externo de 20 pixels em todas as direções para as caixas do menu */
-  border: 15px solid #fff;  /* Adiciona uma borda de 15 pixels sólida de cor branca para as caixas do menu */
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);  /* Adiciona uma sombra suave às caixas do menu */
+  width: 340px;
+  /* Define a largura das caixas do menu como 340 pixels */
+  margin: 20px;
+  /* Adiciona espaçamento externo de 20 pixels em todas as direções para as caixas do menu */
+  border: 15px solid var(--branco);
+  /* Adiciona uma borda de 15 pixels sólida de cor branca para as caixas do menu */
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+  /* Adiciona uma sombra suave às caixas do menu */
 }
 
+/* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
 @media screen and (max-width: 991px) {
+
   header,
   header .navegacao-fixa {
-    padding: 10px 20px;  /* Reduz o espaçamento interno do cabeçalho e da navegação fixa para 10 pixels acima/abaixo e 20 pixels à direita/esquerda */
+    padding: 10px 20px;
+    /* Reduz o espaçamento interno do cabeçalho e da navegação fixa para 10 pixels acima/abaixo e 20 pixels à direita/esquerda */
   }
 
   header .navegacao {
-    display: none;  /* Oculta a navegação */
+    display: none;
+    /* Oculta a navegação */
   }
 
+  /* Estilizando a navegação quando ativada em telas menores */
   header .navegacao.active {
-    width: 100%;  /* Define a largura da navegação ativa como 100% */
-    height: calc(100% - 68px);  /* Define a altura da navegação ativa como 100% menos 68 pixels */
-    position: fixed;  /* Define a posição da navegação ativa como fixa */
-    top: 68px;  /* Posiciona a navegação ativa abaixo do cabeçalho */
-    left: 0;  /* Posiciona a navegação ativa no lado esquerdo da página */
-    display: flex;  /* Define a navegação ativa como um contêiner flexível */
-    justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro da navegação ativa */
-    align-items: center;  /* Centraliza o conteúdo verticalmente dentro da navegação ativa */
-    flex-direction: column;  /* Define a direção do fluxo de itens dentro da navegação ativa como coluna */
-    background: #fff;  /* Define o plano de fundo da navegação ativa como branco */
+    width: 100%;
+    /* Define a largura da navegação ativa como 100% */
+    height: calc(100% - 68px);
+    /* Define a altura da navegação ativa como 100% menos 68 pixels (considerando a altura do cabeçalho) */
+    position: fixed;
+    /* Define a posição da navegação ativa como fixa */
+    top: 68px;
+    /* Posiciona a navegação ativa abaixo do cabeçalho */
+    left: 0;
+    /* Posiciona a navegação ativa no lado esquerdo da página */
+    display: flex;
+    /* Define a navegação ativa como um contêiner flexível */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente dentro da navegação ativa */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente dentro da navegação ativa */
+    flex-direction: column;
+    /* Define a direção do fluxo de itens dentro da navegação ativa como coluna */
+    background: var(--branco);
+    /* Define o plano de fundo da navegação ativa como branco */
   }
 
   header .navegacao li {
-    margin-left: 0;  /* Remove o espaçamento à esquerda para os itens da navegação quando a largura da tela é igual ou inferior a 991 pixels */
+    margin-left: 0;
+    /* Remove o espaçamento à esquerda para os itens da navegação quando a largura da tela é igual ou inferior a 991 pixels */
   }
 
   header .navegacao li a {
-    color: #111;  /* Define a cor do texto dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como um tom de cinza escuro (#111) */
-    font-size: 1.6em;  /* Define o tamanho da fonte dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como 1.6em (em relação ao tamanho da fonte padrão) */
+    color: var(--color-navbar--preto);
+    /* Define a cor do texto dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como um tom de cinza escuro (var(--color-navbar--preto)) */
+    font-size: 1.6em;
+    /* Define o tamanho da fonte dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como 1.6em (em relação ao tamanho da fonte padrão) */
   }
 
+  /* Estilizando o botão de menu "hamburguer" */
   .menutoggle {
-    position: relative;  /* Define a posição do elemento menutoggle como relativa */
-    width: 40px;  /* Define a largura do elemento menutoggle como 40 pixels */
-    height: 40px;  /* Define a altura do elemento menutoggle como 40 pixels */
-    background: url("../img/homepage/menu.png");  /* Define uma imagem de plano de fundo para o menutoggle */
-    background-size: 30px;  /* Define o tamanho da imagem de plano de fundo do menutoggle como 30 pixels */
-    background-repeat: no-repeat;  /* Impede a repetição da imagem de plano de fundo do menutoggle */
-    background-position: center;  /* Posiciona a imagem de plano de fundo do menutoggle no centro */
-    cursor: pointer;  /* Define o cursor do mouse como ponteiro para o menutoggle */
+    position: relative;
+    /* Define a posição do elemento menutoggle como relativa */
+    width: 40px;
+    /* Define a largura do elemento menutoggle como 40 pixels */
+    height: 40px;
+    /* Define a altura do elemento menutoggle como 40 pixels */
+    background: url("../img/homepage/menu.png");
+    /* Define uma imagem de plano de fundo para o menutoggle */
+    background-size: 30px;
+    /* Define o tamanho da imagem de plano de fundo do menutoggle como 30 pixels */
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem de plano de fundo do menutoggle */
+    background-position: center;
+    /* Posiciona a imagem de plano de fundo do menutoggle no centro */
+    cursor: pointer;
+    /* Define o cursor do mouse como ponteiro para o menutoggle */
   }
 
+  /* Estilizando o botão de menu "hamburguer" quando ativado */
   .menutoggle.active {
-    background: url("../img/homepage/close.png");  /* Define uma imagem de plano de fundo diferente para o menutoggle quando está ativo */
-    background-size: 25px;  /* Define o tamanho da imagem de plano de fundo do menutoggle ativo como 25 pixels */
-    background-repeat: no-repeat;  /* Impede a repetição da imagem de plano de fundo do menutoggle ativo */
-    background-position: center;  /* Posiciona a imagem de plano de fundo do menutoggle ativo no centro */
+    background: url("../img/homepage/close.png");
+    /* Define uma imagem de plano de fundo diferente para o menutoggle quando está ativo */
+    background-size: 25px;
+    /* Define o tamanho da imagem de plano de fundo do menutoggle ativo como 25 pixels */
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem de plano de fundo do menutoggle ativo */
+    background-position: center;
+    /* Posiciona a imagem de plano de fundo do menutoggle ativo no centro */
   }
 
   .navegacao-fixa .menutoggle {
-    filter: invert(1);  /* Inverte as cores do menutoggle quando está na navegação fixa */
+    filter: invert(1);
+    /* Inverte as cores do menutoggle quando está na navegação fixa */
   }
 
   .menu .contente {
-    margin-top: 20px;  /* Reduz o espaçamento acima para o elemento de conteúdo do menu quando a largura da tela é igual ou inferior a 991 pixels */
+    margin-top: 20px;
+    /* Reduz o espaçamento acima para o elemento de conteúdo do menu quando a largura da tela é igual ou inferior a 991 pixels */
   }
 
   .menu .contente .caixa {
-    margin: 10px;  /* Reduz o espaçamento externo para as caixas do menu quando a largura da tela é igual ou inferior a 991 pixels */
+    margin: 10px;
+    /* Reduz o espaçamento externo para as caixas do menu quando a largura da tela é igual ou inferior a 991 pixels */
   }
 
   .menu .contente .caixa .imagem-caixa {
-    height: 260px;  /* Reduz a altura do elemento de imagem das caixas do menu quando a largura da tela é igual ou inferior a 991 pixels */
+    height: 260px;
+    /* Reduz a altura do elemento de imagem das caixas do menu quando a largura da tela é igual ou inferior a 991 pixels */
   }
 
   .titulo-texto {
-    font-size: 1.8em;  /* Reduz o tamanho da fonte do título quando a largura da tela é igual ou inferior a 991 pixels */
-    text-align: center;  /* Centraliza o texto do título horizontalmente quando a largura da tela é igual ou inferior a 991 pixels */
+    font-size: 1.8em;
+    /* Reduz o tamanho da fonte do título quando a largura da tela é igual ou inferior a 991 pixels */
+    text-align: center;
+    /* Centraliza o texto do título horizontalmente quando a largura da tela é igual ou inferior a 991 pixels */
   }
 
   .navegacao-fixa {
-    padding: 10px 30px;  /* Adiciona um espaçamento interno reduzido para a navegação fixa quando a largura da tela é igual ou inferior a 991 pixels */
+    padding: 10px 30px;
+    /* Adiciona um espaçamento interno reduzido para a navegação fixa quando a largura da tela é igual ou inferior a 991 pixels */
   }
 }

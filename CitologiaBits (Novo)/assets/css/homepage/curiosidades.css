@@ -15,7 +15,7 @@
   width: 350px;  /* Define a largura das caixas de curiosidades como 350 pixels */
   margin: 20px;  /* Adiciona um espaçamento externo de 20 pixels em todas as direções para as caixas */
   padding: 40px;  /* Adiciona um espaçamento interno de 40 pixels em todas as direções para as caixas */
-  background: #fff;  /* Define o plano de fundo das caixas como branco */
+  background: var(--branco);  /* Define o plano de fundo das caixas como branco */
   display: flex;  /* Define as caixas como contêineres flexíveis */
   justify-content: center;  /* Centraliza o conteúdo horizontalmente dentro das caixas */
   align-items: center;  /* Centraliza o conteúdo verticalmente dentro das caixas */
@@ -45,13 +45,13 @@
   margin-top: 20px;  /* Adiciona um espaçamento de 20 pixels acima para os títulos das caixas */
   color: #111;  /* Define a cor dos títulos como um tom de cinza escuro (#111) */
   font-size: 1.5em;  /* Define o tamanho da fonte dos títulos como 1.5em (em relação ao tamanho da fonte padrão) */
-  color: #ff0157;  /* Define a cor dos títulos como rosa (#ff0157) */
+  color: var(--color-link);  /* Define a cor dos títulos como rosa (var(--color-link)) */
   font-weight: 600;  /* Define o peso da fonte dos títulos como 600 (mais ousado) */
 }
 
 .branco .titulo-texto,
 .branco p {
-  color: #fff;  /* Define a cor do texto para os elementos com a classe "branco" como branco */
+  color: var(--branco);  /* Define a cor do texto para os elementos com a classe "branco" como branco */
 }
 
 @media screen and (max-width: 991px) {

@@ -1,99 +1,155 @@
+/* Estilos para o contêiner de contato */
 .container-contato {
   display: flex;
+  /* Define o contêiner como um contêiner flexível */
   justify-content: center;
+  /* Centraliza o conteúdo horizontalmente dentro do contêiner */
   align-items: center;
+  /* Centraliza o conteúdo verticalmente dentro do contêiner */
   flex-wrap: wrap;
+  /* Permite que os elementos dentro do contêiner sejam organizados em várias linhas quando o espaço é insuficiente */
   height: 100%;
+  /* Define a altura do contêiner como 100% */
   margin-top: 2rem;
+  /* Adiciona um espaçamento de 2rem (aproximadamente 32 pixels) acima do contêiner */
   margin-bottom: 3rem;
+  /* Adiciona um espaçamento de 3rem (aproximadamente 48 pixels) abaixo do contêiner */
 }
 
+/* Estilos para os botões de contato */
 .botao-contato {
   width: 100px;
+  /* Define a largura dos botões como 100 pixels */
   height: 100px;
+  /* Define a altura dos botões como 100 pixels */
   background-color: #f6f6f6;
+  /* Define a cor de fundo dos botões como #f6f6f6 (cinza claro) */
   display: flex;
+  /* Define os botões como contêineres flexíveis */
   align-items: center;
+  /* Centraliza o conteúdo verticalmente dentro dos botões */
   justify-content: center;
+  /* Centraliza o conteúdo horizontalmente dentro dos botões */
   margin-left: 2em;
+  /* Adiciona um espaçamento de 2em (aproximadamente 32 pixels) à esquerda dos botões */
   margin-right: 1em;
+  /* Adiciona um espaçamento de 1em (aproximadamente 16 pixels) à direita dos botões */
   cursor: pointer;
+  /* Define o cursor do mouse como um ponteiro quando passa sobre os botões */
   transition: all 0.3s;
+  /* Adiciona uma transição suave de 0,3 segundos para as propriedades que sofrerem alteração */
   border-radius: 10px;
+  /* Define o raio das bordas dos botões como 10 pixels, criando um formato arredondado */
   margin-bottom: 1.70rem;
+  /* Adiciona um espaçamento de 1.70rem (aproximadamente 27 pixels) abaixo dos botões */
 }
 
+/* Estilos para os botões de contato no estado "wh-botao" */
 .botao-contato.wh-botao {
   box-shadow: 0 20px 20px -17px #128C7E;
+  /* Adiciona uma sombra aos botões com uma cor verde-azulada quando no estado "wh-botao" */
 }
 
+/* Estilos aplicados aos botões de contato no estado "wh-botao" quando o cursor do mouse passa por cima (hover) ou estão em foco (focus) */
 .botao-contato.wh-botao:hover,
 .botao-contato.wh-botao:focus {
   transform: scale(1.2);
+  /* Aumenta o tamanho dos botões em 20% quando o cursor do mouse passa por cima ou estão em foco */
   box-shadow: 0 30px 45px -15px #075E54;
+  /* Adiciona uma sombra maior e mais escura quando o cursor do mouse passa por cima ou estão em foco */
 }
 
+/* Estilos para os botões de contato no estado "in-botao" */
 .botao-contato.in-botao {
   box-shadow: 0 20px 20px -17px #d6249f;
+  /* Adiciona uma sombra aos botões com uma cor rosa quando no estado "in-botao" */
 }
 
+/* Estilos aplicados aos botões de contato no estado "in-botao" quando o cursor do mouse passa por cima (hover) ou estão em foco (focus) */
 .botao-contato.in-botao:hover,
 .botao-contato.in-botao:focus {
   transform: scale(1.2);
+  /* Aumenta o tamanho dos botões em 20% quando o cursor do mouse passa por cima ou estão em foco */
   box-shadow: 0 30px 45px -15px #a02d76;
+  /* Adiciona uma sombra maior e mais escura quando o cursor do mouse passa por cima ou estão em foco */
 }
 
+/* Estilos para os botões de contato no estado "gm-botao" */
 .botao-contato.gm-botao {
   box-shadow: 0 20px 20px -17px rgba(255, 16, 39, 0.5);
+  /* Adiciona uma sombra aos botões com uma cor vermelha quando no estado "gm-botao" */
 }
 
+/* Estilos aplicados aos botões de contato no estado "gm-botao" quando o cursor do mouse passa por cima (hover) ou estão em foco (focus) */
 .botao-contato.gm-botao:hover,
 .botao-contato.gm-botao:focus {
   transform: scale(1.2);
+  /* Aumenta o tamanho dos botões em 20% quando o cursor do mouse passa por cima ou estão em foco */
   box-shadow: 0 30px 45px -15px rgba(255, 16, 39, 0.57);
+  /* Adiciona uma sombra maior e mais escura quando o cursor do mouse passa por cima ou estão em foco */
 }
 
-/* o texto aparece quando o ícone está no estado de foco */
-
+/* Estilos para o texto que aparece quando o ícone está no estado de foco */
 .box-botao:hover .text-botao,
 .box-botao:focus .text-botao {
   bottom: 6rem;
+  /* Move o texto para baixo, a 6rem (aproximadamente 96 pixels) da posição inicial */
   visibility: visible;
+  /* Torna o texto visível quando o ícone está no estado de foco */
   opacity: 1;
+  /* Define a opacidade do texto como 1, tornando-o completamente visível */
 }
 
-/* seta de texto pop-up */
-
+/* Setas de texto pop-up */
 .box-botao .text-botao:before {
   content: '';
+  /* Define o conteúdo do pseudo-elemento como vazio */
   width: 0;
+  /* Define a largura do pseudo-elemento como 0 */
   height: 0;
+  /* Define a altura do pseudo-elemento como 0 */
   border-left: 5px solid transparent;
+  /* Define uma borda esquerda transparente no pseudo-elemento */
   border-right: 5px solid transparent;
-  border-top: 5px solid #ff0157;
+  /* Define uma borda direita transparente no pseudo-elemento */
+  border-top: 5px solid var(--color-link);
+  /* Define uma borda superior com uma cor rosa no pseudo-elemento */
   position: absolute;
+  /* Define a posição do pseudo-elemento como absoluta */
   bottom: -5px;
+  /* Posiciona o pseudo-elemento 5 pixels abaixo da parte inferior do contêiner pai */
   left: 40px;
+  /* Posiciona o pseudo-elemento a 40 pixels à esquerda do contêiner pai */
 }
 
-/* texto pop-up */
-
+/* Estilos para o texto pop-up */
 .box-botao .text-botao {
   color: #f6f6f6;
+  /* Define a cor do texto como branco */
   position: absolute;
+  /* Define a posição do texto como absoluta */
   font-family: sans-serif;
+  /* Define a fonte do texto como uma fonte sans-serif */
   bottom: 28px;
+  /* Posiciona o texto 28 pixels acima da parte inferior do contêiner pai */
   left: 50%;
+  /* Centraliza o texto horizontalmente dentro do contêiner pai */
   transform: translateX(-50%);
+  /* Move o texto horizontalmente para a esquerda em 50% da largura do próprio texto */
   padding: 5px 7px;
+  /* Adiciona um espaçamento interno de 5 pixels acima/abaixo e 7 pixels à direita/esquerda para o texto */
   z-index: -10;
+  /* Define a ordem de empilhamento do texto como -10 (coloca-o atrás dos outros elementos) */
   font-size: 14px;
+  /* Define o tamanho da fonte do texto como 14 pixels */
   border-radius: 2px;
-  background: #ff0157;
+  /* Define o raio das bordas do texto como 2 pixels, criando um formato arredondado */
+  background: var(--color-link);
+  /* Define o fundo do texto como uma cor rosa */
   visibility: hidden;
+  /* Torna o texto inicialmente invisível */
   opacity: 0;
-  -o-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -moz-transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Define a opacidade do texto como 0 (completamente transparente) */
   transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* Adiciona uma transição suave de 0,5 segundos com uma curva de aceleração personalizada para as propriedades que sofrerem alteração */
 }

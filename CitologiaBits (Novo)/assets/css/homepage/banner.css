@@ -1,31 +1,51 @@
+/* Estilos para a seção de banner */
 .banner {
   position: relative;
+  /* Define a posição do elemento como relativa */
   width: 100%;
+  /* Define a largura do elemento como 100% */
   min-height: 100vh;
+  /* Define a altura mínima como 100% da altura da viewport (viewport height) */
   display: flex;
+  /* Define o elemento como um contêiner flexível */
   justify-content: center;
+  /* Centraliza o conteúdo horizontalmente dentro do elemento */
   align-items: center;
+  /* Centraliza o conteúdo verticalmente dentro do elemento */
   background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)), url("../../img/background/background.png");
+  /* Cria um gradiente com uma cor de sobreposição semi-transparente (rgba) combinada com uma imagem de fundo */
   background-size: cover;
+  /* Redimensiona a imagem de fundo para cobrir todo o espaço disponível no elemento, mantendo a proporção */
 }
 
+/* Estilos para o conteúdo dentro da seção de banner */
 .banner .contente {
   max-width: 900px;
+  /* Define a largura máxima do conteúdo como 900 pixels */
   text-align: center;
+  /* Centraliza o texto dentro do elemento */
 }
 
+/* Estilos para o título (h2) dentro do conteúdo da seção de banner */
 .banner .contente h2 {
   font-size: 5em;
-  color: #fff;
+  /* Define o tamanho da fonte para o título como 5em (em relação ao tamanho da fonte padrão) */
+  color: var(--branco);
+  /* Define a cor do texto do título como branco */
 }
 
+/* Estilos para parágrafos (p) dentro do conteúdo da seção de banner */
 .banner .contente p {
   font-size: 1em;
-  color: #fff;
+  /* Define o tamanho da fonte para os parágrafos como 1em (em relação ao tamanho da fonte padrão) */
+  color: var(--branco);
+  /* Define a cor do texto dos parágrafos como branco */
 }
 
+/* Estilos aplicados quando a largura da tela é igual ou inferior a 991 pixels */
 @media screen and (max-width: 991px) {
   .banner .contente h2 {
     font-size: 3em;
+    /* Reduz o tamanho da fonte para o título para 3em quando a largura da tela é igual ou inferior a 991 pixels */
   }
 }
