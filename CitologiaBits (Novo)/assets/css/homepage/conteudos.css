@@ -1,0 +1,71 @@
+/* Estilos para as imagens dentro da classe "imagem-caixa" que estão dentro da classe "caixa" que está dentro da classe "contente" que está dentro da classe "conteudos" */
+.conteudos .contente .caixa .imagem-caixa {
+  position: relative;
+  /* Define a posição do elemento como relativa */
+  width: 100%;
+  /* Define a largura do elemento como 100% */
+  height: 300px;
+  /* Define a altura do elemento como 300 pixels */
+}
+
+/* Estilos para as imagens dentro da classe "imagem-caixa" que estão dentro da classe "caixa" que está dentro da classe "contente" que está dentro da classe "conteudos" */
+.conteudos .contente .caixa .imagem-caixa img {
+  position: absolute;
+  /* Define a posição da imagem como absoluta, em relação ao elemento pai */
+  top: 0;
+  /* Posiciona a imagem no topo do elemento pai */
+  left: 0;
+  /* Posiciona a imagem à esquerda do elemento pai */
+  width: 100%;
+  /* Define a largura da imagem como 100% do elemento pai */
+  height: 100%;
+  /* Define a altura da imagem como 100% do elemento pai */
+  object-fit: cover;
+  /* Redimensiona a imagem para cobrir todo o espaço disponível no elemento pai */
+}
+
+/* Estilizando o conteúdo do conteudos */
+.conteudos .contente {
+  display: flex;
+  /* Define o elemento de conteúdo do conteudos como um contêiner flexível */
+  justify-content: center;
+  /* Centraliza o conteúdo horizontalmente dentro do elemento de conteúdo */
+  flex-direction: linha-reverse;
+  /* Define a direção do fluxo de itens dentro do elemento de conteúdo como linha-reverse (provavelmente um erro, pois deveria ser "row-reverse") */
+  flex-wrap: wrap;
+  /* Permite que o conteúdo quebre para uma nova linha, caso não caiba horizontalmente */
+  margin-top: 40px;
+  /* Adiciona espaçamento acima para o elemento de conteúdo do conteudos */
+}
+
+/* Estilizando as caixas do conteudos */
+.conteudos .contente .caixa {
+  width: 340px;
+  /* Define a largura das caixas do conteudos como 340 pixels */
+  margin: 20px;
+  /* Adiciona espaçamento externo de 20 pixels em todas as direções para as caixas do conteudos */
+  border: 15px solid var(--branco);
+  /* Adiciona uma borda de 15 pixels sólida de cor branca para as caixas do conteudos */
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+  /* Adiciona uma sombra suave às caixas do conteudos */
+}
+
+/* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
+@media screen and (max-width: 991px) {
+
+  .conteudos .contente {
+    margin-top: 20px;
+    /* Reduz o espaçamento acima para o elemento de conteúdo do menu quando a largura da tela é igual ou inferior a 991 pixels */
+  }
+
+  .conteudos .contente .caixa {
+    margin: 10px;
+    /* Reduz o espaçamento externo para as caixas do conteudos quando a largura da tela é igual ou inferior a 991 pixels */
+  }
+
+  .conteudos .contente .caixa .imagem-caixa {
+    height: 260px;
+    /* Reduz a altura do elemento de imagem das caixas do conteudos quando a largura da tela é igual ou inferior a 991 pixels */
+  }
+
+}
