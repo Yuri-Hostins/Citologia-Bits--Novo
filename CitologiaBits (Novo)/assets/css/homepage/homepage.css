@@ -2,6 +2,7 @@
 @import url("banner.css"); /* Importa o arquivo "banner.css" */
 @import url("linha.css"); /* Importa o arquivo "linha.css" */
 @import url("sobre.css"); /* Importa o arquivo "sobre.css" */
+@import url("conteudos.css"); /* Importa o arquivo "conteudos.css" */
 @import url("curiosidades.css"); /* Importa o arquivo "curiosidades.css" */
 @import url("contato.css"); /* Importa o arquivo "contato.css" */
 
@@ -47,32 +48,6 @@ p {
 
 /* Estilos para as imagens dentro da classe "imagem-caixa" */
 .imagem-caixa img {
-  position: absolute;
-  /* Define a posição da imagem como absoluta, em relação ao elemento pai */
-  top: 0;
-  /* Posiciona a imagem no topo do elemento pai */
-  left: 0;
-  /* Posiciona a imagem à esquerda do elemento pai */
-  width: 100%;
-  /* Define a largura da imagem como 100% do elemento pai */
-  height: 100%;
-  /* Define a altura da imagem como 100% do elemento pai */
-  object-fit: cover;
-  /* Redimensiona a imagem para cobrir todo o espaço disponível no elemento pai */
-}
-
-/* Estilos para as imagens dentro da classe "imagem-caixa" que estão dentro da classe "caixa" que está dentro da classe "contente" que está dentro da classe "menu" */
-.menu .contente .caixa .imagem-caixa {
-  position: relative;
-  /* Define a posição do elemento como relativa */
-  width: 100%;
-  /* Define a largura do elemento como 100% */
-  height: 300px;
-  /* Define a altura do elemento como 300 pixels */
-}
-
-/* Estilos para as imagens dentro da classe "imagem-caixa" que estão dentro da classe "caixa" que está dentro da classe "contente" que está dentro da classe "menu" */
-.menu .contente .caixa .imagem-caixa img {
   position: absolute;
   /* Define a posição da imagem como absoluta, em relação ao elemento pai */
   top: 0;

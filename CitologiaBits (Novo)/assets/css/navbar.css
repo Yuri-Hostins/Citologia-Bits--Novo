@@ -132,31 +132,9 @@ header .navegacao li a:hover {
   /* Define a direção do fluxo de itens dentro do elemento título como coluna */
 }
 
-/* Estilizando o conteúdo do menu */
-.menu .contente {
-  display: flex;
-  /* Define o elemento de conteúdo do menu como um contêiner flexível */
-  justify-content: center;
-  /* Centraliza o conteúdo horizontalmente dentro do elemento de conteúdo */
-  flex-direction: linha-reverse;
-  /* Define a direção do fluxo de itens dentro do elemento de conteúdo como linha-reverse (provavelmente um erro, pois deveria ser "row-reverse") */
-  flex-wrap: wrap;
-  /* Permite que o conteúdo quebre para uma nova linha, caso não caiba horizontalmente */
-  margin-top: 40px;
-  /* Adiciona espaçamento acima para o elemento de conteúdo do menu */
-}
 
-/* Estilizando as caixas do menu */
-.menu .contente .caixa {
-  width: 340px;
-  /* Define a largura das caixas do menu como 340 pixels */
-  margin: 20px;
-  /* Adiciona espaçamento externo de 20 pixels em todas as direções para as caixas do menu */
-  border: 15px solid var(--branco);
-  /* Adiciona uma borda de 15 pixels sólida de cor branca para as caixas do menu */
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
-  /* Adiciona uma sombra suave às caixas do menu */
-}
+
+
 
 /* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
 @media screen and (max-width: 991px) {
@@ -243,21 +221,6 @@ header .navegacao li a:hover {
   .navegacao-fixa .menutoggle {
     filter: invert(1);
     /* Inverte as cores do menutoggle quando está na navegação fixa */
-  }
-
-  .menu .contente {
-    margin-top: 20px;
-    /* Reduz o espaçamento acima para o elemento de conteúdo do menu quando a largura da tela é igual ou inferior a 991 pixels */
-  }
-
-  .menu .contente .caixa {
-    margin: 10px;
-    /* Reduz o espaçamento externo para as caixas do menu quando a largura da tela é igual ou inferior a 991 pixels */
-  }
-
-  .menu .contente .caixa .imagem-caixa {
-    height: 260px;
-    /* Reduz a altura do elemento de imagem das caixas do menu quando a largura da tela é igual ou inferior a 991 pixels */
   }
 
   .titulo-texto {
