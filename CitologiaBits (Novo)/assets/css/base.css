@@ -22,9 +22,9 @@
   --color-principal: #1d1d1d; /* Cor que utilizamos na tag "body" */
 
   /* Define variáveis de cores utilizadas no loader (carregador de página) */
-  --color-loader--ciano--antes: #1cffb3; /* Cor ciano antes da animação do loader */
-  --color-loader--ciano--depois: #0ff; /* Cor ciano depois da animação do loader */
-  --color-loader--branco: #e7e7e7; /* Cor de fundo do loader em tom de branco */
+  --color-loader--ciano--antes: #FE0000; /* Cor ciano antes da animação do loader */
+  --color-loader--ciano--depois: #0079FF; /* Cor ciano depois da animação do loader */
+  --color-loader--branco: #585656; /* Cor de fundo do loader em tom de branco */ 
 
   /* Define a cor do texto da barra de navegação */
   --color-navbar--preto: #111;

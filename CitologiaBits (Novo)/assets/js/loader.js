@@ -37,5 +37,5 @@ window.addEventListener("load", function () {
         body.style.opacity = "1";
       }, 500);
     }, 200);
-  }, 3000);
+  }, 2500);
 });

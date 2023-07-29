@@ -7,5 +7,5 @@ function togglemenu() {
   const menutoggle = document.querySelector(".menutoggle"); // Seleciona o elemento com a classe "menutoggle"
   const navigation = document.querySelector(".navegacao"); // Seleciona o elemento com a classe "navegacao"
   menutoggle.classList.toggle("active"); // Alterna a classe "active" no elemento menutoggle
-  navigation.classList.toggle("active"); // Alterna a classe "active" no elemento navigation
+  navigation.classList.toggle("active"); // Alterna a classe "active" no elemento navegacao
 }
