@@ -1,20 +1,34 @@
 /* Importando estilos de arquivos externos */
-@import url("reset.css");  /* Importa o arquivo "reset.css" para redefinir os estilos padrão do navegador */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");  /* Importa a fonte Poppins do Google Fonts com diferentes pesos (400, 500, 600) */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap"); /* Importa a fonte Open Sans do Google Fonts com diferentes pesos (400, 500, 600) */
-@import url("loader.css");  /* Importa o arquivo "loader.css" específico para a página inicial */
-@import url("navbar.css");  /* Importa o arquivo "navbar.css" para estilizar a barra de navegação */
-@import url("homepage/homepage.css");  /* Importa o arquivo "homepage.css" específico para a página inicial */
-@import url("conteudo/conteudo.css");  /* Importa o arquivo "conteudo.css" específico para a página inicial */
-@import url("footer.css");  /* Importa o arquivo "footer.css" para estilizar o rodapé */
+
+@import url("reset.css"); /* Importa o arquivo "reset.css" para redefinir os estilos padrão do navegador */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); /* Importa a fonte Poppins do Google Fonts com diferentes pesos (400, 500, 600) */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");/* Importa a fonte Open Sans do Google Fonts com diferentes pesos (400, 500, 600) */
+@import url("loader.css"); /* Importa o arquivo "loader.css" específico para a página inicial */
+@import url("navbar.css"); /* Importa o arquivo "navbar.css" para estilizar a barra de navegação */
+@import url("homepage/homepage.css"); /* Importa o arquivo "homepage.css" específico para a página inicial */
+@import url("conteudo/conteudo.css"); /* Importa o arquivo "conteudo.css" específico para a página inicial */
+@import url("footer.css"); /* Importa o arquivo "footer.css" para estilizar o rodapé */
 
 /* Definição de variáveis de cores */
-:root{
-  --branco: #fff; /* Define a variável "branco" como branco (#fff) */
-  
-  --color-loader--ciano--antes: #1cffb3; /* Define a variável "color-loader--ciano--antes" como um tom de ciano (#1cffb3) */
-  --color-loader--ciano--depois: #0ff; /* Define a variável "color-loader--ciano--depois" como ciano (#0ff) */
-  --color-loader--branco: #e7e7e7; /* Define a variável "color-loader--branco" como um tom de branco (#e7e7e7) */
-  --color-navbar--preto: #111; /* Define a variável "color-navbar--preto" como um tom de preto (#111) */
-  --color-link: #ff0157; /* Define a variável "color-link" como um tom de rosa (#ff0157) */
+:root {
+  /* Define a variável "branco" como branco (#fff) */
+  --branco: #fff;
+
+  /* Define variáveis de cores utilizadas no conteúdo da página */
+  --color-titulo--conteudo: #005baa; /* Cor do título do conteúdo */
+  --botao-border--conteudo: #c2c2c2; /* Cor da borda de botões no conteúdo */
+  --botao-texto--conteudo: #717171; /* Cor do texto de botões no conteúdo */
+  --background--conteudo: #f6f7fb; /* Cor de fundo do conteúdo */
+  --color-principal: #1d1d1d; /* Cor que utilizamos na tag "body" */
+
+  /* Define variáveis de cores utilizadas no loader (carregador de página) */
+  --color-loader--ciano--antes: #1cffb3; /* Cor ciano antes da animação do loader */
+  --color-loader--ciano--depois: #0ff; /* Cor ciano depois da animação do loader */
+  --color-loader--branco: #e7e7e7; /* Cor de fundo do loader em tom de branco */
+
+  /* Define a cor do texto da barra de navegação */
+  --color-navbar--preto: #111;
+
+  /* Define a cor dos links na página */
+  --color-link: #ff0157; /* Cor rosa para os links */
 }
