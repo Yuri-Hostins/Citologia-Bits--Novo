@@ -24,6 +24,10 @@ figcaption {
   /* Adiciona margem de 1rem em todas as direções ao elemento <figcaption> */
 }
 
+.titulo-span{
+  color: var(--color-link);
+}
+
 .background-conteudo {
   background-color: #f6f7fb;
   /* Define a cor de fundo do elemento com tom de azul claro */
@@ -70,7 +74,7 @@ figcaption {
 }
 
 .link-conteudo {
-  color: #ff0157;
+  color: var(--color-link);
   /* Define a cor do texto dos links com a classe .link-conteudo */
   text-decoration: none;
   /* Remove a decoração de sublinhado dos links */
