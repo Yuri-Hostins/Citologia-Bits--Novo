@@ -14,13 +14,113 @@ const tempoCronometro = document.querySelector(".cronometro .segundos-cronometro
 let questions = [
 
   {
-    question: 'Em qual região da África as máscaras são mais proeminentes na cultura?',
-    answer: "África Ocidental",
+    question: 'Qual é a função principal do citoplasma',
+    answer: "Síntese de proteínas",
     options: [
-      "África Austral",
-      "África Oriental",
-      "África Ocidental",
-      "África Central",
+      "Armazenamento de informações genéticas",
+      "Síntese de proteínas",
+      "Proteção do núcleo celular",
+      "Transporte de oxigênio",
+    ],
+  },
+  {
+    question: 'O que é o citoplasma?',
+    answer: "Substância gelatinosa que preenche o núcleo",
+    options: [
+      "Estrutura celular que engloba o núcleo",
+      "Substância gelatinosa que preenche o núcleo",
+      "Membrana que envolve a célula",
+      "Estrutura celular presente apenas em células vegetais",
+    ],
+  },
+  {
+    question: 'O que é responsável pela síntese de proteínas no citoplasma?',
+    answer: "Ribossomos",
+    options: [
+      "Complexo de Golgi",
+      "Ribossomos",
+      "Lisossomos",
+      "Mitocôndrias",
+    ],
+  },
+  {
+    question: 'Qual é o papel do citoesqueleto no citoplasma?',
+    answer: "Suporte estrutural e divisão celular",
+    options: [
+      "Síntese de lipídios",
+      "Armazenamento de água",
+      "Suporte estrutural e divisão celular",
+      "Fotossíntese",
+    ],
+  },
+  {
+    question: 'O que compõe principalmente o citoplasma?',
+    answer: "Água, íons, proteínas, enzimas e organelas celulares.",
+    options: [
+      "Água, íons, proteínas, enzimas e organelas celulares.",
+      "Gases e nutrientes",
+      "Vitaminas e minerais",
+      "Ácidos nucleicos",
+    ],
+  },
+  {
+    question: 'Além das células eucarióticas, o citoplasma também está presente em células',
+    answer: "Procariontes",
+    options: [
+      "Procariontes",
+      "Animais apenas",
+      "Vegetais apenas",
+      "Fúngicas apenas",
+    ],
+  },
+  {
+    question: 'Qual é o papel do citoplasma na realização da citocinese?',
+    answer: "Dividir o material genético igualmente entre as células filhas",
+    options: [
+      "Controlar a entrada e saída de substâncias da célula",
+      "Síntese de carboidratos para a divisão celular",
+      "Dividir o material genético igualmente entre as células filhas",
+      "Armazenar informações genéticas",
+    ],
+  },
+  {
+    question: 'Qual é o nome dado à região do citoplasma que contém o material genético nas células procariontes?',
+    answer: "Nucleoide",
+    options: [
+      "Núcleo",
+      "Nucleoide",
+      "Complexo de Golgi",
+      "Retículo endoplasmático",
+    ],
+  },
+  {
+    question: 'Quais organelas citoplasmáticas são responsáveis pela produção de energia da célula?',
+    answer: "Mitocôndrias",
+    options: [
+      "Complexo de Golgi",
+      "Mitocôndrias",
+      "Lisossomos",
+      "Ribossomos",
+    ],
+  },
+  {
+    question: 'Como são chamadas as extensões do citoplasma que aumentam a superfície de absorção de nutrientes em células vegetais?',
+    answer: "Microvilosidades",
+    options: [
+      "Cílios",
+      "Flagelos",
+      "Microvilosidades",
+      "Pseudópodes",
+    ],
+  },
+  {
+    question: 'Qual é a função dos peroxissomos no citoplasma?',
+    answer: "Desintoxicação celular e metabolismo de lipídios",
+    options: [
+      "Produção de lipídios",
+      "Digestão intracelular",
+      "Desintoxicação celular e metabolismo de lipídios",
+      "Síntese de proteínas",
     ],
   },
 ];
@@ -80,8 +180,8 @@ sairQuiz.onclick = () => {
   window.location.reload(); // recarregar a página atual
 };
 
-const botaoProximo = document.querySelector("footer .botao-proximo");
-const contadorPeguntas = document.querySelector("footer .total-perguntas");
+const botaoProximo = document.querySelector(".footer-quiz .botao-proximo");
+const contadorPeguntas = document.querySelector(".footer-quiz  .perguntas-texto");
 
 // se o botão Next Que for clicado
 botaoProximo.onclick = () => {

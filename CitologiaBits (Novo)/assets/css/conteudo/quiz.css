@@ -309,7 +309,7 @@ section .lista-opcoes .option .icon {
   border-color: #a42834;
 }
 
-footer {
+.footer-quiz {
   height: 60px;
   padding: 0 30px;
   display: flex;
@@ -318,21 +318,21 @@ footer {
   border-top: 1px solid lightgrey;
 }
 
-footer .total-perguntas span {
+.footer-quiz .total-perguntas span {
   display: flex;
   user-select: none;
 }
 
-footer .total-perguntas span p {
+.footer-quiz .total-perguntas span p {
   font-weight: 500;
   padding: 0 5px;
 }
 
-footer .total-perguntas span p:first-child {
+.footer-quiz .total-perguntas span p:first-child {
   padding-left: 0px;
 }
 
-footer button {
+.footer-quiz button {
   height: 40px;
   padding: 0 13px;
   font-size: 18px;
@@ -351,11 +351,11 @@ footer button {
   transition: all 0.3s ease;
 }
 
-footer button:hover {
+.footer-quiz button:hover {
   background: #2404b1;
 }
 
-footer button.show {
+.footer-quiz button.show {
   opacity: 1;
   pointer-events: auto;
   transform: scale(1);
