@@ -16,7 +16,7 @@ main {
 }
 
 figcaption {
-  color: #717171;
+  color: var(--botao-texto--conteudo);
   /* Define a cor do texto dentro do elemento <figcaption> */
   font-size: 1rem;
   /* Define o tamanho da fonte do texto dentro do elemento <figcaption> */
@@ -24,8 +24,12 @@ figcaption {
   /* Adiciona margem de 1rem em todas as direções ao elemento <figcaption> */
 }
 
+.titulo-span{
+  color: var(--color-link);
+}
+
 .background-conteudo {
-  background-color: #f6f7fb;
+  background-color: var(--background--conteudo);
   /* Define a cor de fundo do elemento com tom de azul claro */
   border-radius: 10px;
   /* Adiciona bordas arredondadas com raio de 10px ao elemento */
@@ -70,7 +74,7 @@ figcaption {
 }
 
 .link-conteudo {
-  color: #ff0157;
+  color: var(--color-link);
   /* Define a cor do texto dos links com a classe .link-conteudo */
   text-decoration: none;
   /* Remove a decoração de sublinhado dos links */
@@ -129,9 +133,9 @@ figcaption {
   /* Define o peso da fonte como negrito */
   font-size: clamp(3.4375rem, 3.25rem + 0.75vw, 4rem);
   /* Define o tamanho da fonte com base em uma fórmula */
-  background-color: #005baa;
+  background-color: var(--color-titulo--conteudo);
   /* Define a cor de fundo do texto */
-  background-image: linear-gradient(45deg, #005baa, #000000);
+  background-image: linear-gradient(45deg, var(--color-titulo--conteudo), #000000);
   /* Cria um gradiente linear como imagem de fundo */
   background-size: 100%;
   /* Redimensiona a imagem de fundo para cobrir todo o texto */
@@ -150,7 +154,7 @@ figcaption {
 .banner-conteudo>div hr {
   display: block;
   /* Define o elemento <hr> como bloco */
-  background: #005baa;
+  background: var(--color-titulo--conteudo);
   /* Define a cor de fundo do elemento <hr> */
   height: 0.25rem;
   /* Define a altura do elemento <hr> */
@@ -174,11 +178,11 @@ figcaption {
   /* Remove a decoração de sublinhado dos links */
   text-transform: uppercase;
   /* Transforma o texto em letras maiúsculas */
-  color: #717171;
+  color: var(--botao-texto--conteudo);
   /* Define a cor do texto dos links */
   font-weight: 500;
   /* Define o peso da fonte dos links */
-  background: #fff;
+  background: var(--branco);
   /* Define a cor de fundo dos links */
   border-radius: 3.125rem;
   /* Define o raio das bordas dos links */
@@ -187,7 +191,7 @@ figcaption {
 }
 
 .banner-conteudo>div>a {
-  border: 2px solid #c2c2c2;
+  border: 2px solid var(--botao-border--conteudo);
   /* Define uma borda sólida de 2px nos links */
   margin-top: 2.188rem;
   /* Define uma margem superior de 2.188rem nos links */
@@ -196,9 +200,9 @@ figcaption {
 }
 
 .banner-conteudo>div>a:hover {
-  border: 0.125rem solid #005baa;
+  border: 0.125rem solid var(--color-titulo--conteudo);
   /* Define uma borda sólida de 0.125rem nos links quando o mouse está em cima */
-  color: #005baa;
+  color: var(--color-titulo--conteudo);
   /* Define a cor do texto dos links quando o mouse está em cima */
 }
 
