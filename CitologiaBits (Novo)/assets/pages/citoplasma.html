@@ -8,7 +8,6 @@
 
     <!-- Links -->
     <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/conteudo/citoplasma.css" />
     <link rel="shortcut icon" href="../img/favicon/favicon.png" />
     
     <!-- Scripts -->
@@ -466,72 +465,72 @@
           </div>
           
           <!-- Aqui começa o quiz -->
-
+    
           <!-- botão iniciar Quiz -->
-          <section class="container-botoes">
-            <h1>Bem-vindo ao Genio Quiz!</h1>
-            <p>Neste quiz, você verá perguntas relacionadas ao que você aprendeu.</p>
-            <div class="botao-comeca">
+          <section class="container-buttons">
+            <h3>Bem-vindo ao Genio Quiz</h3>
+            <div class="start_btn">
               <button>Começar Quiz</button>
+              <p>Neste quiz, você verá perguntas relacionadas ao que você aprendeu.</p>
             </div>
           </section>
-    
+
           <!-- Caixa de informação  -->
-          <div class="caixa-infomacao">
-            <div class="titulo-informacao"><span>Regras deste Quiz Game</span></div>
-            <ul class="lista-informacao">
-              <li class="informacao">
+          <div class="info_box">
+            <div class="info-title"><span>Regras deste Quiz Game</span></div>
+            <div class="info-list">
+              <div class="info">
                 1-) você só tem <span>25 segundos</span> por pergunta.
-              </li>
-              <li class="informacao">
+              </div>
+              <div class="info">
                 2-) Depois de selecionar sua resposta, ela não pode ser desfeita.
-              </li>
-              <li class="informacao">
+              </div>
+              <div class="info">
                 3-) Você não pode selecionar nenhuma opção quando o tempo acabar.
-              </li>
-              <li class="informacao">
+              </div>
+              <div class="info">
                 4-) Você não pode sair do Quiz Game enquanto estiver jogando.
-              </li>
-              <li class="informacao">
+              </div>
+              <div class="info">
                 5-) Você receberá pontos com base em suas respostas corretas.
-              </li>
-            </ul>
-            <div class="botoes">
-              <button class="sair">Sair do Quiz</button>
-              <button class="reiniciar">Continuar</button>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="quit">Sair do Quiz</button>
+              <button class="restart">Continuar</button>
             </div>
           </div>
 
           <!-- Caixa de perguntas -->
-          <div class="caixa-quiz">
+          <div class="quiz_box">
             <header>
-              <div class="titulo">Gênio Quiz</div>
-              <div class="cronometro">
-                <div class="hora-esquerda-texto">Tempo restante</div>
-                <div class="segundos-cronometro">25</div>
+              <div class="title">Gênio Quiz</div>
+              <div class="timer">
+                <div class="time_left_txt">Tempo restante</div>
+                <div class="timer_sec">25</div>
               </div>
-              <div class="linha-tempo"></div>
+              <div class="time_line"></div>
             </header>
             <section>
-              <div class="perguntas-texto">
+              <div class="que_text">
                 <!-- Aqui eu inseri a pergunta do JavaScript -->
               </div>
-              <div class="lista-opcoes">
+              <div class="option_list">
                 <!-- Aqui eu inseri a pergunta do JavaScript -->
               </div>
             </section>
 
             <!-- rodapé da caixa de perguntas -->
             <div class="footer-quiz">
-              <div class="total-perguntas">
+              <div class="total_que">
                 <!-- Aqui inseri o número de contagem de perguntas do JavaScript -->
               </div>
-              <button class="botao-proximo">Próximo teste</button>
+              <button class="next_btn">Próximo teste</button>
             </div>
           </div>
 
           <!-- Caixa de resultados -->
-          <div class="caixa-resultado">
+          <div class="result_box">
             <div class="icon">
               <i class="fas fa-crown"></i>
             </div>
@@ -539,9 +538,9 @@
             <div class="score_text">
               <!-- Aqui inseri o resultado da pontuação do JavaScript -->
             </div>
-            <div class="botoes">
-              <button class="reiniciar">Replay Quiz</button>
-              <button class="sair">Sair do Quiz</button>
+            <div class="buttons">
+              <button class="restart">Replay Quiz</button>
+              <button class="quit">Sair do Quiz</button>
             </div>
           </div>
 

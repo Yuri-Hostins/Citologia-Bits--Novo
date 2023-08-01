@@ -11,29 +11,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.informacao {
+.info {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 17px;
@@ -43,35 +21,16 @@
 
 
 ::selection {
-  color: var(--branco);
+  color: #fff;
   background: #3414bc;
 }
 
-.container-botoes {
+.container-buttons {
   display: flex;
   flex-direction: column
 }
 
-.caixa-infomacao,
-.caixa-quiz,
-.caixa-resultado {
-  position: absolute;
-  margin-top: -13rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.caixa-infomacao.activeInfo,
-.caixa-quiz.activeQuiz,
-.caixa-resultado.activeResult {
-  opacity: 1;
-  z-index: 5;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.botao-comeca button {
+.buttons-infos button {
   font-size: 25px;
   font-weight: 500;
   color: #3414bc;
@@ -79,18 +38,18 @@
   outline: none;
   border: none;
   border-radius: 5px;
-  background: var(--branco);
+  background: #fff;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 2rem;
   transition: 0.25s ease;
 }
 
-.botao-comeca button:hover,
-.botao-comeca button:focus {
+.buttons-infos button:hover,
+.buttons-infos button:focus {
   font-size: 25px;
   font-weight: 500;
-  color: var(--branco);
+  color: #fff;
   padding: 15px 30px;
   outline: none;
   border: none;
@@ -102,9 +61,59 @@
   transition: 0.25s ease;
 }
 
-.caixa-infomacao {
+.info_box,
+.quiz_box,
+.result_box {
+  position: absolute;
+  margin-top: -13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.start_btn button {
+  font-size: 25px;
+  font-weight: 500;
+  color: #3414bc;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2rem;
+  transition: 0.25s ease;
+}
+
+.start_btn button:hover,
+.start_btn button:focus {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: #3414bc;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2rem;
+  transition: 0.25s ease;
+}
+
+.info_box {
   width: 540px;
-  background: var(--branco);
+  background: #fff;
   border-radius: 5px;
   transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
@@ -112,7 +121,7 @@
   transition: all 0.3s ease;
 }
 
-.caixa-infomacao .titulo-informacao {
+.info_box .info-title {
   height: 60px;
   width: 100%;
   border-bottom: 1px solid lightgrey;
@@ -124,21 +133,21 @@
   font-weight: 600;
 }
 
-.caixa-infomacao .lista-informacao {
+.info_box .info-list {
   padding: 15px 30px;
 }
 
-.caixa-infomacao .lista-informacao .informacao {
+.info_box .info-list .info {
   margin: 5px 0;
   font-size: 17px;
 }
 
-.caixa-infomacao .lista-informacao .informacao span {
+.info_box .info-list .info span {
   font-weight: 600;
   color: #3414bc;
 }
 
-.caixa-infomacao .botoes {
+.info_box .buttons {
   height: 60px;
   display: flex;
   align-items: center;
@@ -147,7 +156,7 @@
   border-top: 1px solid lightgrey;
 }
 
-.caixa-infomacao .botoes button {
+.info_box .buttons button {
   margin: 0 5px;
   height: 40px;
   width: 100px;
@@ -161,9 +170,9 @@
   transition: all 0.3s ease;
 }
 
-.caixa-quiz {
+.quiz_box {
   width: 550px;
-  background: var(--branco);
+  background: #fff;
   border-radius: 5px;
   transform: translate(-50%, -50%) scale(0.9);
   opacity: 0;
@@ -171,12 +180,12 @@
   transition: all 0.3s ease;
 }
 
-.caixa-quiz header {
+.quiz_box header {
   position: relative;
   z-index: 2;
   height: 70px;
   padding: 0 30px;
-  background: var(--branco);
+  background: #fff;
   border-radius: 5px 5px 0 0;
   display: flex;
   align-items: center;
@@ -184,12 +193,12 @@
   box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
-.caixa-quiz header .titulo {
+.quiz_box header .title {
   font-size: 20px;
   font-weight: 600;
 }
 
-.caixa-quiz header .cronometro {
+.quiz_box header .timer {
   color: #004085;
   background: #cce5ff;
   border: 1px solid #b8daff;
@@ -202,18 +211,18 @@
   width: 145px;
 }
 
-.caixa-quiz header .cronometro .hora-esquerda-texto {
+.quiz_box header .timer .time_left_txt {
   font-weight: 400;
   font-size: 17px;
   user-select: none;
 }
 
-.caixa-quiz header .cronometro .segundos-cronometro {
+.quiz_box header .timer .timer_sec {
   font-size: 18px;
   font-weight: 500;
   height: 30px;
   width: 45px;
-  color: var(--branco);
+  color: #fff;
   border-radius: 5px;
   line-height: 30px;
   text-align: center;
@@ -222,7 +231,7 @@
   user-select: none;
 }
 
-.caixa-quiz header .linha-tempo{
+.quiz_box header .time_line {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -232,20 +241,20 @@
 
 section {
   padding: 25px 30px 20px 30px;
-  background: var(--branco);
+  background: #fff;
 }
 
-section .perguntas-texto {
+section .que_text {
   font-size: 25px;
   font-weight: 600;
 }
 
-section .lista-opcoes {
+section .option_list {
   padding: 20px 0px;
   display: block;
 }
 
-section .lista-opcoes .option {
+section .option_list .option {
   background: aliceblue;
   border: 1px solid #84c5fe;
   border-radius: 5px;
@@ -259,33 +268,33 @@ section .lista-opcoes .option {
   justify-content: space-between;
 }
 
-section .lista-opcoes .option:last-child {
+section .option_list .option:last-child {
   margin-bottom: 0px;
 }
 
-section .lista-opcoes .option:hover {
+section .option_list .option:hover {
   color: #004085;
   background: #cce5ff;
   border: 1px solid #b8daff;
 }
 
-section .lista-opcoes .option.correct {
+section .option_list .option.correct {
   color: #155724;
   background: #d4edda;
   border: 1px solid #c3e6cb;
 }
 
-section .lista-opcoes .option.incorrect {
+section .option_list .option.incorrect {
   color: #721c24;
   background: #f8d7da;
   border: 1px solid #f5c6cb;
 }
 
-section .lista-opcoes .option.disabled {
+section .option_list .option.disabled {
   pointer-events: none;
 }
 
-section .lista-opcoes .option .icon {
+section .option_list .option .icon {
   height: 26px;
   width: 26px;
   border: 2px solid transparent;
@@ -297,13 +306,13 @@ section .lista-opcoes .option .icon {
   line-height: 24px;
 }
 
-.lista-opcoes .option .icon.tick {
+.option_list .option .icon.tick {
   color: #23903c;
   border-color: #23903c;
   background: #d4edda;
 }
 
-.lista-opcoes .option .icon.cross {
+.option_list .option .icon.cross {
   color: #a42834;
   background: #f8d7da;
   border-color: #a42834;
@@ -318,17 +327,17 @@ section .lista-opcoes .option .icon {
   border-top: 1px solid lightgrey;
 }
 
-.footer-quiz .total-perguntas span {
+.footer-quiz .total_que span {
   display: flex;
   user-select: none;
 }
 
-.footer-quiz .total-perguntas span p {
+.footer-quiz .total_que span p {
   font-weight: 500;
   padding: 0 5px;
 }
 
-.footer-quiz .total-perguntas span p:first-child {
+.footer-quiz .total_que span p:first-child {
   padding-left: 0px;
 }
 
@@ -340,7 +349,7 @@ section .lista-opcoes .option .icon {
   cursor: pointer;
   border: none;
   outline: none;
-  color: var(--branco);
+  color: #fff;
   border-radius: 5px;
   background: #3414bc;
   border: 1px solid #3414bc;
@@ -361,8 +370,8 @@ section .lista-opcoes .option .icon {
   transform: scale(1);
 }
 
-.caixa-resultado {
-  background: var(--branco);
+.result_box {
+  background: #fff;
   border-radius: 5px;
   display: flex;
   padding: 25px 30px;
@@ -376,35 +385,35 @@ section .lista-opcoes .option .icon {
   transition: all 0.3s ease;
 }
 
-.caixa-resultado .icon {
+.result_box .icon {
   font-size: 100px;
   color: #3414bc;
   margin-bottom: 10px;
 }
 
-.caixa-resultado .complete_text {
+.result_box .complete_text {
   font-size: 20px;
   font-weight: 500;
 }
 
-.caixa-resultado .score_text span {
+.result_box .score_text span {
   display: flex;
   margin: 10px 0;
   font-size: 18px;
   font-weight: 500;
 }
 
-.caixa-resultado .score_text span p {
+.result_box .score_text span p {
   padding: 0 4px;
   font-weight: 600;
 }
 
-.caixa-resultado .botoes {
+.result_box .buttons {
   display: flex;
   margin: 20px 0;
 }
 
-.caixa-resultado .botoes button {
+.result_box .buttons button {
   margin: 0 10px;
   height: 45px;
   padding: 0 20px;
@@ -418,38 +427,38 @@ section .lista-opcoes .option .icon {
   transition: all 0.3s ease;
 }
 
-.botoes button.reiniciar {
-  color: var(--branco);
+.buttons button.restart {
+  color: #fff;
   background: #3414bc;
 }
 
-.botoes button.reiniciar:hover {
+.buttons button.restart:hover {
   background: #0263ca;
 }
 
-.botoes button.sair {
+.buttons button.quit {
   color: #3414bc;
-  background: var(--branco);
+  background: #fff;
 }
 
-.botoes button.sair:hover {
-  color: var(--branco);
+.buttons button.quit:hover {
+  color: #fff;
   background: #3414bc;
 }
 
 @media screen and (max-width: 550px) {
-  .caixa-infomacao {
+  .info_box {
     width: 363px;
     height: 545px;
   }
 
-  .caixa-infomacao .botoes {
+  .info_box .buttons {
     justify-content: center;
   }
 
-  .caixa-quiz {
+  .quiz_box {
     width: 357px;
-    background: var(--branco);
+    background: #fff;
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -457,8 +466,8 @@ section .lista-opcoes .option .icon {
     transition: all 0.3s ease;
   }
 
-  .caixa-resultado {
-    background: var(--branco);
+  .result_box {
+    background: #fff;
     border-radius: 5px;
     display: flex;
     padding: 25px 30px;

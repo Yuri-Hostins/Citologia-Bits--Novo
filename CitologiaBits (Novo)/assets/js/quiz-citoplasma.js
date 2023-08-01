@@ -1,14 +1,14 @@
 // selecionando todos os elementos necessários
-const botaoComeca = document.querySelector(".botao-comeca button");
-const caixaInformacao = document.querySelector(".caixa-infomacao");
-const botaoSair = caixaInformacao.querySelector(".botoes .sair");
-const botaoContinuar = caixaInformacao.querySelector(".botoes .reiniciar");
-const caixaQuiz = document.querySelector(".caixa-quiz");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const listaOpcoes = document.querySelector(".lista-opcoes");
-const linhaTempo = document.querySelector("header .linha-tempo");
-const tempoTexto = document.querySelector(".cronometro .hora-esquerda-texto");
-const tempoCronometro = document.querySelector(".cronometro .segundos-cronometro");
+const start_btn = document.querySelector(".start_btn button");
+const info_box = document.querySelector(".info_box");
+const exit_btn = info_box.querySelector(".buttons .quit");
+const continue_btn = info_box.querySelector(".buttons .restart");
+const quiz_box = document.querySelector(".quiz_box");
+const result_box = document.querySelector(".result_box");
+const option_list = document.querySelector(".option_list");
+const time_line = document.querySelector("header .time_line");
+const timeText = document.querySelector(".timer .time_left_txt");
+const timeCount = document.querySelector(".timer .timer_sec");
 
 // criando um array e passando o número, perguntas, opções e respostas
 let questions = [
@@ -126,19 +126,19 @@ let questions = [
 ];
 
 // se o botão startQuiz for clicado
-botaoComeca.onclick = () => {
-  caixaInformacao.classList.add("activeInfo"); // mostrar info box
+start_btn.onclick = () => {
+  info_box.classList.add("activeInfo"); // mostrar info box
 };
 
 // se o botão exitQuiz for clicado
-botaoSair.onclick = () => {
-  caixaInformacao.classList.remove("activeInfo"); // esconder info box
+exit_btn.onclick = () => {
+  info_box.classList.remove("activeInfo"); // esconder info box
 };
 
 // se o botão continueQuiz for clicado
-botaoContinuar.onclick = () => {
-  caixaInformacao.classList.remove("activeInfo"); // esconder info box
-  caixaQuiz.classList.add("activeQuiz"); // mostrar quiz box
+continue_btn.onclick = () => {
+  info_box.classList.remove("activeInfo"); // esconder info box
+  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
   showQuetions(0); // chamando a função showQuestions
   queCounter(1); // passando 1 parâmetro para queCounter
   startTimer(25); // chamando a função startTimer
@@ -153,13 +153,13 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-const reiniciarQuiz = caixaResultado.querySelector(".botoes .reiniciar");
-const sairQuiz = caixaResultado.querySelector(".botoes .sair");
+const restart_quiz = result_box.querySelector(".buttons .restart");
+const quit_quiz = result_box.querySelector(".buttons .quit");
 
 // se o botão restartQuiz for clicado
-reiniciarQuiz.onclick = () => {
-  caixaQuiz.classList.add("activeQuiz"); // mostrar quiz box
-  caixaResultado.classList.remove("activeResult"); // esconder result box
+restart_quiz.onclick = () => {
+  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
+  result_box.classList.remove("activeResult"); // esconder result box
   timeValue = 25;
   que_count = 0;
   que_numb = 1;
@@ -171,20 +171,20 @@ reiniciarQuiz.onclick = () => {
   clearInterval(counterLine); // limpar counterLine
   startTimer(timeValue); // chamando a função startTimer
   startTimerLine(widthValue); // chamando a função startTimerLine
-  tempoTexto.textContent = "Tempo Restante"; // alterar o texto de tempoTexto para Tempo Restante
-  botaoProximo.classList.remove("show"); // esconder o botão next
+  timeText.textContent = "Tempo Restante"; // alterar o texto de timeText para Tempo Restante
+  next_btn.classList.remove("show"); // esconder o botão next
 };
 
 // se o botão quitQuiz for clicado
-sairQuiz.onclick = () => {
+quit_quiz.onclick = () => {
   window.location.reload(); // recarregar a página atual
 };
 
-const botaoProximo = document.querySelector(".footer-quiz .botao-proximo");
-const contadorPeguntas = document.querySelector(".footer-quiz  .perguntas-texto");
+const next_btn = document.querySelector(".footer-quiz .next_btn");
+const bottom_ques_counter = document.querySelector(".footer-quiz .total_que");
 
 // se o botão Next Que for clicado
-botaoProximo.onclick = () => {
+next_btn.onclick = () => {
   if (que_count < questions.length - 1) {
     // se o contador de perguntas for menor que o comprimento total das perguntas
     que_count++; // incrementar o valor do contador de perguntas
@@ -195,8 +195,8 @@ botaoProximo.onclick = () => {
     clearInterval(counterLine); // limpar counterLine
     startTimer(timeValue); // chamando a função startTimer
     startTimerLine(widthValue); // chamando a função startTimerLine
-    tempoTexto.textContent = "Tempo Restante"; // alterar o texto de tempoTexto para Tempo Restante
-    botaoProximo.classList.remove("show"); // esconder o botão next
+    timeText.textContent = "Tempo Restante"; // alterar o texto de timeText para Tempo Restante
+    next_btn.classList.remove("show"); // esconder o botão next
   } else {
     clearInterval(counter); // limpar counter
     clearInterval(counterLine); // limar counterLine
@@ -206,7 +206,7 @@ botaoProximo.onclick = () => {
 
 // obtendo perguntas e opções do array
 function showQuetions(index) {
-  const que_text = document.querySelector(".total-perguntas");
+  const que_text = document.querySelector(".que_text");
 
   // criando uma nova tag span e div para a pergunta e opção e passando o valor usando o índice do array
   let que_tag =
@@ -229,9 +229,9 @@ function showQuetions(index) {
     questions[index].options[3] +
     "</span></div>";
   que_text.innerHTML = que_tag; // adicionando a nova tag span dentro de que_tag
-  listaOpcoes.innerHTML = option_tag; // adicionando a nova tag div dentro de option_tag
+  option_list.innerHTML = option_tag; // adicionando a nova tag div dentro de option_tag
 
-  const option = listaOpcoes.querySelectorAll(".option");
+  const option = option_list.querySelectorAll(".option");
 
   // definindo o atributo onclick para todas as opções disponíveis
   for (i = 0; i < option.length; i++) {
@@ -249,7 +249,7 @@ function optionSelected(answer) {
   clearInterval(counterLine); // limpar counterLine
   let userAns = answer.textContent; // obtendo a opção selecionada pelo usuário
   let correcAns = questions[que_count].answer; // obtendo a resposta correta do array
-  const allOptions = listaOpcoes.children.length; // obtendo todos os itens de opção
+  const allOptions = option_list.children.length; // obtendo todos os itens de opção
 
   if (userAns == correcAns) {
     // se a opção selecionada pelo usuário for igual à resposta correta do array
@@ -264,25 +264,25 @@ function optionSelected(answer) {
     console.log("Resposta Errada");
 
     for (i = 0; i < allOptions; i++) {
-      if (listaOpcoes.children[i].textContent == correcAns) {
+      if (option_list.children[i].textContent == correcAns) {
         // se houver uma opção que corresponde à resposta do array
-        listaOpcoes.children[i].setAttribute("class", "option correct"); // adicionar a cor verde à opção correspondente
-        listaOpcoes.children[i].insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção correspondente
+        option_list.children[i].setAttribute("class", "option correct"); // adicionar a cor verde à opção correspondente
+        option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção correspondente
         console.log("Resposta correta selecionada automaticamente.");
       }
     }
   }
   for (i = 0; i < allOptions; i++) {
-    listaOpcoes.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
+    option_list.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
   }
-  botaoProximo.classList.add("show"); // mostrar o botão next se o usuário selecionar alguma opção
+  next_btn.classList.add("show"); // mostrar o botão next se o usuário selecionar alguma opção
 }
 
 function showResult() {
-  caixaInformacao.classList.remove("activeInfo"); // esconder info box
-  caixaQuiz.classList.remove("activeQuiz"); // esconder quiz box
-  caixaResultado.classList.add("activeResult"); // mostrar result box
-  const scoreText = caixaResultado.querySelector(".score_text");
+  info_box.classList.remove("activeInfo"); // esconder info box
+  quiz_box.classList.remove("activeQuiz"); // esconder quiz box
+  result_box.classList.add("activeResult"); // mostrar result box
+  const scoreText = result_box.querySelector(".score_text");
   if (userScore > 3) {
     // se o usuário acertar mais de 3 perguntas
     // criando uma nova tag span e passando o número de pontos do usuário e o número total de perguntas
@@ -317,31 +317,31 @@ function showResult() {
 function startTimer(time) {
   counter = setInterval(timer, 1000);
   function timer() {
-    tempoCronometro.textContent = time; // alterando o valor de tempoCronometro com o valor de tempo
+    timeCount.textContent = time; // alterando o valor de timeCount com o valor de tempo
     time--; // decrementando o valor do tempo
     if (time < 9) {
       // se o tempo for menor que 9
-      let addZero = tempoCronometro.textContent;
-      tempoCronometro.textContent = "0" + addZero; // adicionar um 0 antes do valor do tempo
+      let addZero = timeCount.textContent;
+      timeCount.textContent = "0" + addZero; // adicionar um 0 antes do valor do tempo
     }
     if (time < 0) {
       // se o tempo for menor que 0
       clearInterval(counter); // limpar counter
-      tempoTexto.textContent = "Tempo Esgotado"; // alterar o texto de tempoTexto para Tempo Esgotado
-      const allOptions = listaOpcoes.children.length; // obtendo todos os itens de opção
+      timeText.textContent = "Tempo Esgotado"; // alterar o texto de timeText para Tempo Esgotado
+      const allOptions = option_list.children.length; // obtendo todos os itens de opção
       let correcAns = questions[que_count].answer; // obtendo a resposta correta do array
       for (i = 0; i < allOptions; i++) {
-        if (listaOpcoes.children[i].textContent == correcAns) {
+        if (option_list.children[i].textContent == correcAns) {
           // se houver uma opção que corresponde à resposta do array
-          listaOpcoes.children[i].setAttribute("class", "option correct"); // adicionar a cor verde à opção correspondente
-          listaOpcoes.children[i].insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção correspondente
+          option_list.children[i].setAttribute("class", "option correct"); // adicionar a cor verde à opção correspondente
+          option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção correspondente
           console.log("Tempo Esgotado: Resposta corretaselecionada automaticamente.");
         }
       }
       for (i = 0; i < allOptions; i++) {
-        listaOpcoes.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
+        option_list.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
       }
-      botaoProximo.classList.add("show"); // mostrar o botão next se o usuário selecionar alguma opção
+      next_btn.classList.add("show"); // mostrar o botão next se o usuário selecionar alguma opção
     }
   }
 }
@@ -350,7 +350,7 @@ function startTimerLine(time) {
   counterLine = setInterval(timer, 47);
   function timer() {
     time += 1; // incrementar o valor do tempo em 1
-    linhaTempo.style.width = time + "px"; // aumentar a largura da linhaTempo com px pelo valor do tempo
+    time_line.style.width = time + "px"; // aumentar a largura da time_line com px pelo valor do tempo
     
     // Verificar a largura da tela
     if (window.innerWidth < 600) {
@@ -380,9 +380,9 @@ function generateRandomQuestions() {
 }
 
 // se o botão continueQuiz for clicado
-botaoContinuar.onclick = () => {
-  caixaInformacao.classList.remove("activeInfo"); // esconder info box
-  caixaQuiz.classList.add("activeQuiz"); // mostrar quiz box
+continue_btn.onclick = () => {
+  info_box.classList.remove("activeInfo"); // esconder info box
+  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
   questions = generateRandomQuestions(); // Gerar um conjunto aleatório de perguntas
   showQuetions(0); // chamando a função showQuestions
   queCounter(1); // passando 1 parâmetro para queCounter
@@ -391,9 +391,9 @@ botaoContinuar.onclick = () => {
 };
 
 // se o botão restartQuiz for clicado
-reiniciarQuiz.onclick = () => {
-  caixaQuiz.classList.add("activeQuiz"); // mostrar quiz box
-  caixaResultado.classList.remove("activeResult"); // esconder result box
+restart_quiz.onclick = () => {
+  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
+  result_box.classList.remove("activeResult"); // esconder result box
   timeValue = 25;
   que_count = 0;
   que_numb = 1;
@@ -406,8 +406,8 @@ reiniciarQuiz.onclick = () => {
   clearInterval(counterLine); // limpar counterLine
   startTimer(timeValue); // chamando a função startTimer
   startTimerLine(widthValue); // chamando a função startTimerLine
-  tempoTexto.textContent = "Tempo Restante"; // alterar o texto de tempoTexto para Tempo Restante
-  botaoProximo.classList.remove("show"); // esconder o botão next
+  timeText.textContent = "Tempo Restante"; // alterar o texto de timeText para Tempo Restante
+  next_btn.classList.remove("show"); // esconder o botão next
 };
 
 function queCounter(index) {
@@ -418,5 +418,5 @@ function queCounter(index) {
     "</p> de <p>" +
     questions.length +
     "</p> Perguntas</span>";
-  contadorPeguntas.innerHTML = totalQueCounTag; // adicionando a nova tag span dentro de contadorPeguntas
+  bottom_ques_counter.innerHTML = totalQueCounTag; // adicionando a nova tag span dentro de bottom_ques_counter
 }
