@@ -12,256 +12,215 @@ const contagemTempo = document.querySelector(".tempo .tempo-segundo");
 
 // criando um array e passando o número, perguntas, opções e respostas
 let perguntas = [
-
   {
-    pergunta: 'Qual é a função principal do citoplasma',
-    alternativaCerta: "Síntese de proteínas",
-    opcoes: [
-      "Armazenamento de informações genéticas",
-      "Síntese de proteínas",
-      "Proteção do núcleo celular",
-      "Transporte de oxigênio",
-    ],
-  },
-  {
-    pergunta: 'O que é o citoplasma?',
-    alternativaCerta: "Substância gelatinosa que preenche o núcleo",
-    opcoes: [
-      "Estrutura celular que engloba o núcleo",
-      "Substância gelatinosa que preenche o núcleo",
-      "Membrana que envolve a célula",
-      "Estrutura celular presente apenas em células vegetais",
-    ],
-  },
-  {
-    pergunta: 'O que é responsável pela síntese de proteínas no citoplasma?',
+    pergunta: "Qual é a organela responsável pela síntese de proteínas?",
     alternativaCerta: "Ribossomos",
     opcoes: [
-      "Complexo de Golgi",
-      "Ribossomos",
-      "Lisossomos",
-      "Mitocôndrias",
+      "Mitocôndrias", 
+      "Retículo Endoplasmático", 
+      "Núcleo", 
+      "Ribossomos"
     ],
   },
   {
-    pergunta: 'Qual é o papel do citoesqueleto no citoplasma?',
-    alternativaCerta: "Suporte estrutural e divisão celular",
-    opcoes: [
-      "Síntese de lipídios",
-      "Armazenamento de água",
-      "Suporte estrutural e divisão celular",
-      "Fotossíntese",
-    ],
-  },
-  {
-    pergunta: 'O que compõe principalmente o citoplasma?',
-    alternativaCerta: "Água, íons, proteínas, enzimas e organelas celulares.",
-    opcoes: [
-      "Água, íons, proteínas, enzimas e organelas celulares.",
-      "Gases e nutrientes",
-      "Vitaminas e minerais",
-      "Ácidos nucleicos",
-    ],
-  },
-  {
-    pergunta: 'Além das células eucarióticas, o citoplasma também está presente em células',
-    alternativaCerta: "Procariontes",
-    opcoes: [
-      "Procariontes",
-      "Animais apenas",
-      "Vegetais apenas",
-      "Fúngicas apenas",
-    ],
-  },
-  {
-    pergunta: 'Qual é o papel do citoplasma na realização da citocinese?',
-    alternativaCerta: "Dividir o material genético igualmente entre as células filhas",
-    opcoes: [
-      "Controlar a entrada e saída de substâncias da célula",
-      "Síntese de carboidratos para a divisão celular",
-      "Dividir o material genético igualmente entre as células filhas",
-      "Armazenar informações genéticas",
-    ],
-  },
-  {
-    pergunta: 'Qual é o nome dado à região do citoplasma que contém o material genético nas células procariontes?',
-    alternativaCerta: "Nucleoide",
-    opcoes: [
-      "Núcleo",
-      "Nucleoide",
-      "Complexo de Golgi",
-      "Retículo endoplasmático",
-    ],
-  },
-  {
-    pergunta: 'Quais organelas citoplasmáticas são responsáveis pela produção de energia da célula?',
+    pergunta:"Qual é a organela conhecida como a 'usina de energia' da célula?",
     alternativaCerta: "Mitocôndrias",
     opcoes: [
-      "Complexo de Golgi",
+      "Cloroplastos", 
+      "Lisossomos", 
+      "Mitocôndrias", 
+      "Peroxissomos"
+    ],
+  },
+  {
+    pergunta:"Onde é armazenado o material genético (DNA) na célula eucariótica?",
+    alternativaCerta: "Núcleo",
+    opcoes: [
+      "Cloroplastos", 
+      "Núcleo", 
+      "Retículo Endoplasmático", 
+      "Lisossomos"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que contém enzimas digestivas e realiza a digestão intracelular?",
+    alternativaCerta: "Lisossomos",
+    opcoes: [
+      "Ribossomos", 
+      "Lisossomos", 
+      "Complexo de Golgi", 
+      "Vacúolos"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela responsável pela fotossíntese em células vegetais?",
+    alternativaCerta: "Cloroplastos",
+    opcoes: [
+      "Mitocôndrias", 
+      "Cloroplastos", 
+      "Lisossomos", 
+      "Núcleo"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que armazena água, íons e algumas substâncias de reserva?",
+    alternativaCerta: "Vacúolos",
+    opcoes: [
+      "Complexo de Golgi", 
+      "Ribossomos", 
+      "Vacúolos", 
+      "Núcleo"
+    ],
+  },
+  {
+    pergunta: "Qual é a organela que desintoxica o organismo ao metabolizar substâncias tóxicas?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Retículo Endoplasmático", 
+      "Peroxissomos", 
+      "Núcleo", 
+      "Lisossomos"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que processa, modifica e empacota proteínas para transporte?",
+    alternativaCerta: "Complexo de Golgi",
+    opcoes: [
+      "Mitocôndrias", 
+      "Complexo de Golgi", 
+      "Cloroplastos", 
+      "Ribossomos"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que auxilia na divisão celular e formação do fuso mitótico?",
+    alternativaCerta: "Centríolos",
+    opcoes: [
+      "Lisossomos",
+      "Centríolos",
+      "Retículo Endoplasmático",
+      "Cloroplastos",
+    ],
+  },
+  {
+    pergunta:"Qual é a organela responsável pela síntese de lipídios e detoxificação de substâncias?",
+    alternativaCerta: "Retículo Endoplasmático Liso",
+    opcoes: [
+      "Retículo Endoplasmático Rugoso",
+      "Ribossomos",
+      "Retículo Endoplasmático Liso",
+      "Mitocôndrias",
+    ],
+  },
+  {
+    pergunta: "Qual é a organela responsável pela produção de ATP (adenosina trifosfato), a moeda energética da célula?",
+    alternativaCerta: "Mitocôndrias",
+    opcoes: [
+      "Peroxissomos",
       "Mitocôndrias",
       "Lisossomos",
+      "Retículo Endoplasmático",
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que contém clorofila e é responsável pela fotossíntese em células vegetais?",
+    alternativaCerta: "Cloroplastos",
+    opcoes: [
+      "Complexo de Golgi", 
+      "Cloroplastos", 
+      "Vacúolos", 
+      "Lisossomos"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que produz ribossomos e está localizada no núcleo da célula?",
+    alternativaCerta: "Nucleolos",
+    opcoes: [
+      "Núcleo", 
+      "Nucleolos", 
+      "Cloroplastos", 
+      "Mitocôndrias"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que serve como local de armazenamento e transporte de substâncias dentro da célula?",
+    alternativaCerta: "Complexo de Golgi",
+    opcoes: [
+      "Vacúolos", 
+      "Ribossomos", 
+      "Complexo de Golgi", 
+      "Lisossomos"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que possui um papel fundamental na regulação da expressão gênica e síntese de RNA?",
+    alternativaCerta: "Núcleo",
+    opcoes: [
+      "Núcleo", 
+      "Ribossomos", 
+      "Retículo Endoplasmático", 
+      "Mitocôndrias"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela responsável pela degradação de substâncias celulares desnecessárias ou danificadas?",
+    alternativaCerta: "Lisossomos",
+    opcoes: [
+      "Mitocôndrias", 
+      "Lisossomos", 
+      "Peroxissomos", 
+      "Núcleo"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que auxilia na síntese, modificação e transporte de proteínas?",
+    alternativaCerta: "Retículo Endoplasmático",
+    opcoes: [
+      "Núcleo", 
+      "Cloroplastos", 
+      "Ribossomos", 
+      "Retículo Endoplasmático"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que contém cristais de oxalato de cálcio e pode estar relacionada à toxicidade de algumas plantas?",
+    alternativaCerta: "Vacúolos",
+    opcoes: [
+      "Vacúolos", 
+      "Complexo de Golgi", 
+      "Cloroplastos", 
+      "Mitocôndrias"
+    ],
+  },
+  {
+    pergunta:"Qual é a organela que possui dois subtipos principais, o liso e o rugoso?",
+    alternativaCerta: "Retículo Endoplasmático",
+    opcoes: [
+      "Lisossomos", 
+      "Retículo Endoplasmático", 
+      "Peroxissomos", 
+      "Núcleo"
+    ],
+  },
+  {
+    pergunta: "Qual é a organela que forma o fuso mitótico durante a divisão celular?",
+    alternativaCerta: "Centríolos",
+    opcoes: [
+      "Mitocôndrias",
+      "Cloroplastos",
+      "Centríolos",
+      "Retículo Endoplasmático",
+    ],
+  },
+  {
+    pergunta: "Qual é a organela que realiza a fotossíntese em células vegetais?",
+    alternativaCerta: "Cloroplastos",
+    opcoes: [
+      "Cloroplastos",
       "Ribossomos",
-    ],
-  },
-  {
-    pergunta: 'Como são chamadas as extensões do citoplasma que aumentam a superfície de absorção de nutrientes em células vegetais?',
-    alternativaCerta: "Microvilosidades",
-    opcoes: [
-      "Cílios",
-      "Flagelos",
-      "Microvilosidades",
-      "Pseudópodes",
-    ],
-  },
-  {
-    pergunta: 'Qual é a função dos peroxissomos no citoplasma?',
-    alternativaCerta: "Desintoxicação celular e metabolismo de lipídios",
-    opcoes: [
-      "Produção de lipídios",
-      "Digestão intracelular",
-      "Desintoxicação celular e metabolismo de lipídios",
-      "Síntese de proteínas",
-    ],
-  },
-  {
-    pergunta: 'Qual é a composição principal do citoplasma?',
-    alternativaCerta: "Água e proteínas.",
-    opcoes: [
-      "Água e lipídios",
-      "Lipídios e ácidos nucleicos.",
-      "Água e proteínas.",
-      "Água e organelas celulares.",
-    ],
-  },
-  {
-    pergunta: 'Qual é a principal função do citoplasma?',
-    alternativaCerta: "Abrigar as organelas celulares e participar de processos metabólicos.",
-    opcoes: [
-      "Armazenar informações genéticas.",
-      "Regular a passagem de substâncias para dentro e fora da célula.",
-      "Produzir energia para a célula.",
-      "Abrigar as organelas celulares e participar de processos metabólicos.",
-    ],
-  },
-  {
-    pergunta: 'Quais são as organelas celulares encontradas no citoplasma?',
-    alternativaCerta: "Ribossomos, retículo endoplasmático e complexo de Golgi.",
-    opcoes: [
-      "Lisossomos, centríolos e mitocôndrias.",
-      "Cloroplastos, vacúolos e núcleo.",
-      "Ribossomos, retículo endoplasmático e complexo de Golgi.",
-      "Núcleo, peroxissomos e cloroplastos.",
-    ],
-  },
-  {
-    pergunta: 'O que são os ribossomos e onde estão localizados no citoplasma?',
-    alternativaCerta: "Estruturas responsáveis pela síntese de proteínas, encontradas livres no citoplasma ou aderidas ao retículo endoplasmático.",
-    opcoes: [
-      "Organelas responsáveis pela síntese de lipídios, encontradas no núcleo.",
-      "Organelas que realizam a fotossíntese, encontradas no citoplasma.",
-      "Estruturas responsáveis pela síntese de proteínas, encontradas livres no citoplasma ou aderidas ao retículo endoplasmático.",
-      "Vesículas de armazenamento, encontradas no complexo de Golgi.",
-    ],
-  },
-  {
-    pergunta: 'Qual é a função dos centríolos no citoplasma?',
-    alternativaCerta: "Auxiliar na divisão celular e formação do fuso mitótico.",
-    opcoes: [
-      "Produção de energia para a célula.",
-      "Armazenamento de substâncias de reserva.",
-      "Auxiliar na divisão celular e formação do fuso mitótico.",
-      "Síntese de proteínas.",
-    ],
-  },
-  {
-    pergunta: 'O que é o citoesqueleto e qual é sua função no citoplasma?',
-    alternativaCerta: "Estruturas que mantêm a forma da célula e auxiliam no transporte intracelular.",
-    opcoes: [
-      "Uma organela que armazena água e íons.",
-      "Estruturas que mantêm a forma da célula e auxiliam no transporte intracelular.",
-      "Vesículas responsáveis pela digestão celular.",
-      "Organelas responsáveis pela fotossíntese.",
-    ],
-  },
-  {
-    pergunta: 'Qual é a organela responsável pela digestão intracelular de macromoléculas no citoplasma?',
-    alternativaCerta: "Lisossomos.",
-    opcoes: [
-      "Ribossomos.",
-      "Lisossomos.",
-      "Mitocôndrias.",
-      "Peroxissomos.",
-    ],
-  },
-  {
-    pergunta: 'Qual é a origem do citoplasma durante o processo de divisão celular?',
-    alternativaCerta: "É dividido igualmente entre as células filhas durante a citocinese.",
-    opcoes: [
-      "É sintetizado a partir do núcleo.",
-      "É originado a partir do complexo de Golgi.",
-      "É dividido igualmente entre as células filhas durante a citocinese.",
-      "É formado a partir dos cloroplastos e mitocôndrias.",
-    ],
-  },
-  {
-    pergunta: 'Quais são as duas principais partes do citoplasma?',
-    alternativaCerta: "Hialoplasma e organelas celulares.",
-    opcoes: [
-      "Núcleo e membrana plasmática.",
-      "Carioteca e ribossomos.",
-      "Hialoplasma e organelas celulares.",
-      "Peroxissomos e lisossomos.",
-    ],
-  },
-  {
-    pergunta: 'Qual é a função do hialoplasma no citoplasma?',
-    alternativaCerta: "Permitir a difusão de substâncias e abrigar as organelas celulares.",
-    opcoes: [
-      "Produzir energia para a célula.",
-      "Armazenar informações genéticas.",
-      "Permitir a difusão de substâncias e abrigar as organelas celulares.",
-      "Realizar a fotossíntese.",
-    ],
-  },
-  {
-    pergunta: 'O que é o retículo endoplasmático e quais são os dois tipos principais?',
-    alternativaCerta: "Uma organela que armazena proteínas; retículo endoplasmático liso e retículo endoplasmático rugoso.",
-    opcoes: [
-      "Uma organela que armazena proteínas; retículo endoplasmático liso e retículo endoplasmático rugoso.",
-      "Uma organela que produz energia; retículo endoplasmático animal e retículo endoplasmático vegetal.",
-      "Uma organela que realiza a digestão intracelular; retículo endoplasmático ácido e retículo endoplasmático básico.",
-      "Uma organela que realiza a fotossíntese; retículo endoplasmático clorofílico e retículo endoplasmático não-clorofílico.",
-    ],
-  },
-  {
-    pergunta: 'Como as mitocôndrias estão relacionadas ao citoplasma?',
-    alternativaCerta: "São os locais de produção de energia através da respiração celular.",
-    opcoes: [
-      "Uma organela que armazena proteínas; retículo endoplasmático liso e retículo endoplasmático rugoso.",
-      "Armazenam informações genéticas.",
-      "São os locais de produção de energia através da respiração celular.",
-      "Auxiliam na divisão celular.",
-    ],
-  },
-  {
-    pergunta: 'O que são os cloroplastos e onde são encontrados no citoplasma?',
-    alternativaCerta: "São organelas que realizam a fotossíntese, encontradas apenas em células vegetais.",
-    opcoes: [
-      "São organelas responsáveis pela síntese de proteínas, encontradas no núcleo.",
-      "São organelas que realizam a fotossíntese, encontradas no retículo endoplasmático rugoso.",
-      "São organelas que realizam a fotossíntese, encontradas apenas em células vegetais.",
-      "São organelas responsáveis pela digestão intracelular.",
-    ],
-  },
-  {
-    pergunta: 'Quais são as duas principais funções dos ribossomos no citoplasma?',
-    alternativaCerta: "Síntese de proteínas e síntese de ácidos nucleicos.",
-    opcoes: [
-      "Produção de energia e síntese de lipídios.",
-      "Digestão intracelular e produção de proteínas.",
-      "Síntese de proteínas e síntese de ácidos nucleicos.",
-      "Respiração celular e produção de energia.",
-    ],
+      "Retículo Endoplasmático",
+      "Núcleo"
+    ]
   },
 ];
 
@@ -321,7 +280,9 @@ sairQuiz.onclick = () => {
 };
 
 const botaoProximo = document.querySelector(".footer-quiz .botao-proximo");
-const contadorPerguntasInferior = document.querySelector(".footer-quiz .perguntas-total");
+const contadorPerguntasInferior = document.querySelector(
+  ".footer-quiz .perguntas-total"
+);
 
 // se o botão Next Que for clicado
 botaoProximo.onclick = () => {
@@ -350,11 +311,7 @@ function mostrarPerguntas(index) {
 
   // criando uma nova tag span e div para a pergunta e opção e passando o valor usando o índice do array
   let perguntasMarcada =
-    "<span>" +
-    (index + 1) +
-    ". " +
-    perguntas[index].pergunta +
-    "</span>";
+    "<span>" + (index + 1) + ". " + perguntas[index].pergunta + "</span>";
   let opcaoMarcada =
     '<div class="opcao"><span>' +
     perguntas[index].opcoes[0] +
@@ -380,8 +337,10 @@ function mostrarPerguntas(index) {
 }
 
 // criando as novas tags div para os ícones
-let iconeCerto = '<div class="icone marcacao"><i class="fas fa-check"></i></div>';
-let iconeErrado = '<div class="icone cruzar"><i class="fas fa-times"></i></div>';
+let iconeCerto =
+  '<div class="icone marcacao"><i class="fas fa-check"></i></div>';
+let iconeErrado =
+  '<div class="icone cruzar"><i class="fas fa-times"></i></div>';
 
 // se o usuário clicar em uma opção
 function opcaoSelecionada(alternativaCerta) {
@@ -475,7 +434,9 @@ function iniciarTempo(time) {
           // se houver uma opção que corresponde à resposta do array
           listaOpcao.children[i].setAttribute("class", "opcao correct"); // adicionar a cor verde à opção correspondente
           listaOpcao.children[i].insertAdjacentHTML("beforeend", iconeCerto); // adicionar o ícone de marca de seleção à opção correspondente
-          console.log("Tempo Esgotado: Resposta corretaselecionada automaticamente.");
+          console.log(
+            "Tempo Esgotado: Resposta corretaselecionada automaticamente."
+          );
         }
       }
       for (i = 0; i < todasOpcoes; i++) {
@@ -491,19 +452,18 @@ function iniciarLinhaTemporizador(time) {
   function timer() {
     time += 1; // incrementar o valor do tempo em 1
     linhaTempo.style.width = time + "px"; // aumentar a largura da linhaTempo com px pelo valor do tempo
-    
+
     // Verificar a largura da tela
     if (window.innerWidth < 600) {
       clearInterval(contadorLinha); // Limpar contadorLinha
     }
-    
+
     if (time > 549) {
       // se o valor do tempo for maior que 549
       clearInterval(contadorLinha); // limpar contadorLinha
     }
   }
 }
-
 
 // Função para embaralhar o array de perguntas
 function shuffleperguntas(array) {
