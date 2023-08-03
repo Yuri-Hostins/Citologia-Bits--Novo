@@ -1,22 +1,22 @@
 // selecionando todos os elementos necessários
-const start_btn = document.querySelector(".start_btn button");
-const info_box = document.querySelector(".info_box");
-const exit_btn = info_box.querySelector(".buttons .quit");
-const continue_btn = info_box.querySelector(".buttons .restart");
-const quiz_box = document.querySelector(".quiz_box");
-const result_box = document.querySelector(".result_box");
-const option_list = document.querySelector(".option_list");
-const time_line = document.querySelector("header .time_line");
-const timeText = document.querySelector(".timer .time_left_txt");
-const timeCount = document.querySelector(".timer .timer_sec");
+const botaoComecar = document.querySelector(".botao-comecar button");
+const caixaInformacao = document.querySelector(".caixa-informacao");
+const botaoSair = caixaInformacao.querySelector(".botoes .sair");
+const botaoContinuar = caixaInformacao.querySelector(".botoes .reiniciar");
+const caixaQuiz = document.querySelector(".caixa-quiz");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const listaOpcao = document.querySelector(".lista-opcao");
+const linhaTempo = document.querySelector("header .linha-tempo");
+const textoTempo = document.querySelector(".tempo .texto-esquerdo-tempo");
+const contagemTempo = document.querySelector(".tempo .tempo-segundo");
 
 // criando um array e passando o número, perguntas, opções e respostas
-let questions = [
+let perguntas = [
 
   {
-    question: 'Qual é a função principal do citoplasma',
-    answer: "Síntese de proteínas",
-    options: [
+    pergunta: 'Qual é a função principal do citoplasma',
+    alternativaCerta: "Síntese de proteínas",
+    opcoes: [
       "Armazenamento de informações genéticas",
       "Síntese de proteínas",
       "Proteção do núcleo celular",
@@ -24,9 +24,9 @@ let questions = [
     ],
   },
   {
-    question: 'O que é o citoplasma?',
-    answer: "Substância gelatinosa que preenche o núcleo",
-    options: [
+    pergunta: 'O que é o citoplasma?',
+    alternativaCerta: "Substância gelatinosa que preenche o núcleo",
+    opcoes: [
       "Estrutura celular que engloba o núcleo",
       "Substância gelatinosa que preenche o núcleo",
       "Membrana que envolve a célula",
@@ -34,9 +34,9 @@ let questions = [
     ],
   },
   {
-    question: 'O que é responsável pela síntese de proteínas no citoplasma?',
-    answer: "Ribossomos",
-    options: [
+    pergunta: 'O que é responsável pela síntese de proteínas no citoplasma?',
+    alternativaCerta: "Ribossomos",
+    opcoes: [
       "Complexo de Golgi",
       "Ribossomos",
       "Lisossomos",
@@ -44,9 +44,9 @@ let questions = [
     ],
   },
   {
-    question: 'Qual é o papel do citoesqueleto no citoplasma?',
-    answer: "Suporte estrutural e divisão celular",
-    options: [
+    pergunta: 'Qual é o papel do citoesqueleto no citoplasma?',
+    alternativaCerta: "Suporte estrutural e divisão celular",
+    opcoes: [
       "Síntese de lipídios",
       "Armazenamento de água",
       "Suporte estrutural e divisão celular",
@@ -54,9 +54,9 @@ let questions = [
     ],
   },
   {
-    question: 'O que compõe principalmente o citoplasma?',
-    answer: "Água, íons, proteínas, enzimas e organelas celulares.",
-    options: [
+    pergunta: 'O que compõe principalmente o citoplasma?',
+    alternativaCerta: "Água, íons, proteínas, enzimas e organelas celulares.",
+    opcoes: [
       "Água, íons, proteínas, enzimas e organelas celulares.",
       "Gases e nutrientes",
       "Vitaminas e minerais",
@@ -64,9 +64,9 @@ let questions = [
     ],
   },
   {
-    question: 'Além das células eucarióticas, o citoplasma também está presente em células',
-    answer: "Procariontes",
-    options: [
+    pergunta: 'Além das células eucarióticas, o citoplasma também está presente em células',
+    alternativaCerta: "Procariontes",
+    opcoes: [
       "Procariontes",
       "Animais apenas",
       "Vegetais apenas",
@@ -74,9 +74,9 @@ let questions = [
     ],
   },
   {
-    question: 'Qual é o papel do citoplasma na realização da citocinese?',
-    answer: "Dividir o material genético igualmente entre as células filhas",
-    options: [
+    pergunta: 'Qual é o papel do citoplasma na realização da citocinese?',
+    alternativaCerta: "Dividir o material genético igualmente entre as células filhas",
+    opcoes: [
       "Controlar a entrada e saída de substâncias da célula",
       "Síntese de carboidratos para a divisão celular",
       "Dividir o material genético igualmente entre as células filhas",
@@ -84,9 +84,9 @@ let questions = [
     ],
   },
   {
-    question: 'Qual é o nome dado à região do citoplasma que contém o material genético nas células procariontes?',
-    answer: "Nucleoide",
-    options: [
+    pergunta: 'Qual é o nome dado à região do citoplasma que contém o material genético nas células procariontes?',
+    alternativaCerta: "Nucleoide",
+    opcoes: [
       "Núcleo",
       "Nucleoide",
       "Complexo de Golgi",
@@ -94,9 +94,9 @@ let questions = [
     ],
   },
   {
-    question: 'Quais organelas citoplasmáticas são responsáveis pela produção de energia da célula?',
-    answer: "Mitocôndrias",
-    options: [
+    pergunta: 'Quais organelas citoplasmáticas são responsáveis pela produção de energia da célula?',
+    alternativaCerta: "Mitocôndrias",
+    opcoes: [
       "Complexo de Golgi",
       "Mitocôndrias",
       "Lisossomos",
@@ -104,9 +104,9 @@ let questions = [
     ],
   },
   {
-    question: 'Como são chamadas as extensões do citoplasma que aumentam a superfície de absorção de nutrientes em células vegetais?',
-    answer: "Microvilosidades",
-    options: [
+    pergunta: 'Como são chamadas as extensões do citoplasma que aumentam a superfície de absorção de nutrientes em células vegetais?',
+    alternativaCerta: "Microvilosidades",
+    opcoes: [
       "Cílios",
       "Flagelos",
       "Microvilosidades",
@@ -114,9 +114,9 @@ let questions = [
     ],
   },
   {
-    question: 'Qual é a função dos peroxissomos no citoplasma?',
-    answer: "Desintoxicação celular e metabolismo de lipídios",
-    options: [
+    pergunta: 'Qual é a função dos peroxissomos no citoplasma?',
+    alternativaCerta: "Desintoxicação celular e metabolismo de lipídios",
+    opcoes: [
       "Produção de lipídios",
       "Digestão intracelular",
       "Desintoxicação celular e metabolismo de lipídios",
@@ -126,247 +126,247 @@ let questions = [
 ];
 
 // se o botão startQuiz for clicado
-start_btn.onclick = () => {
-  info_box.classList.add("activeInfo"); // mostrar info box
+botaoComecar.onclick = () => {
+  caixaInformacao.classList.add("informacaoAtivo"); // mostrar info box
 };
 
 // se o botão exitQuiz for clicado
-exit_btn.onclick = () => {
-  info_box.classList.remove("activeInfo"); // esconder info box
+botaoSair.onclick = () => {
+  caixaInformacao.classList.remove("informacaoAtivo"); // esconder info box
 };
 
 // se o botão continueQuiz for clicado
-continue_btn.onclick = () => {
-  info_box.classList.remove("activeInfo"); // esconder info box
-  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
-  showQuetions(0); // chamando a função showQuestions
-  queCounter(1); // passando 1 parâmetro para queCounter
-  startTimer(25); // chamando a função startTimer
-  startTimerLine(0); // chamando a função startTimerLine
+botaoContinuar.onclick = () => {
+  caixaInformacao.classList.remove("informacaoAtivo"); // esconder info box
+  caixaQuiz.classList.add("quizAtivo"); // mostrar quiz box
+  mostrarPerguntas(0); // chamando a função showperguntas
+  contadorPerguntas(1); // passando 1 parâmetro para contadorPerguntas
+  iniciarTempo(25); // chamando a função iniciarTempo
+  iniciarLinhaTemporizador(0); // chamando a função iniciarLinhaTemporizador
 };
 
-let timeValue = 25;
-let que_count = 0;
-let que_numb = 1;
-let userScore = 0;
-let counter;
-let counterLine;
-let widthValue = 0;
+let tempoValor = 25;
+let contagemPerguntas = 0;
+let numeroPerguntas = 1;
+let pontoUsario = 0;
+let contador;
+let contadorLinha;
+let valorLargura = 0;
 
-const restart_quiz = result_box.querySelector(".buttons .restart");
-const quit_quiz = result_box.querySelector(".buttons .quit");
+const reinicioQuiz = caixaResultado.querySelector(".buttons .restart");
+const sairQuiz = caixaResultado.querySelector(".buttons .quit");
 
 // se o botão restartQuiz for clicado
-restart_quiz.onclick = () => {
-  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
-  result_box.classList.remove("activeResult"); // esconder result box
-  timeValue = 25;
-  que_count = 0;
-  que_numb = 1;
-  userScore = 0;
-  widthValue = 0;
-  showQuetions(que_count); // chamando a função showQuestions
-  queCounter(que_numb); // passando o valor que_numb para queCounter
-  clearInterval(counter); // limpar counter
-  clearInterval(counterLine); // limpar counterLine
-  startTimer(timeValue); // chamando a função startTimer
-  startTimerLine(widthValue); // chamando a função startTimerLine
-  timeText.textContent = "Tempo Restante"; // alterar o texto de timeText para Tempo Restante
-  next_btn.classList.remove("show"); // esconder o botão next
+reinicioQuiz.onclick = () => {
+  caixaQuiz.classList.add("quizAtivo"); // mostrar quiz box
+  caixaResultado.classList.remove("resultadoAtivo"); // esconder result box
+  tempoValor = 25;
+  contagemPerguntas = 0;
+  numeroPerguntas = 1;
+  pontoUsario = 0;
+  valorLargura = 0;
+  mostrarPerguntas(contagemPerguntas); // chamando a função showperguntas
+  contadorPerguntas(numeroPerguntas); // passando o valor numeroPerguntas para contadorPerguntas
+  clearInterval(contador); // limpar contador
+  clearInterval(contadorLinha); // limpar contadorLinha
+  iniciarTempo(tempoValor); // chamando a função iniciarTempo
+  iniciarLinhaTemporizador(valorLargura); // chamando a função iniciarLinhaTemporizador
+  textoTempo.textContent = "Tempo Restante"; // alterar o texto de textoTempo para Tempo Restante
+  botaoProximo.classList.remove("mostrar"); // esconder o botão next
 };
 
 // se o botão quitQuiz for clicado
-quit_quiz.onclick = () => {
+sairQuiz.onclick = () => {
   window.location.reload(); // recarregar a página atual
 };
 
-const next_btn = document.querySelector(".footer-quiz .next_btn");
-const bottom_ques_counter = document.querySelector(".footer-quiz .total_que");
+const botaoProximo = document.querySelector(".footer-quiz .botao-proximo");
+const contadorPerguntasInferior = document.querySelector(".footer-quiz .perguntas-total");
 
 // se o botão Next Que for clicado
-next_btn.onclick = () => {
-  if (que_count < questions.length - 1) {
+botaoProximo.onclick = () => {
+  if (contagemPerguntas < perguntas.length - 1) {
     // se o contador de perguntas for menor que o comprimento total das perguntas
-    que_count++; // incrementar o valor do contador de perguntas
-    que_numb++; // incrementar o valor do contador de números das perguntas
-    showQuetions(que_count); // chamando a função showQuestions
-    queCounter(que_numb); // passando o valor do contador de números das perguntas para queCounter
-    clearInterval(counter); // limpar counter
-    clearInterval(counterLine); // limpar counterLine
-    startTimer(timeValue); // chamando a função startTimer
-    startTimerLine(widthValue); // chamando a função startTimerLine
-    timeText.textContent = "Tempo Restante"; // alterar o texto de timeText para Tempo Restante
-    next_btn.classList.remove("show"); // esconder o botão next
+    contagemPerguntas++; // incrementar o valor do contador de perguntas
+    numeroPerguntas++; // incrementar o valor do contador de números das perguntas
+    mostrarPerguntas(contagemPerguntas); // chamando a função showperguntas
+    contadorPerguntas(numeroPerguntas); // passando o valor do contador de números das perguntas para contadorPerguntas
+    clearInterval(contador); // limpar contador
+    clearInterval(contadorLinha); // limpar contadorLinha
+    iniciarTempo(tempoValor); // chamando a função iniciarTempo
+    iniciarLinhaTemporizador(valorLargura); // chamando a função iniciarLinhaTemporizador
+    textoTempo.textContent = "Tempo Restante"; // alterar o texto de textoTempo para Tempo Restante
+    botaoProximo.classList.remove("mostrar"); // esconder o botão next
   } else {
-    clearInterval(counter); // limpar counter
-    clearInterval(counterLine); // limar counterLine
-    showResult(); // chamando a função showResult
+    clearInterval(contador); // limpar contador
+    clearInterval(contadorLinha); // limar contadorLinha
+    mostrarResultado(); // chamando a função mostrarResultado
   }
 };
 
 // obtendo perguntas e opções do array
-function showQuetions(index) {
-  const que_text = document.querySelector(".que_text");
+function mostrarPerguntas(index) {
+  const textoPerguntas = document.querySelector(".texto-perguntas");
 
   // criando uma nova tag span e div para a pergunta e opção e passando o valor usando o índice do array
-  let que_tag =
+  let perguntasMarcada =
     "<span>" +
     (index + 1) +
     ". " +
-    questions[index].question +
+    perguntas[index].pergunta +
     "</span>";
-  let option_tag =
-    '<div class="option"><span>' +
-    questions[index].options[0] +
+  let opcaoMarcada =
+    '<div class="opcao"><span>' +
+    perguntas[index].opcoes[0] +
     "</span></div>" +
-    '<div class="option"><span>' +
-    questions[index].options[1] +
+    '<div class="opcao"><span>' +
+    perguntas[index].opcoes[1] +
     "</span></div>" +
-    '<div class="option"><span>' +
-    questions[index].options[2] +
+    '<div class="opcao"><span>' +
+    perguntas[index].opcoes[2] +
     "</span></div>" +
-    '<div class="option"><span>' +
-    questions[index].options[3] +
+    '<div class="opcao"><span>' +
+    perguntas[index].opcoes[3] +
     "</span></div>";
-  que_text.innerHTML = que_tag; // adicionando a nova tag span dentro de que_tag
-  option_list.innerHTML = option_tag; // adicionando a nova tag div dentro de option_tag
+  textoPerguntas.innerHTML = perguntasMarcada; // adicionando a nova tag span dentro de perguntasMarcada
+  listaOpcao.innerHTML = opcaoMarcada; // adicionando a nova tag div dentro de opcaoMarcada
 
-  const option = option_list.querySelectorAll(".option");
+  const opcao = listaOpcao.querySelectorAll(".opcao");
 
   // definindo o atributo onclick para todas as opções disponíveis
-  for (i = 0; i < option.length; i++) {
-    option[i].setAttribute("onclick", "optionSelected(this)");
+  for (i = 0; i < opcao.length; i++) {
+    opcao[i].setAttribute("onclick", "opcaoSelecionada(this)");
   }
 }
 
 // criando as novas tags div para os ícones
-let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
-let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
+let iconeCerto = '<div class="icone marcacao"><i class="fas fa-check"></i></div>';
+let iconeErrado = '<div class="icone cruzar"><i class="fas fa-times"></i></div>';
 
 // se o usuário clicar em uma opção
-function optionSelected(answer) {
-  clearInterval(counter); // limpar counter
-  clearInterval(counterLine); // limpar counterLine
-  let userAns = answer.textContent; // obtendo a opção selecionada pelo usuário
-  let correcAns = questions[que_count].answer; // obtendo a resposta correta do array
-  const allOptions = option_list.children.length; // obtendo todos os itens de opção
+function opcaoSelecionada(alternativaCerta) {
+  clearInterval(contador); // limpar contador
+  clearInterval(contadorLinha); // limpar contadorLinha
+  let usarioResposta = alternativaCerta.textContent; // obtendo a opção selecionada pelo usuário
+  let respostaCorreta = perguntas[contagemPerguntas].alternativaCerta; // obtendo a resposta correta do array
+  const todasOpcoes = listaOpcao.children.length; // obtendo todos os itens de opção
 
-  if (userAns == correcAns) {
+  if (usarioResposta == respostaCorreta) {
     // se a opção selecionada pelo usuário for igual à resposta correta do array
-    userScore += 1; // incrementar o valor do userScore em 1
-    answer.classList.add("correct"); // adicionar a cor verde à opção selecionada correta
-    answer.insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção selecionada correta
+    pontoUsario += 1; // incrementar o valor do pontoUsario em 1
+    alternativaCerta.classList.add("correct"); // adicionar a cor verde à opção selecionada correta
+    alternativaCerta.insertAdjacentHTML("beforeend", iconeCerto); // adicionar o ícone de marca de seleção à opção selecionada correta
     console.log("Resposta Correta");
-    console.log("Suas respostas corretas = " + userScore);
+    console.log("Suas respostas corretas = " + pontoUsario);
   } else {
-    answer.classList.add("incorrect"); // adicionar a cor vermelha à opção selecionada correta
-    answer.insertAdjacentHTML("beforeend", crossIconTag); // adicionar o ícone de cruz à opção selecionada correta
+    alternativaCerta.classList.add("incorrect"); // adicionar a cor vermelha à opção selecionada correta
+    alternativaCerta.insertAdjacentHTML("beforeend", iconeErrado); // adicionar o ícone de cruz à opção selecionada correta
     console.log("Resposta Errada");
 
-    for (i = 0; i < allOptions; i++) {
-      if (option_list.children[i].textContent == correcAns) {
+    for (i = 0; i < todasOpcoes; i++) {
+      if (listaOpcao.children[i].textContent == respostaCorreta) {
         // se houver uma opção que corresponde à resposta do array
-        option_list.children[i].setAttribute("class", "option correct"); // adicionar a cor verde à opção correspondente
-        option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção correspondente
+        listaOpcao.children[i].setAttribute("class", "opcao correct"); // adicionar a cor verde à opção correspondente
+        listaOpcao.children[i].insertAdjacentHTML("beforeend", iconeCerto); // adicionar o ícone de marca de seleção à opção correspondente
         console.log("Resposta correta selecionada automaticamente.");
       }
     }
   }
-  for (i = 0; i < allOptions; i++) {
-    option_list.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
+  for (i = 0; i < todasOpcoes; i++) {
+    listaOpcao.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
   }
-  next_btn.classList.add("show"); // mostrar o botão next se o usuário selecionar alguma opção
+  botaoProximo.classList.add("mostrar"); // mostrar o botão next se o usuário selecionar alguma opção
 }
 
-function showResult() {
-  info_box.classList.remove("activeInfo"); // esconder info box
-  quiz_box.classList.remove("activeQuiz"); // esconder quiz box
-  result_box.classList.add("activeResult"); // mostrar result box
-  const scoreText = result_box.querySelector(".score_text");
-  if (userScore > 3) {
+function mostrarResultado() {
+  caixaInformacao.classList.remove("informacaoAtivo"); // esconder info box
+  caixaQuiz.classList.remove("quizAtivo"); // esconder quiz box
+  caixaResultado.classList.add("resultadoAtivo"); // mostrar result box
+  const pontosTexto = caixaResultado.querySelector(".pontos-textos");
+  if (pontoUsario > 3) {
     // se o usuário acertar mais de 3 perguntas
     // criando uma nova tag span e passando o número de pontos do usuário e o número total de perguntas
     let scoreTag =
       "<span>Parabéns! Você acertou <p>" +
-      userScore +
+      pontoUsario +
       "</p> de <p>" +
-      questions.length +
+      perguntas.length +
       "</p></span>";
-    scoreText.innerHTML = scoreTag; // adicionando a nova tag span dentro de scoreText
-  } else if (userScore > 1) {
+    pontosTexto.innerHTML = scoreTag; // adicionando a nova tag span dentro de pontosTexto
+  } else if (pontoUsario > 1) {
     // se o usuário acertar mais de 1 pergunta
     let scoreTag =
       "<span>Legal! Você acertou <p>" +
-      userScore +
+      pontoUsario +
       "</p> de <p>" +
-      questions.length +
+      perguntas.length +
       "</p></span>";
-    scoreText.innerHTML = scoreTag;
+    pontosTexto.innerHTML = scoreTag;
   } else {
     // se o usuário acertar menos de 1 pergunta
     let scoreTag =
       "<span>Desculpe, você acertou apenas <p>" +
-      userScore +
+      pontoUsario +
       "</p> de <p>" +
-      questions.length +
+      perguntas.length +
       "</p></span>";
-    scoreText.innerHTML = scoreTag;
+    pontosTexto.innerHTML = scoreTag;
   }
 }
 
-function startTimer(time) {
-  counter = setInterval(timer, 1000);
+function iniciarTempo(time) {
+  contador = setInterval(timer, 1000);
   function timer() {
-    timeCount.textContent = time; // alterando o valor de timeCount com o valor de tempo
+    contagemTempo.textContent = time; // alterando o valor de contagemTempo com o valor de tempo
     time--; // decrementando o valor do tempo
     if (time < 9) {
       // se o tempo for menor que 9
-      let addZero = timeCount.textContent;
-      timeCount.textContent = "0" + addZero; // adicionar um 0 antes do valor do tempo
+      let addZero = contagemTempo.textContent;
+      contagemTempo.textContent = "0" + addZero; // adicionar um 0 antes do valor do tempo
     }
     if (time < 0) {
       // se o tempo for menor que 0
-      clearInterval(counter); // limpar counter
-      timeText.textContent = "Tempo Esgotado"; // alterar o texto de timeText para Tempo Esgotado
-      const allOptions = option_list.children.length; // obtendo todos os itens de opção
-      let correcAns = questions[que_count].answer; // obtendo a resposta correta do array
-      for (i = 0; i < allOptions; i++) {
-        if (option_list.children[i].textContent == correcAns) {
+      clearInterval(contador); // limpar contador
+      textoTempo.textContent = "Tempo Esgotado"; // alterar o texto de textoTempo para Tempo Esgotado
+      const todasOpcoes = listaOpcao.children.length; // obtendo todos os itens de opção
+      let respostaCorreta = perguntas[contagemPerguntas].alternativaCerta; // obtendo a resposta correta do array
+      for (i = 0; i < todasOpcoes; i++) {
+        if (listaOpcao.children[i].textContent == respostaCorreta) {
           // se houver uma opção que corresponde à resposta do array
-          option_list.children[i].setAttribute("class", "option correct"); // adicionar a cor verde à opção correspondente
-          option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag); // adicionar o ícone de marca de seleção à opção correspondente
+          listaOpcao.children[i].setAttribute("class", "opcao correct"); // adicionar a cor verde à opção correspondente
+          listaOpcao.children[i].insertAdjacentHTML("beforeend", iconeCerto); // adicionar o ícone de marca de seleção à opção correspondente
           console.log("Tempo Esgotado: Resposta corretaselecionada automaticamente.");
         }
       }
-      for (i = 0; i < allOptions; i++) {
-        option_list.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
+      for (i = 0; i < todasOpcoes; i++) {
+        listaOpcao.children[i].classList.add("disabled"); // uma vez que o usuário selecionou uma opção, desabilitar todas as opções
       }
-      next_btn.classList.add("show"); // mostrar o botão next se o usuário selecionar alguma opção
+      botaoProximo.classList.add("mostrar"); // mostrar o botão next se o usuário selecionar alguma opção
     }
   }
 }
 
-function startTimerLine(time) {
-  counterLine = setInterval(timer, 47);
+function iniciarLinhaTemporizador(time) {
+  contadorLinha = setInterval(timer, 47);
   function timer() {
     time += 1; // incrementar o valor do tempo em 1
-    time_line.style.width = time + "px"; // aumentar a largura da time_line com px pelo valor do tempo
+    linhaTempo.style.width = time + "px"; // aumentar a largura da linhaTempo com px pelo valor do tempo
     
     // Verificar a largura da tela
     if (window.innerWidth < 600) {
-      clearInterval(counterLine); // Limpar counterLine
+      clearInterval(contadorLinha); // Limpar contadorLinha
     }
     
     if (time > 549) {
       // se o valor do tempo for maior que 549
-      clearInterval(counterLine); // limpar counterLine
+      clearInterval(contadorLinha); // limpar contadorLinha
     }
   }
 }
 
 
 // Função para embaralhar o array de perguntas
-function shuffleQuestions(array) {
+function shuffleperguntas(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -374,49 +374,49 @@ function shuffleQuestions(array) {
 }
 
 // Função para gerar um conjunto aleatório de perguntas do conjunto maior
-function generateRandomQuestions() {
-  shuffleQuestions(questions); // Embaralhar as perguntas
-  return questions.slice(0, 10); // Selecionar as primeiras 10 perguntas
+function gerarPerguntasAleatorias() {
+  shuffleperguntas(perguntas); // Embaralhar as perguntas
+  return perguntas.slice(0, 10); // Selecionar as primeiras 10 perguntas
 }
 
 // se o botão continueQuiz for clicado
-continue_btn.onclick = () => {
-  info_box.classList.remove("activeInfo"); // esconder info box
-  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
-  questions = generateRandomQuestions(); // Gerar um conjunto aleatório de perguntas
-  showQuetions(0); // chamando a função showQuestions
-  queCounter(1); // passando 1 parâmetro para queCounter
-  startTimer(25); // chamando a função startTimer
-  startTimerLine(0); // chamando a função startTimerLine
+botaoContinuar.onclick = () => {
+  caixaInformacao.classList.remove("informacaoAtivo"); // esconder info box
+  caixaQuiz.classList.add("quizAtivo"); // mostrar quiz box
+  perguntas = gerarPerguntasAleatorias(); // Gerar um conjunto aleatório de perguntas
+  mostrarPerguntas(0); // chamando a função showperguntas
+  contadorPerguntas(1); // passando 1 parâmetro para contadorPerguntas
+  iniciarTempo(25); // chamando a função iniciarTempo
+  iniciarLinhaTemporizador(0); // chamando a função iniciarLinhaTemporizador
 };
 
 // se o botão restartQuiz for clicado
-restart_quiz.onclick = () => {
-  quiz_box.classList.add("activeQuiz"); // mostrar quiz box
-  result_box.classList.remove("activeResult"); // esconder result box
-  timeValue = 25;
-  que_count = 0;
-  que_numb = 1;
-  userScore = 0;
-  widthValue = 0;
-  questions = generateRandomQuestions(); // Gerar um conjunto aleatório de perguntas
-  showQuetions(que_count); // chamando a função showQuestions
-  queCounter(que_numb); // passando o valor que_numb para queCounter
-  clearInterval(counter); // limpar counter
-  clearInterval(counterLine); // limpar counterLine
-  startTimer(timeValue); // chamando a função startTimer
-  startTimerLine(widthValue); // chamando a função startTimerLine
-  timeText.textContent = "Tempo Restante"; // alterar o texto de timeText para Tempo Restante
-  next_btn.classList.remove("show"); // esconder o botão next
+reinicioQuiz.onclick = () => {
+  caixaQuiz.classList.add("quizAtivo"); // mostrar quiz box
+  caixaResultado.classList.remove("resultadoAtivo"); // esconder result box
+  tempoValor = 25;
+  contagemPerguntas = 0;
+  numeroPerguntas = 1;
+  pontoUsario = 0;
+  valorLargura = 0;
+  perguntas = gerarPerguntasAleatorias(); // Gerar um conjunto aleatório de perguntas
+  mostrarPerguntas(contagemPerguntas); // chamando a função showperguntas
+  contadorPerguntas(numeroPerguntas); // passando o valor numeroPerguntas para contadorPerguntas
+  clearInterval(contador); // limpar contador
+  clearInterval(contadorLinha); // limpar contadorLinha
+  iniciarTempo(tempoValor); // chamando a função iniciarTempo
+  iniciarLinhaTemporizador(valorLargura); // chamando a função iniciarLinhaTemporizador
+  textoTempo.textContent = "Tempo Restante"; // alterar o texto de textoTempo para Tempo Restante
+  botaoProximo.classList.remove("mostrar"); // esconder o botão next
 };
 
-function queCounter(index) {
+function contadorPerguntas(index) {
   // criando uma nova tag span e passando o número da pergunta e o número total de perguntas
   let totalQueCounTag =
     "<span><p>" +
     index +
     "</p> de <p>" +
-    questions.length +
+    perguntas.length +
     "</p> Perguntas</span>";
-  bottom_ques_counter.innerHTML = totalQueCounTag; // adicionando a nova tag span dentro de bottom_ques_counter
+  contadorPerguntasInferior.innerHTML = totalQueCounTag; // adicionando a nova tag span dentro de contadorPerguntasInferior
 }
