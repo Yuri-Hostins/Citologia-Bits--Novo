@@ -22,7 +22,7 @@
 
 ::selection {
   color: var(--branco);
-  background: #3414bc;
+  background: var(--color-link);
 }
 
 .caixa-informacao,
@@ -47,7 +47,7 @@
 .botao-comecar button {
   font-size: 25px;
   font-weight: 500;
-  color: #3414bc;
+  color: var(--color-link);
   padding: 15px 30px;
   outline: none;
   border: none;
@@ -68,7 +68,7 @@
   outline: none;
   border: none;
   border-radius: 5px;
-  background: #3414bc;
+  background: var(--color-link);
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 2rem;
@@ -108,7 +108,7 @@
 
 .caixa-informacao .lista-informacao .informacao span {
   font-weight: 600;
-  color: #3414bc;
+  color: var(--color-link);
 }
 
 .caixa-informacao .botoes {
@@ -130,7 +130,7 @@
   border: none;
   outline: none;
   border-radius: 5px;
-  border: 1px solid #3414bc;
+  border: 1px solid var(--color-link);
   transition: all 0.3s ease;
 }
 
@@ -200,7 +200,7 @@
   bottom: 0px;
   left: 0px;
   height: 3px;
-  background: #3414bc;
+  background: var(--color-link);
 }
 
 section {
@@ -315,8 +315,8 @@ section .lista-opcao .opcao .icone {
   outline: none;
   color: var(--branco);
   border-radius: 5px;
-  background: #3414bc;
-  border: 1px solid #3414bc;
+  background: var(--color-link);
+  border: 1px solid var(--color-link);
   line-height: 10px;
   opacity: 0;
   pointer-events: none;
@@ -325,7 +325,7 @@ section .lista-opcao .opcao .icone {
 }
 
 .footer-quiz button:hover {
-  background: #2404b1;
+  background: var(--color-link--secundarios);
 }
 
 .footer-quiz button.mostrar {
@@ -351,7 +351,7 @@ section .lista-opcao .opcao .icone {
 
 .caixa-resultado .icone {
   font-size: 100px;
-  color: #3414bc;
+  color: var(--color-link);
   margin-bottom: 10px;
 }
 
@@ -387,27 +387,27 @@ section .lista-opcao .opcao .icone {
   border: none;
   outline: none;
   border-radius: 5px;
-  border: 1px solid #3414bc;
+  border: 1px solid var(--color-link);
   transition: all 0.3s ease;
 }
 
 .botoes button.reiniciar {
   color: var(--branco);
-  background: #3414bc;
+  background: var(--color-link);
 }
 
 .botoes button.reiniciar:hover {
-  background: #0263ca;
+  background: var(--color-link--secundarios);
 }
 
 .botoes button.sair {
-  color: #3414bc;
+  color: var(--color-link);
   background: var(--branco);
 }
 
 .botoes button.sair:hover {
   color: var(--branco);
-  background: #3414bc;
+  background: var(--color-link);
 }
 
 @media screen and (max-width: 550px) {
@@ -416,7 +416,7 @@ section .lista-opcao .opcao .icone {
     height: 545px;
   }
 
-  .caixa-informacao .buttons {
+  .caixa-informacao .botoes {
     justify-content: center;
   }
 

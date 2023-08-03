@@ -153,8 +153,8 @@ let contador;
 let contadorLinha;
 let valorLargura = 0;
 
-const reinicioQuiz = caixaResultado.querySelector(".buttons .restart");
-const sairQuiz = caixaResultado.querySelector(".buttons .quit");
+const reinicioQuiz = caixaResultado.querySelector(".botoes .reiniciar");
+const sairQuiz = caixaResultado.querySelector(".botoes .sair");
 
 // se o botão restartQuiz for clicado
 reinicioQuiz.onclick = () => {

@@ -33,4 +33,5 @@
 
   /* Define a cor dos links na página */
   --color-link: #ff0157; /* Cor rosa para os links */
+  --color-link--secundarios: #fc3e7e; /* Cor rosa para os links secundários*/
 }
