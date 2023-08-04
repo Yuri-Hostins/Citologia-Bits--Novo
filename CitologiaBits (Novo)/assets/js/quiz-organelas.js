@@ -222,6 +222,146 @@ let perguntas = [
       "Núcleo"
     ]
   },
+  {
+    pergunta: "Qual é a organela responsável pela síntese de proteínas?",
+    alternativaCerta: "Ribossomos",
+    opcoes: [
+      "Mitocôndrias",
+      "Retículo Endoplasmático",
+      "Núcleo",
+      "Ribossomos"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que contém enzimas digestivas e realiza a digestão intracelular?",
+    alternativaCerta: "Lisossomos",
+    opcoes: [
+      "Ribossomos",
+      "Lisossomos",
+      "Complexo de Golgi",
+      "Vacúolos"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela responsável pela produção de ATP, a principal molécula de energia da célula?",
+    alternativaCerta: "Mitocôndrias",
+    opcoes: [
+      "Peroxissomos",
+      "Mitocôndrias",
+      "Cloroplastos",
+      "Retículo Endoplasmático"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que armazena água, íons e algumas substâncias de reserva?",
+    alternativaCerta: "Vacúolos",
+    opcoes: [
+      "Complexo de Golgi",
+      "Ribossomos",
+      "Vacúolos",
+      "Núcleo"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que possui um papel fundamental na regulação da expressão gênica?",
+    alternativaCerta: "Núcleo",
+    opcoes: [
+      "Núcleo",
+      "Ribossomos",
+      "Retículo Endoplasmático",
+      "Mitocôndrias"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que auxilia na síntese, modificação e transporte de proteínas?",
+    alternativaCerta: "Retículo Endoplasmático",
+    opcoes: [
+      "Núcleo",
+      "Cloroplastos",
+      "Ribossomos",
+      "Retículo Endoplasmático"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que forma o fuso mitótico durante a divisão celular?",
+    alternativaCerta: "Centríolos",
+    opcoes: [
+      "Mitocôndrias",
+      "Cloroplastos",
+      "Centríolos",
+      "Retículo Endoplasmático"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela responsável pela síntese de lipídios e detoxificação de substâncias?",
+    alternativaCerta: "Retículo Endoplasmático Liso",
+    opcoes: [
+      "Retículo Endoplasmático Rugoso",
+      "Ribossomos",
+      "Retículo Endoplasmático Liso",
+      "Mitocôndrias"
+    ]
+  },
+  {
+    ergunta: "Qual é a organela que possui dois subtipos principais, o liso e o rugoso?",
+    alternativaCerta: "Retículo Endoplasmático",
+    opcoes: [
+      "Lisossomos",
+      "Retículo Endoplasmático",
+      "Peroxissomos",
+      "Núcleo"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que possui enzimas oxidativas e está envolvida no metabolismo de peróxido de hidrogênio?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Lisossomos",
+      "Retículo Endoplasmático",
+      "Peroxissomos",
+      "Núcleo"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que contém clorofila e realiza a fotossíntese em células vegetais?",
+    alternativaCerta: "Cloroplastos",
+    opcoes: [
+      "Mitocôndrias",
+      "Cloroplastos",
+      "Retículo Endoplasmático",
+      "Núcleo"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que é responsável pelo armazenamento e transporte de proteínas?",
+    alternativaCerta: "Complexo de Golgi",
+    opcoes: [
+      "Vacúolos",
+      "Ribossomos",
+      "Complexo de Golgi",
+      "Lisossomos"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que contém o material genético (DNA) da célula?",
+    alternativaCerta: "Núcleo",
+    opcoes: [
+      "Núcleo",
+      "Ribossomos",
+      "Retículo Endoplasmático",
+      "Mitocôndrias"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que realiza a digestão intracelular de substâncias?",
+    alternativaCerta: "Lisossomos",
+    opcoes: [
+      "Ribossomos",
+      "Lisossomos",
+      "Peroxissomos",
+      "Núcleo"
+    ]
+  },
 ];
 
 // se o botão startQuiz for clicado
