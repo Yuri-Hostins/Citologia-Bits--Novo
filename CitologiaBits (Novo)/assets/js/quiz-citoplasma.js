@@ -263,6 +263,216 @@ let perguntas = [
       "Respiração celular e produção de energia.",
     ],
   },
+  {
+    pergunta: 'Qual é o processo pelo qual o citoplasma se divide durante a citocinese?',
+    alternativaCerta: "Citocinese.",
+    opcoes: [
+      "Mitose.",
+      "Meiose.",
+      "Divisão celular.",
+      "Citocinese.",
+    ],
+  },
+  {
+    pergunta: 'Qual é a função das microvilosidades no citoplasma?',
+    alternativaCerta: "Aumentar a área de absorção de nutrientes.",
+    opcoes: [
+      "Armazenar energia.",
+      "Realizar a fotossíntese.",
+      "Aumentar a área de absorção de nutrientes.",
+      "Sintetizar proteínas.",
+    ],
+  },
+  {
+    pergunta: 'Quais são os componentes básicos do citoplasma?',
+    alternativaCerta: "Hialoplasma e organelas.",
+    opcoes: [
+      "Água e proteínas.",
+      "Gases e lipídios.",
+      "Água e vitaminas.",
+      "Hialoplasma e organelas.",
+    ],
+  },
+  {
+    pergunta: 'O que é a ameboidia no contexto do citoplasma?',
+    alternativaCerta: "Movimento celular utilizando pseudópodes.",
+    opcoes: [
+      "Processo de síntese de ATP.",
+      "Divisão do citoplasma.",
+      "Movimento celular utilizando pseudópodes.",
+      "Processo de fagocitose.",
+    ],
+  },
+  {
+    pergunta: 'O que é a corrente citoplasmática?',
+    alternativaCerta: "Movimento do citoplasma dentro da célula.",
+    opcoes: [
+      "Corrente elétrica presente no citoplasma.",
+      "Movimento do citoplasma fora da célula.",
+      "Movimento do núcleo no citoplasma.",
+      "Movimento do citoplasma dentro da célula.",
+    ],
+  },
+  {
+    pergunta: 'Quais são as principais funções do citoplasma em uma célula?',
+    alternativaCerta: "Abrigar organelas, realizar processos metabólicos e dar suporte estrutural.",
+    opcoes: [
+      "Armazenar informações genéticas e produzir ATP.",
+      "Realizar a fotossíntese e a digestão celular.",
+      "Realizar a mitose e a meiose.",
+      "Abrigar organelas, realizar processos metabólicos e dar suporte estrutural.",
+    ],
+  },
+  {
+    pergunta: 'O que é o cianoplasma?',
+    alternativaCerta: "Citoplasma das células vegetais.",
+    opcoes: [
+      "Citoplasma das células animais.",
+      "Fluido extracelular.",
+      "Núcleo das células.",
+      "Citoplasma das células vegetais.",
+    ],
+  },
+  {
+    pergunta: 'O que é a ectoplasma?',
+    alternativaCerta: "Parte externa e mais viscosa do citoplasma.",
+    opcoes: [
+      "Citoplasma das células animais.",
+      "Parte interna e fluida do núcleo.",
+      "Parte externa e mais viscosa do citoplasma.",
+      "Região onde ocorre a fotossíntese.",
+    ],
+  },
+  {
+    pergunta: 'Qual é a principal função do citoplasma nas células?',
+    alternativaCerta: "Hospedar as organelas e facilitar processos celulares.",
+    opcoes: [
+      "Armazenar informações genéticas.",
+      "Regular a entrada e saída de substâncias.",
+      "Produzir enzimas para a digestão.",
+      "Hospedar as organelas e facilitar processos celulares.",
+    ],
+  },
+  {
+    pergunta: 'O citoplasma é um componente presente em qual tipo de células?',
+    alternativaCerta: "Tanto em células eucarióticas quanto em células procariontes.",
+    opcoes: [
+      "Apenas em células vegetais.",
+      "Apenas em células animais.",
+      "Tanto em células eucarióticas quanto em células procariontes.",
+      "Apenas em células bacterianas.",
+    ],
+  },
+  {
+    pergunta: 'O que é a citolise?',
+    alternativaCerta: "Romper da membrana plasmática devido à entrada excessiva de água.",
+    opcoes: [
+      "Processo de divisão celular.",
+      "Absorção de nutrientes pelas células.",
+      "Transporte de substâncias para dentro da célula.",
+      "Romper da membrana plasmática devido à entrada excessiva de água.",
+    ],
+  },
+  {
+    pergunta: 'Como as substâncias se movem no citoplasma?',
+    alternativaCerta: "Por meio da difusão e do fluxo citoplasmático.",
+    opcoes: [
+      "Através da ação das mitocôndrias.",
+      "Por meio da síntese de ATP.",
+      "Por meio do transporte ativo.",
+      "Por meio da difusão e do fluxo citoplasmático.",
+    ],
+  },
+  {
+    pergunta: 'O que é a corrente citoplasmática?',
+    alternativaCerta: "Movimento do citoplasma dentro da célula.",
+    opcoes: [
+      "Fluxo de elétrons no citoplasma.",
+      "Movimento das mitocôndrias.",
+      "Transporte de íons para fora da célula.",
+      "Movimento do citoplasma dentro da célula.",
+    ],
+  },
+  {
+    pergunta: 'Quais são os componentes do citoplasma além do hialoplasma?',
+    alternativaCerta: "Organelas e inclusões citoplasmáticas.",
+    opcoes: [
+      "Água e lipídios.",
+      "Gases e proteínas.",
+      "Vitaminas e minerais.",
+      "Organelas e inclusões citoplasmáticas.",
+    ],
+  },
+  {
+    pergunta: 'O que é o citoesqueleto e qual é sua função no citoplasma?',
+    alternativaCerta: "Rede de filamentos que mantém a forma da célula e auxilia no transporte intracelular.",
+    opcoes: [
+      "Organela responsável pela síntese de proteínas.",
+      "Rede de filamentos que protege o núcleo.",
+      "Estrutura que armazena energia.",
+      "Rede de filamentos que mantém a forma da célula e auxilia no transporte intracelular.",
+    ],
+  },
+  {
+    pergunta: 'Qual é o papel do citoplasma na divisão celular?',
+    alternativaCerta: "Dividir-se para formar duas células filhas durante a citocinese.",
+    opcoes: [
+      "Sintetizar proteínas para o crescimento da célula.",
+      "Realizar a fotossíntese.",
+      "Produzir energia para a mitose.",
+      "Dividir-se para formar duas células filhas durante a citocinese.",
+    ],
+  },
+  {
+    pergunta: 'O que é a citometria de fluxo?',
+    alternativaCerta: "Técnica que permite a análise das características físicas e químicas das células.",
+    opcoes: [
+      "Técnica para estudar a divisão celular.",
+      "Método de transporte de substâncias no citoplasma.",
+      "Processo de síntese de proteínas.",
+      "Técnica que permite a análise das características físicas e químicas das células.",
+    ],
+  },
+  {
+    pergunta: 'O que é o ciclo celular?',
+    alternativaCerta: "Sequência de eventos que leva ao crescimento e à divisão celular.",
+    opcoes: [
+      "Processo de transporte de água no citoplasma.",
+      "Processo de obtenção de energia.",
+      "Divisão do núcleo da célula.",
+      "Sequência de eventos que leva ao crescimento e à divisão celular.",
+    ],
+  },
+  {
+    pergunta: 'Qual é a principal função do citoplasma em células musculares?',
+    alternativaCerta: "Gerar energia para a contração muscular.",
+    opcoes: [
+      "Sintetizar proteínas.",
+      "Regular a entrada de substâncias.",
+      "Armazenar informações genéticas.",
+      "Gerar energia para a contração muscular.",
+    ],
+  },
+  {
+    pergunta: 'Qual é a função do complexo de Golgi no citoplasma?',
+    alternativaCerta: "Processar, empacotar e distribuir proteínas e lipídios.",
+    opcoes: [
+      "Sintetizar ácidos nucleicos.",
+      "Realizar a fotossíntese.",
+      "Sintetizar ATP.",
+      "Processar, empacotar e distribuir proteínas e lipídios.",
+    ],
+  },
+  {
+    pergunta: 'O que é o citoquilasma?',
+    alternativaCerta: "Parte mais externa do citoplasma.",
+    opcoes: [
+      "Organela que realiza a fotossíntese.",
+      "Região do citoplasma onde ocorre a mitose.",
+      "Parte mais interna do núcleo.",
+      "Parte mais externa do citoplasma.",
+    ],
+  },
 ];
 
 // se o botão startQuiz for clicado

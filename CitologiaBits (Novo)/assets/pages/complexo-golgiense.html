@@ -14,6 +14,7 @@
     <!-- Scripts -->
     <script src="../js/loader.js" defer></script>
     <script src="../js/navbar.js" defer></script>
+    <script src="../js/quiz-complexo.js" defer></script>
     
     <!-- Título -->
     <title>Complexo Golgiense | CitologiaBits</title>
@@ -248,6 +249,87 @@
               </p>
             </div>
           </div>
+
+          <!-- Aqui começa o quiz -->
+    
+          <!-- botão iniciar Quiz -->
+          <section>
+            <h3>Bem-vindo ao Quiz</h3>
+            <div class="botao-comecar">
+              <button>Começar Quiz</button>
+              <p>Neste quiz, você verá perguntas relacionadas ao que você aprendeu.</p>
+            </div>
+          </section>
+
+          <!-- Caixa de informação  -->
+          <div class="caixa-informacao">
+            <div class="titulo-informacao"><span>Regras deste Quiz Game</span></div>
+            <div class="lista-informacao">
+              <div class="informacao">
+                1-) você só tem <span>25 segundos</span> por pergunta.
+              </div>
+              <div class="informacao">
+                2-) Depois de selecionar sua resposta, ela não pode ser desfeita.
+              </div>
+              <div class="informacao">
+                3-) Você não pode selecionar nenhuma opção quando o tempo acabar.
+              </div>
+              <div class="informacao">
+                4-) Você não pode sair do Quiz Game enquanto estiver jogando.
+              </div>
+              <div class="informacao">
+                5-) Você receberá pontos com base em suas respostas corretas.
+              </div>
+            </div>
+            <div class="botoes">
+              <button class="sair">Sair do Quiz</button>
+              <button class="reiniciar">Continuar</button>
+            </div>
+          </div>
+
+          <!-- Caixa de perguntas -->
+          <div class="caixa-quiz">
+            <header>
+              <div class="title">Gênio Quiz</div>
+              <div class="tempo">
+                <div class="texto-esquerdo-tempo">Tempo restante</div>
+                <div class="tempo-segundo">25</div>
+              </div>
+              <div class="linha-tempo"></div>
+            </header>
+            <section>
+              <div class="texto-perguntas">
+                <!-- Aqui eu inseri a pergunta do JavaScript -->
+              </div>
+              <div class="lista-opcao">
+                <!-- Aqui eu inseri a pergunta do JavaScript -->
+              </div>
+            </section>
+
+            <!-- rodapé da caixa de perguntas -->
+            <div class="footer-quiz">
+              <div class="perguntas-total">
+                <!-- Aqui inseri o número de contagem de perguntas do JavaScript -->
+              </div>
+              <button class="botao-proximo">Próximo teste</button>
+            </div>
+          </div>
+
+          <!-- Caixa de resultados -->
+          <div class="caixa-resultado">
+            <div class="icone">
+              <i class="fas fa-crown"></i>
+            </div>
+            <div class="texto-completo">Você concluiu o Quiz!</div>
+            <div class="pontos-textos">
+              <!-- Aqui inseri o resultado da pontuação do JavaScript -->
+            </div>
+            <div class="botoes">
+              <button class="reiniciar">Replay Quiz</button>
+              <button class="sair">Sair do Quiz</button>
+            </div>
+          </div>
+
         </div>
       </section>
     </main>

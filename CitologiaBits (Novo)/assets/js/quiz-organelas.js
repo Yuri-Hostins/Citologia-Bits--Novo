@@ -362,6 +362,36 @@ let perguntas = [
       "Núcleo"
     ]
   },
+  {
+    pergunta: "Qual é a organela que realiza a síntese de ácidos graxos e detoxificação de substâncias?",
+    alternativaCerta: "Retículo Endoplasmático Liso",
+    opcoes: [
+      "Retículo Endoplasmático Liso",
+      "Ribossomos",
+      "Retículo Endoplasmático Rugoso",
+      "Mitocôndrias"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que desempenha um papel fundamental na regulação da expressão gênica e na síntese de RNA?",
+    alternativaCerta: "Núcleo",
+    opcoes: [
+      "Núcleo",
+      "Ribossomos",
+      "Retículo Endoplasmático",
+      "Mitocôndrias"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que auxilia na divisão celular e na formação do fuso mitótico?",
+    alternativaCerta: "Centríolos",
+    opcoes: [
+      "Lisossomos",
+      "Centríolos",
+      "Retículo Endoplasmático",
+      "Cloroplastos"
+    ]
+  },
 ];
 
 // se o botão startQuiz for clicado

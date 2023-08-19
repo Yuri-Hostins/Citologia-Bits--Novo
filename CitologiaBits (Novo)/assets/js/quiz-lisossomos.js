@@ -352,6 +352,206 @@ let perguntas = [
       "Acúmulo de substâncias não digeridas, disfunção celular e doenças lisossômicas"
     ]
   },
+  {
+    pergunta: "Quais são os componentes principais dos lisossomos?",
+    alternativaCerta: "Enzimas hidrolíticas e membrana",
+    opcoes: [
+      "DNA e ribossomos",
+      "Lipídios e proteínas",
+      "Água e sais minerais",
+      "Enzimas hidrolíticas e membrana"
+    ]
+  },
+  {
+    pergunta: "Qual é o papel das enzimas hidrolíticas nos lisossomos?",
+    alternativaCerta: "Digerir macromoléculas em componentes menores",
+    opcoes: [
+      "Produzir energia para a célula",
+      "Sintetizar proteínas",
+      "Armazenar nutrientes",
+      "Digerir macromoléculas em componentes menores"
+    ]
+  },
+  {
+    pergunta: "Quando ocorre a autólise em relação aos lisossomos?",
+    alternativaCerta: "Quando as enzimas lisossomais destroem os componentes celulares",
+    opcoes: [
+      "Durante a produção de ATP",
+      "Quando ocorre a síntese de proteínas",
+      "Durante a divisão celular",
+      "Quando as enzimas lisossomais destroem os componentes celulares"
+    ]
+  },
+  {
+    pergunta: "Qual é o nome dado às doenças genéticas que afetam os lisossomos?",
+    alternativaCerta: "Doenças lisossômicas",
+    opcoes: [
+      "Doenças mitocondriais",
+      "Doenças genéticas",
+      "Doenças autoimunes",
+      "Doenças lisossômicas"
+    ]
+  },
+  {
+    pergunta: "Como os lisossomos se diferenciam dos peroxissomos?",
+    alternativaCerta: "Lisossomos contêm enzimas digestivas, enquanto peroxissomos contêm enzimas oxidativas",
+    opcoes: [
+      "Lisossomos são encontrados apenas em células vegetais",
+      "Lisossomos são organelas membranosas, enquanto peroxissomos não têm membranas",
+      "Lisossomos contêm enzimas oxidativas, enquanto peroxissomos contêm enzimas digestivas",
+      "Lisossomos são maiores do que peroxissomos"
+    ]
+  },
+  {
+    pergunta: "Qual é o destino das vesículas produzidas pelos complexos de Golgi que contêm enzimas lisossomais?",
+    alternativaCerta: "Elas se fundem com lisossomos primários para formar lisossomos secundários",
+    opcoes: [
+      "Elas são liberadas para o citoplasma",
+      "Elas se fundem com mitocôndrias",
+      "Elas se fundem com núcleos celulares",
+      "Elas se fundem com lisossomos primários para formar lisossomos secundários"
+    ]
+  },
+  {
+    pergunta: "Qual é o nome dado ao processo de formação de vesículas que contêm enzimas lisossomais no complexo de Golgi?",
+    alternativaCerta: "Vesiculação",
+    opcoes: [
+      "Mitose",
+      "Autofagia",
+      "Fagocitose",
+      "Vesiculação"
+    ]
+  },
+  {
+    pergunta: "Quais são os tipos de lisossomos baseados em sua origem e conteúdo?",
+    alternativaCerta: "Lisossomos primários e lisossomos secundários",
+    opcoes: [
+      "Lisossomos primários e lisossomos terciários",
+      "Lisossomos endocíticos e lisossomos exocíticos",
+      "Lisossomos alfa e lisossomos beta",
+      "Lisossomos primários e lisossomos secundários"
+    ]
+  },
+  {
+    pergunta: "Quais são os dois principais tipos de autofagia?",
+    alternativaCerta: "Macroautofagia e microautofagia",
+    opcoes: [
+      "Endocitose e exocitose",
+      "Macroautofagia e microautofagia",
+      "Fagocitose e autofagia",
+      "Autofagia e exocitose"
+    ]
+  },
+  {
+    pergunta: "Qual é o processo pelo qual as células removem componentes celulares danificados ou não funcionais?",
+    alternativaCerta: "Autofagia",
+    opcoes: [
+      "Mitose",
+      "Endocitose",
+      "Fagocitose",
+      "Autofagia"
+    ]
+  },
+  {
+    pergunta: "Quais são os eventos que ocorrem durante a fagocitose?",
+    alternativaCerta: "Englobamento da partícula, formação de fagossomo e fusão com lisossomos",
+    opcoes: [
+      "Produção de ATP, síntese de proteínas e liberação de resíduos",
+      "Divisão celular, formação de vacúolos e fusão de mitocôndrias",
+      "Englobamento da partícula, formação de fagossomo e fusão com lisossomos",
+      "Digestão de glicose, absorção de aminoácidos e liberação de oxigênio"
+    ]
+  },
+  {
+    pergunta: "Quais são os estágios da digestão intracelular realizados pelos lisossomos?",
+    alternativaCerta: "Endocitose, formação de fagossomo, digestão e liberação de produtos",
+    opcoes: [
+      "Produção de ATP, síntese de proteínas, transporte e liberação",
+      "Fotossíntese, formação de gás carbônico, absorção e liberação",
+      "Mitose, divisão celular, degradação e absorção",
+      "Endocitose, formação de fagossomo, digestão e liberação de produtos"
+    ]
+  },
+  {
+    pergunta: "Quais são as enzimas lisossomais responsáveis pela degradação de proteínas?",
+    alternativaCerta: "Proteases",
+    opcoes: [
+      "Lipases",
+      "Glicosidases",
+      "Amilases",
+      "Proteases"
+    ]
+  },
+  {
+    pergunta: "Qual é o destino dos produtos da digestão intracelular realizada pelos lisossomos?",
+    alternativaCerta: "São liberados para o citoplasma e reutilizados",
+    opcoes: [
+      "São armazenados nos vacúolos",
+      "São excretados da célula",
+      "São transportados para o núcleo",
+      "São liberados para o citoplasma e reutilizados"
+    ]
+  },
+  {
+    pergunta: "O que são as doenças de depósito lisossômico?",
+    alternativaCerta: "Doenças causadas pelo acúmulo de substâncias não digeridas nos lisossomos",
+    opcoes: [
+      "Doenças causadas por excesso de mitocôndrias",
+      "Doenças relacionadas ao colapso de membranas celulares",
+      "Doenças que afetam os ribossomos",
+      "Doenças causadas pelo acúmulo de substâncias não digeridas nos lisossomos"
+    ]
+  },
+  {
+    pergunta: "Qual é o processo pelo qual as células fagocitam partículas sólidas?",
+    alternativaCerta: "Fagocitose",
+    opcoes: [
+      "Endocitose",
+      "Exocitose",
+      "Autofagia",
+      "Fagocitose"
+    ]
+  },
+  {
+    pergunta: "Qual é a importância do pH ácido dos lisossomos?",
+    alternativaCerta: "Ativar as enzimas lisossomais para a digestão intracelular",
+    opcoes: [
+      "Neutralizar as enzimas lisossomais",
+      "Prevenir a entrada de substâncias",
+      "Facilitar a síntese de proteínas",
+      "Ativar as enzimas lisossomais para a digestão intracelular"
+    ]
+  },
+  {
+    pergunta: "Quais organelas são responsáveis pela digestão extracelular?",
+    alternativaCerta: "Lisossomos",
+    opcoes: [
+      "Mitocôndrias",
+      "Cloroplastos",
+      "Complexo de Golgi",
+      "Lisossomos"
+    ]
+  },
+  {
+    pergunta: "Quais são as duas principais classes de doenças genéticas relacionadas aos lisossomos?",
+    alternativaCerta: "Mucopolissacaridoses e doenças de depósito lisossômico",
+    opcoes: [
+      "Diabetes e hipertensão",
+      "Mucopolissacaridoses e doenças de depósito lisossômico",
+      "Câncer e doenças cardiovasculares",
+      "Obesidade e doenças pulmonares"
+    ]
+  },
+  {
+    pergunta: "Quais são as vias principais pelas quais as enzimas lisossomais são direcionadas para o interior dos lisossomos?",
+    alternativaCerta: "Via de manose-6-fosfato e glicosilação",
+    opcoes: [
+      "Via de ubiquitinação e proteólise",
+      "Via de manose-6-fosfato e glicosilação",
+      "Via de clatrina e caveolina",
+      "Via de endocitose e exocitose"
+    ]
+  },
 ];
 
 // se o botão startQuiz for clicado

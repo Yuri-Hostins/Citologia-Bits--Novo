@@ -13,495 +13,335 @@ const contagemTempo = document.querySelector(".tempo .tempo-segundo");
 // criando um array e passando o número, perguntas, opções e respostas
 let perguntas = [
   {
-    pergunta: "Qual é a função principal dos vacúolos?",
-    alternativaCerta: "Armazenar água e substâncias",
-    opcoes: [
-      "Síntese de proteínas",
-      "Produção de energia",
-      "Armazenar água e substâncias",
-      "Digestão de resíduos celulares"
-    ]
-  },
-  {
-    pergunta: "Qual é a estrutura que delimita o vacúolo em células vegetais?",
-    alternativaCerta: "Tonoplasto",
-    opcoes: [
-      "Membrana plasmática",
-      "Núcleo",
-      "Tonoplasto",
-      "Membrana mitocondrial"
-    ]
-  },
-  {
-    pergunta: "Quais são os principais íons armazenados nos vacúolos?",
-    alternativaCerta: "Íons de potássio",
-    opcoes: [
-      "Íons de sódio",
-      "Íons de cálcio",
-      "Íons de potássio",
-      "Íons de magnésio"
-    ]
-  },
-  {
-    pergunta: "Em células vegetais, qual é a função dos vacúolos no crescimento celular?",
-    alternativaCerta: "Contribuir para o crescimento e expansão da célula",
-    opcoes: [
-      "Regular a divisão celular",
-      "Contribuir para o crescimento e expansão da célula",
-      "Inibir o crescimento celular",
-      "Controlar o metabolismo"
-    ]
-  },
-  {
-    pergunta: "Nos protozoários, os vacúolos estão associados a qual processo?",
-    alternativaCerta: "Excreção",
-    opcoes: [
-      "Fotossíntese",
-      "Digestão intracelular",
-      "Respiração celular",
-      "Excreção"
-    ]
-  },
-  {
-    pergunta: "Em células vegetais, qual é a função dos vacúolos na manutenção da turgescência?",
-    alternativaCerta: "Manter a rigidez da célula através do armazenamento de água",
-    opcoes: [
-      "Regular a pressão osmótica",
-      "Manter a rigidez da célula através do armazenamento de água",
-      "Inibir a absorção de água",
-      "Produzir enzimas"
-    ]
-  },
-  {
-    pergunta: "Quais são as substâncias de resíduos que podem ser armazenadas nos vacúolos?",
-    alternativaCerta: "Pigmentos, cristais e toxinas",
-    opcoes: [
-      "Enzimas, carboidratos e lipídios",
-      "Água, íons e proteínas",
-      "Pigmentos, cristais e toxinas",
-      "Glicose, aminoácidos e ácidos nucleicos"
-    ]
-  },
-  {
-    pergunta: "Em células vegetais, qual é a função dos vacúolos na fotossíntese?",
-    alternativaCerta: "Armazenar pigmentos fotossintéticos",
-    opcoes: [
-      "Produzir clorofila",
-      "Regular a entrada de luz",
-      "Armazenar pigmentos fotossintéticos",
-      "Converter energia solar em ATP"
-    ]
-  },
-  {
-    pergunta: "Nos animais, os vacúolos são organelas mais proeminentes em qual tipo de células?",
-    alternativaCerta: "Células especializadas, como os macrófagos",
-    opcoes: [
-      "Células nervosas",
-      "Células musculares",
-      "Células epiteliais",
-      "Células especializadas, como os macrófagos"
-    ]
-  },
-  {
-    pergunta: "Quais são as células sanguíneas que podem conter vacúolos durante sua maturação?",
-    alternativaCerta: "Células vermelhas ou hemácias",
-    opcoes: [
-      "Células brancas ou leucócitos",
-      "Células vermelhas ou hemácias",
-      "Plaquetas",
-      "Células-tronco"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos contráteis encontrados em protozoários de água doce?",
-    alternativaCerta: "Vacúolos pulsáteis",
-    opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos digestivos",
-      "Vacúolos secretórios"
-    ]
-  },
-  {
-    pergunta: "Qual é a função dos vacúolos autofágicos nas células?",
-    alternativaCerta: "Degradação de componentes celulares",
+    pergunta: "Qual é a principal função do Complexo de Golgi?",
+    alternativaCerta: "Processamento, modificação e empacotamento de proteínas e lipídios",
     opcoes: [
       "Produção de energia",
+      "Síntese de ácidos nucleicos",
       "Armazenamento de água",
-      "Secreção de enzimas",
-      "Degradação de componentes celulares"
+      "Processamento, modificação e empacotamento de proteínas e lipídios"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos responsáveis pelo armazenamento de enzimas digestivas?",
-    alternativaCerta: "Vacúolos digestivos",
+    pergunta: "O que são vesículas de transporte do Complexo de Golgi?",
+    alternativaCerta: "Pequenas bolsas membranosas que transportam substâncias entre o Golgi e outras partes da célula",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos contráteis",
-      "Vacúolos digestivos"
+      "Proteínas especializadas",
+      "RNA mensageiro",
+      "Moléculas de açúcar",
+      "Pequenas bolsas membranosas que transportam substâncias entre o Golgi e outras partes da célula"
     ]
   },
   {
-    pergunta: "Nos animais, os vacúolos podem desempenhar um papel importante em qual processo de desenvolvimento?",
-    alternativaCerta: "Fagocitose",
+    pergunta: "O que são os cisternas do Complexo de Golgi?",
+    alternativaCerta: "Sacos achatados e empilhados que compõem a estrutura do Golgi",
     opcoes: [
-      "Fotossíntese",
+      "Enzimas lisossômicas",
+      "Complexos de proteínas",
+      "RNA ribossômico",
+      "Sacos achatados e empilhados que compõem a estrutura do Golgi"
+    ]
+  },
+  {
+    pergunta: "Qual é a relação entre o Complexo de Golgi e o retículo endoplasmático?",
+    alternativaCerta: "O Golgi recebe proteínas e lipídios do retículo endoplasmático para processamento e modificação",
+    opcoes: [
+      "O Golgi produz o retículo endoplasmático",
+      "O Golgi degrada proteínas do retículo endoplasmático",
+      "O Golgi não tem relação com o retículo endoplasmático",
+      "O Golgi recebe proteínas e lipídios do retículo endoplasmático para processamento e modificação"
+    ]
+  },
+  {
+    pergunta: "Qual é o nome da face do Complexo de Golgi que recebe substâncias do retículo endoplasmático?",
+    alternativaCerta: "Face cis",
+    opcoes: [
+      "Face trans",
+      "Face medial",
+      "Face lateral",
+      "Face cis"
+    ]
+  },
+  {
+    pergunta: "O que acontece na face trans do Complexo de Golgi?",
+    alternativaCerta: "As vesículas de transporte carregando substâncias processadas são liberadas para outros destinos celulares",
+    opcoes: [
+      "Processamento inicial de proteínas",
+      "Produção de ATP",
       "Digestão intracelular",
-      "Respiração celular",
-      "Fagocitose"
+      "As vesículas de transporte carregando substâncias processadas são liberadas para outros destinos celulares"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que se formam quando uma célula ingere partículas sólidas?",
-    alternativaCerta: "Vacúolos digestivos",
+    pergunta: "Quais são algumas das modificações que podem ocorrer nas proteínas no Complexo de Golgi?",
+    alternativaCerta: "Adição de grupos de açúcar, corte e dobramento",
     opcoes: [
-      "Vacúolos autofágicos",
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos digestivos"
+      "Quebra em aminoácidos",
+      "Ligação a RNA",
+      "Produção de lipídios",
+      "Adição de grupos de açúcar, corte e dobramento"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que se formam durante a fagocitose?",
-    alternativaCerta: "Vacúolos digestivos",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e as lisossomos?",
+    alternativaCerta: "O Golgi produz vesículas que se transformam em lisossomos contendo enzimas digestivas",
     opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos secretórios",
-      "Vacúolos digestivos",
-      "Vacúolos autofágicos"
+      "O Golgi produz ATP para os lisossomos",
+      "O Golgi armazena resíduos para os lisossomos",
+      "O Golgi bloqueia a função dos lisossomos",
+      "O Golgi produz vesículas que se transformam em lisossomos contendo enzimas digestivas"
     ]
   },
   {
-    pergunta: "Em que parte da célula os vacúolos geralmente são encontrados?",
-    alternativaCerta: "Citoplasma",
+    pergunta: "Quais são os principais produtos do Complexo de Golgi que são secretados pela célula?",
+    alternativaCerta: "Vesículas contendo proteínas e lipídios para exocitose",
     opcoes: [
-      "Núcleo",
-      "Mitocôndrias",
-      "Retículo endoplasmático",
-      "Citoplasma"
+      "Água e íons",
+      "Enzimas nucleares",
+      "RNA ribossômico",
+      "Vesículas contendo proteínas e lipídios para exocitose"
     ]
   },
   {
-    pergunta: "Qual é o tamanho típico dos vacúolos em células vegetais?",
-    alternativaCerta: "Grandes e preenchendo a maior parte da célula",
+    pergunta: "O que é a exocitose?",
+    alternativaCerta: "Processo pelo qual as vesículas liberam seu conteúdo para fora da célula",
     opcoes: [
-      "Pequenos e localizados próximos ao núcleo",
-      "Grandes e preenchendo a maior parte da célula",
-      "Iguais em tamanho aos vacúolos de células animais",
-      "Inexistentes em células vegetais"
-    ]
-  },
-  {
-    pergunta: "Qual é a função dos vacúolos contráteis em protozoários?",
-    alternativaCerta: "Regulação do equilíbrio osmótico",
-    opcoes: [
+      "Processo de divisão celular",
+      "Transporte de substâncias para dentro da célula",
       "Digestão intracelular",
-      "Produção de energia",
-      "Regulação do equilíbrio osmótico",
-      "Secreção de enzimas"
-    ]
-  },  
-  {
-    pergunta: "Quais são os vacúolos que contêm pigmentos coloridos em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos",
-      "Vacúolos secretórios"
+      "Processo pelo qual as vesículas liberam seu conteúdo para fora da célula"
     ]
   },
   {
-    pergunta: "Em células animais, qual é a função dos vacúolos?",
-    alternativaCerta: "Participar de processos excretórios e de secreção",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a síntese de glicoproteínas?",
+    alternativaCerta: "O Golgi adiciona grupos de açúcar às proteínas, formando as glicoproteínas",
     opcoes: [
-      "Armazenar água",
-      "Armazenar nutrientes",
-      "Participar de processos excretórios e de secreção",
-      "Síntese de proteínas"
+      "O Golgi produz glicose para as células",
+      "O Golgi destrói glicoproteínas",
+      "O Golgi regula a entrada de glicose",
+      "O Golgi adiciona grupos de açúcar às proteínas, formando as glicoproteínas"
     ]
   },
   {
-    pergunta: "Qual é o processo pelo qual os vacúolos fagocitam e destroem partículas?",
-    alternativaCerta: "Fagocitose",
+    pergunta: "Qual é a importância das glicoproteínas produzidas no Complexo de Golgi?",
+    alternativaCerta: "Elas desempenham papéis fundamentais no reconhecimento celular, adesão e sinalização",
     opcoes: [
-      "Fotossíntese",
-      "Digestão intracelular",
-      "Fagocitose",
-      "Excreção"
+      "Elas fornecem energia para a célula",
+      "Elas armazenam lipídios",
+      "Elas ativam enzimas lisossômicas",
+      "Elas desempenham papéis fundamentais no reconhecimento celular, adesão e sinalização"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos responsáveis pela manutenção da pressão osmótica em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e as membranas celulares?",
+    alternativaCerta: "O Golgi modifica e empacota lipídios e proteínas que serão incorporados nas membranas",
     opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos digestivos",
-      "Vacúolos de suco celular",
-      "Vacúolos autofágicos"
+      "O Golgi cria uma barreira contra substâncias externas",
+      "O Golgi armazena água para a membrana",
+      "O Golgi regula a pressão osmótica",
+      "O Golgi modifica e empacota lipídios e proteínas que serão incorporados nas membranas"
     ]
   },
   {
-    pergunta: "Qual é o papel dos vacúolos na regulação do pH da célula?",
-    alternativaCerta: "Acidificação e alcalinização",
+    pergunta: "O Complexo de Golgi está presente em todas as células?",
+    alternativaCerta: "Não, ele não está presente em células procarióticas",
     opcoes: [
-      "Acidificação e alcalinização",
-      "Produção de íons hidrogênio",
-      "Armazenamento de íons hidroxila",
-      "Síntese de proteínas"
-    ]
-  },  
-  {
-    pergunta: "Nos vegetais, qual é a função dos vacúolos em relação ao armazenamento de substâncias?",
-    alternativaCerta: "Armazenar água e nutrientes",
-    opcoes: [
-      "Armazenar água e nutrientes",
-      "Armazenar enzimas e proteínas",
-      "Armazenar ácidos nucleicos",
-      "Armazenar glicose e lipídios"
+      "Sim, ele está presente em todas as células",
+      "Não, ele está presente apenas em células vegetais",
+      "Não, ele não está presente em células procarióticas",
+      "Sim, ele está presente apenas em células animais"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que podem auxiliar na proteção contra herbívoros?",
-    alternativaCerta: "Vacúolos com toxinas",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a doença de Tay-Sachs?",
+    alternativaCerta: "Na doença de Tay-Sachs, a falta de uma enzima no Golgi leva ao acúmulo de substâncias tóxicas nas células",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos com toxinas"
+      "O Golgi produz excesso de enzimas na doença de Tay-Sachs",
+      "O Golgi regula a produção de neurotransmissores na doença de Tay-Sachs",
+      "O Golgi causa inflamação na doença de Tay-Sachs",
+      "Na doença de Tay-Sachs, a falta de uma enzima no Golgi leva ao acúmulo de substâncias tóxicas nas células"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos presentes nas células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a formação do acrossomo em espermatozoides?",
+    alternativaCerta: "O Golgi é responsável pela formação e empacotamento do acrossomo, uma estrutura importante para a fertilização",
     opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos contráteis",
-      "Vacúolos digestivos",
-      "Vacúolos de suco celular"
+      "O Golgi produz ATP para os espermatozoides",
+      "O Golgi armazena DNA nos espermatozoides",
+      "O Golgi regula a motilidade dos espermatozoides",
+      "O Golgi é responsável pela formação e empacotamento do acrossomo, uma estrutura importante para a fertilização"
     ]
   },
   {
-    pergunta: "Qual é a principal função dos vacúolos em células de protozoários?",
-    alternativaCerta: "Regulação osmótica",
+    pergunta: "O que são os corpos polares do Complexo de Golgi?",
+    alternativaCerta: "Pequenas vesículas que se formam durante a divisão celular e contêm material citoplasmático excedente",
     opcoes: [
-      "Digestão intracelular",
-      "Produção de energia",
-      "Regulação osmótica",
-      "Secreção de enzimas"
+      "Organelas de pigmentação",
+      "Partículas de energia",
+      "Enzimas digestivas",
+      "Pequenas vesículas que se formam durante a divisão celular e contêm material citoplasmático excedente"
     ]
   },
   {
-    pergunta: "Em células vegetais, quais vacúolos podem acumular pigmentos coloridos?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a glicosilação?",
+    alternativaCerta: "O Golgi é responsável por adicionar grupos de açúcar às proteínas, formando as glicoproteínas",
     opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos"
+      "O Golgi produz glicose a partir de proteínas",
+      "O Golgi degrada carboidratos",
+      "O Golgi regula a entrada de glicose",
+      "O Golgi é responsável por adicionar grupos de açúcar às proteínas, formando as glicoproteínas"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que desempenham um papel importante na fotossíntese das células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a orientação das moléculas nas membranas celulares?",
+    alternativaCerta: "O Golgi organiza as moléculas de lipídio e proteína nas vesículas de transporte para garantir sua correta orientação nas membranas",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular"
+      "O Golgi produz moléculas de lipídio",
+      "O Golgi controla a temperatura das membranas",
+      "O Golgi regula a quantidade de água nas membranas",
+      "O Golgi organiza as moléculas de lipídio e proteína nas vesículas de transporte para garantir sua correta orientação nas membranas"
     ]
   },
   {
-    pergunta: "Os vacúolos são comuns em células animais?",
-    alternativaCerta: "Não, os vacúolos são mais comuns em células vegetais",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a secreção de hormônios?",
+    alternativaCerta: "O Golgi modifica e empacota hormônios que serão liberados na corrente sanguínea",
     opcoes: [
-      "Sim, os vacúolos são comuns em células animais",
-      "Não, os vacúolos são mais comuns em células vegetais",
-      "Sim, os vacúolos são exclusivos de células animais",
-      "Sim, todos os tipos de células possuem vacúolos"
+      "O Golgi degrada hormônios",
+      "O Golgi produz hormônios",
+      "O Golgi controla a temperatura dos hormônios",
+      "O Golgi modifica e empacota hormônios que serão liberados na corrente sanguínea"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos com função de armazenar substâncias em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a síntese de membranas celulares?",
+    alternativaCerta: "O Golgi empacota lipídios e proteínas que formam as membranas celulares",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular"
+      "O Golgi regula a pressão osmótica das membranas",
+      "O Golgi produz DNA para as membranas celulares",
+      "O Golgi degrada membranas",
+      "O Golgi empacota lipídios e proteínas que formam as membranas celulares"
     ]
   },
   {
-    pergunta: "Qual é a relação dos vacúolos com a manutenção do pH intracelular?",
-    alternativaCerta: "Os vacúolos auxiliam na regulação do pH intracelular",
+    pergunta: "Qual é o papel do Complexo de Golgi na formação de lisossomos?",
+    alternativaCerta: "O Golgi produz vesículas que se transformam em lisossomos contendo enzimas digestivas",
     opcoes: [
-      "Os vacúolos aumentam a acidez do citoplasma",
-      "Os vacúolos diminuem a alcalinidade do núcleo",
-      "Os vacúolos auxiliam na regulação do pH intracelular",
-      "Os vacúolos são alcalinos e ácidos ao mesmo tempo"
+      "O Golgi armazena lisossomos",
+      "O Golgi degrada lisossomos",
+      "O Golgi produz energia para os lisossomos",
+      "O Golgi produz vesículas que se transformam em lisossomos contendo enzimas digestivas"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos presentes em células animais?",
-    alternativaCerta: "Vacúolos contráteis",
+    pergunta: "Como o Complexo de Golgi contribui para a regulação do metabolismo?",
+    alternativaCerta: "Ele processa e modifica proteínas e lipídios que afetam as vias metabólicas celulares",
     opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos",
-      "Vacúolos contráteis"
+      "Ele produz enzimas metabólicas",
+      "Ele regula a temperatura do metabolismo",
+      "Ele produz RNA para o metabolismo",
+      "Ele processa e modifica proteínas e lipídios que afetam as vias metabólicas celulares"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que atuam na regulação do equilíbrio osmótico em protozoários de água doce?",
-    alternativaCerta: "Vacúolos pulsáteis",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a doença de Alzheimer?",
+    alternativaCerta: "O Golgi é afetado na doença de Alzheimer, levando a problemas na função neuronal",
     opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos digestivos",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular"
+      "O Golgi produz proteínas anormais na doença de Alzheimer",
+      "O Golgi regula a produção de insulina na doença de Alzheimer",
+      "O Golgi não está relacionado à doença de Alzheimer",
+      "O Golgi é afetado na doença de Alzheimer, levando a problemas na função neuronal"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que podem conter toxinas para proteger a célula?",
-    alternativaCerta: "Vacúolos com toxinas",
+    pergunta: "O que são vesículas de clivagem do Complexo de Golgi?",
+    alternativaCerta: "Vesículas que contêm enzimas que clivam proteínas e lipídios em fragmentos menores",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular",
-      "Vacúolos com toxinas"
+      "Vesículas que armazenam DNA",
+      "Vesículas que produzem energia",
+      "Vesículas que transportam água",
+      "Vesículas que contêm enzimas que clivam proteínas e lipídios em fragmentos menores"
     ]
   },
   {
-    pergunta: "Em células vegetais, quais vacúolos desempenham um papel importante na regulação do volume celular?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é a importância das vesículas de transporte do Complexo de Golgi na célula?",
+    alternativaCerta: "Elas garantem a distribuição eficiente de substâncias processadas para suas localizações adequadas",
     opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos"
+      "Elas armazenam resíduos celulares",
+      "Elas produzem energia",
+      "Elas sintetizam proteínas",
+      "Elas garantem a distribuição eficiente de substâncias processadas para suas localizações adequadas"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que podem se fundir com lisossomos para degradar componentes celulares?",
-    alternativaCerta: "Vacúolos autofágicos",
+    pergunta: "Qual é o processo de formação de vesículas de transporte no Complexo de Golgi?",
+    alternativaCerta: "Brotamento das membranas do Golgi para formar as vesículas",
     opcoes: [
-      "Vacúolos digestivos",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular",
-      "Vacúolos autofágicos"
+      "Divisão do Golgi em partes menores",
+      "Fusão das membranas do Golgi para formar as vesículas",
+      "Produção das vesículas diretamente do retículo endoplasmático",
+      "Brotamento das membranas do Golgi para formar as vesículas"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos presentes nas células de protozoários como a ameba?",
-    alternativaCerta: "Vacúolos digestivos",
+    pergunta: "O Complexo de Golgi está envolvido na regulação do pH intracelular?",
+    alternativaCerta: "Sim, ele regula o pH intracelular ao empacotar enzimas que atuam em diferentes pHs",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos"
+      "Não, ele não tem influência no pH intracelular",
+      "Sim, ele controla o pH através da síntese de lipídios",
+      "Sim, ele regula o pH intracelular através da produção de ácido clorídrico",
+      "Sim, ele regula o pH intracelular ao empacotar enzimas que atuam em diferentes pHs"
     ]
   },
   {
-    pergunta: "Os vacúolos são estruturas exclusivas de células eucarióticas?",
-    alternativaCerta: "Sim, apenas células eucarióticas possuem vacúolos",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a síndrome de Alagille?",
+    alternativaCerta: "Na síndrome de Alagille, há anormalidades no desenvolvimento do Golgi e dos ductos biliares",
     opcoes: [
-      "Sim, apenas células eucarióticas possuem vacúolos",
-      "Não, células procariontes também possuem vacúolos",
-      "Não, as células vegetais não possuem vacúolos",
-      "Sim, os vacúolos são encontrados apenas em células animais"
+      "O Golgi produz enzimas anormais na síndrome de Alagille",
+      "O Golgi não está relacionado à síndrome de Alagille",
+      "O Golgi produz excesso de bile na síndrome de Alagille",
+      "Na síndrome de Alagille, há anormalidades no desenvolvimento do Golgi e dos ductos biliares"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos presentes em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
+    pergunta: "Qual é o papel do Complexo de Golgi na adição de grupos fosfato às proteínas?",
+    alternativaCerta: "Ele não está diretamente envolvido na adição de grupos fosfato às proteínas",
     opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos contráteis",
-      "Vacúolos digestivos",
-      "Vacúolos de suco celular"
+      "Ele adiciona grupos fosfato às proteínas para regulação",
+      "Ele degrada grupos fosfato das proteínas",
+      "Ele regula a entrada de fosfato na célula",
+      "Ele não está diretamente envolvido na adição de grupos fosfato às proteínas"
     ]
   },
   {
-    pergunta: "Em células vegetais, quais vacúolos possuem enzimas digestivas para degradar materiais?",
-    alternativaCerta: "Vacúolos digestivos",
+    pergunta: "Qual é a relação entre o Complexo de Golgi e a formação da lâmina basal?",
+    alternativaCerta: "O Golgi é responsável por empacotar proteínas que contribuem para a formação da lâmina basal",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos digestivos"
+      "O Golgi regula a temperatura da lâmina basal",
+      "O Golgi não tem relação com a formação da lâmina basal",
+      "O Golgi produz a lâmina basal",
+      "O Golgi é responsável por empacotar proteínas que contribuem para a formação da lâmina basal"
     ]
   },
   {
-    pergunta: "Qual é a organela que armazena água, íons e algumas substâncias de reserva nas células vegetais?",
-    alternativaCerta: "Vacúolos",
+    pergunta: "Como o Complexo de Golgi está envolvido na modulação da resposta imune?",
+    alternativaCerta: "Ele processa e empacota proteínas envolvidas na resposta imune, como os antígenos",
     opcoes: [
-      "Complexo de Golgis",
-      "Mitocôndrias",
-      "Vacúolos",
-      "Núcleo"
+      "Ele produz anticorpos",
+      "Ele degrada células imunes",
+      "Ele produz citocinas",
+      "Ele processa e empacota proteínas envolvidas na resposta imune, como os antígenos"
     ]
   },
   {
-    pergunta: "Que organela desempenha um papel fundamental na regulação do equilíbrio de água e solutos nas células vegetais?",
-    alternativaCerta: "Vacúolos",
+    pergunta: "O que acontece com o Complexo de Golgi durante a divisão celular?",
+    alternativaCerta: "Ele se dispersa em vesículas pequenas e depois se reorganiza nas células filhas",
     opcoes: [
-      "Lisossomos",
-      "Vacúolos",
-      "Retículo Endoplasmático",
-      "Núcleo"
+      "Ele duplica de tamanho",
+      "Ele se divide em duas partes iguais",
+      "Ele se expande para ocupar mais espaço",
+      "Ele se dispersa em vesículas pequenas e depois se reorganiza nas células filhas"
     ]
-  },
-  {
-    pergunta: "Qual é a organela que também pode conter pigmentos, toxinas e substâncias de reserva, além de água?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Mitocôndrias",
-      "Vacúolos",
-      "Ribossomos",
-      "Cloroplastos"
-    ]
-  },
-  {
-    pergunta: "Que organela possui uma função importante na manutenção da turgidez (rigidez) da célula vegetal?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Complexo de Golgi",
-      "Vacúolos",
-      "Peroxissomos",
-      "Núcleo"
-    ]
-  },
-  {
-    pergunta: "Qual é a organela que desempenha um papel crucial no armazenamento de substâncias como carboidratos e proteínas dentro das células?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Lisossomos",
-      "Vacúolos",
-      "Retículo Endoplasmático",
-      "Mitocôndrias"
-    ]
-  },
-  {
-    pergunta: "Que organela, nas células vegetais, é responsável por armazenar pigmentos, como a clorofila, que são essenciais para a fotossíntese?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Vacúolos",
-      "Núcleo",
-      "Mitocôndrias",
-      "Complexo de Golgi"
-    ]
-  },
-  {
-    pergunta: "Qual é a organela que pode estar envolvida no armazenamento de substâncias de defesa contra herbívoros e patógenos em algumas plantas?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Mitocôndrias",
-      "Vacúolos",
-      "Lisossomos",
-      "Cloroplastos"
-    ]
-  },
+  }
 ];
 
 // se o botão startQuiz for clicado

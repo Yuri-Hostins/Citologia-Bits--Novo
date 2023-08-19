@@ -13,495 +13,375 @@ const contagemTempo = document.querySelector(".tempo .tempo-segundo");
 // criando um array e passando o número, perguntas, opções e respostas
 let perguntas = [
   {
-    pergunta: "Qual é a função principal dos vacúolos?",
-    alternativaCerta: "Armazenar água e substâncias",
+    pergunta: "Qual é a estrutura celular em forma de cilindro composta por microtúbulos?",
+    alternativaCerta: "Centríolo",
     opcoes: [
-      "Síntese de proteínas",
-      "Produção de energia",
-      "Armazenar água e substâncias",
-      "Digestão de resíduos celulares"
-    ]
-  },
-  {
-    pergunta: "Qual é a estrutura que delimita o vacúolo em células vegetais?",
-    alternativaCerta: "Tonoplasto",
-    opcoes: [
-      "Membrana plasmática",
+      "Mitocôndria",
       "Núcleo",
-      "Tonoplasto",
-      "Membrana mitocondrial"
+      "Complexo de Golgi",
+      "Centríolo"
     ]
   },
   {
-    pergunta: "Quais são os principais íons armazenados nos vacúolos?",
-    alternativaCerta: "Íons de potássio",
+    pergunta: "Qual é a principal função dos centríolos?",
+    alternativaCerta: "Organizar os microtúbulos durante a divisão celular",
     opcoes: [
-      "Íons de sódio",
-      "Íons de cálcio",
-      "Íons de potássio",
-      "Íons de magnésio"
+      "Sintetizar proteínas",
+      "Produzir energia",
+      "Armazenar DNA",
+      "Organizar os microtúbulos durante a divisão celular"
     ]
   },
   {
-    pergunta: "Em células vegetais, qual é a função dos vacúolos no crescimento celular?",
-    alternativaCerta: "Contribuir para o crescimento e expansão da célula",
+    pergunta: "Os centríolos são encontrados apenas em células animais?",
+    alternativaCerta: "Sim, estão presentes apenas em células animais",
     opcoes: [
-      "Regular a divisão celular",
-      "Contribuir para o crescimento e expansão da célula",
-      "Inibir o crescimento celular",
-      "Controlar o metabolismo"
+      "Não, estão presentes apenas em células vegetais",
+      "Sim, estão presentes apenas em células animais",
+      "Sim, estão presentes em todas as células",
+      "Não, estão presentes apenas em células bacterianas"
     ]
   },
   {
-    pergunta: "Nos protozoários, os vacúolos estão associados a qual processo?",
-    alternativaCerta: "Excreção",
+    pergunta: "Quantos centríolos normalmente estão presentes em uma célula animal?",
+    alternativaCerta: "Geralmente, dois",
     opcoes: [
-      "Fotossíntese",
-      "Digestão intracelular",
-      "Respiração celular",
-      "Excreção"
+      "Um",
+      "Dois",
+      "Três",
+      "Cinco"
     ]
   },
   {
-    pergunta: "Em células vegetais, qual é a função dos vacúolos na manutenção da turgescência?",
-    alternativaCerta: "Manter a rigidez da célula através do armazenamento de água",
+    pergunta: "Qual é a relação entre os centríolos e o citoesqueleto?",
+    alternativaCerta: "Os centríolos estão associados aos microtúbulos do citoesqueleto",
     opcoes: [
-      "Regular a pressão osmótica",
-      "Manter a rigidez da célula através do armazenamento de água",
-      "Inibir a absorção de água",
-      "Produzir enzimas"
+      "Os centríolos armazenam proteínas do citoesqueleto",
+      "Os centríolos produzem energia para o citoesqueleto",
+      "Os centríolos degradam os microtúbulos do citoesqueleto",
+      "Os centríolos estão associados aos microtúbulos do citoesqueleto"
     ]
   },
   {
-    pergunta: "Quais são as substâncias de resíduos que podem ser armazenadas nos vacúolos?",
-    alternativaCerta: "Pigmentos, cristais e toxinas",
+    pergunta: "Qual é a função dos centríolos durante a divisão celular?",
+    alternativaCerta: "Organizar os microtúbulos do fuso mitótico",
     opcoes: [
-      "Enzimas, carboidratos e lipídios",
-      "Água, íons e proteínas",
-      "Pigmentos, cristais e toxinas",
-      "Glicose, aminoácidos e ácidos nucleicos"
+      "Sintetizar DNA",
+      "Produzir RNA",
+      "Armazenar lipídios",
+      "Organizar os microtúbulos do fuso mitótico"
     ]
   },
   {
-    pergunta: "Em células vegetais, qual é a função dos vacúolos na fotossíntese?",
-    alternativaCerta: "Armazenar pigmentos fotossintéticos",
+    pergunta: "Em que região da célula os centríolos geralmente estão localizados?",
+    alternativaCerta: "Próximo ao núcleo, no centrossomo",
     opcoes: [
-      "Produzir clorofila",
-      "Regular a entrada de luz",
-      "Armazenar pigmentos fotossintéticos",
-      "Converter energia solar em ATP"
+      "No citoplasma",
+      "Na membrana plasmática",
+      "No complexo de Golgi",
+      "Próximo ao núcleo, no centrossomo"
     ]
   },
   {
-    pergunta: "Nos animais, os vacúolos são organelas mais proeminentes em qual tipo de células?",
-    alternativaCerta: "Células especializadas, como os macrófagos",
+    pergunta: "Qual é a estrutura cilíndrica que compõe os centríolos?",
+    alternativaCerta: "Microtúbulos",
     opcoes: [
-      "Células nervosas",
-      "Células musculares",
-      "Células epiteliais",
-      "Células especializadas, como os macrófagos"
+      "DNA",
+      "RNA",
+      "Proteínas",
+      "Microtúbulos"
     ]
   },
   {
-    pergunta: "Quais são as células sanguíneas que podem conter vacúolos durante sua maturação?",
-    alternativaCerta: "Células vermelhas ou hemácias",
+    pergunta: "Os centríolos são essenciais para a sobrevivência da célula?",
+    alternativaCerta: "Não, as células podem sobreviver sem centríolos",
     opcoes: [
-      "Células brancas ou leucócitos",
-      "Células vermelhas ou hemácias",
-      "Plaquetas",
-      "Células-tronco"
+      "Sim, as células não podem sobreviver sem centríolos",
+      "Não, as células podem sobreviver sem centríolos",
+      "Sim, as células precisam de centríolos para respiração celular",
+      "Não, as células precisam de centríolos para síntese de proteínas"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos contráteis encontrados em protozoários de água doce?",
-    alternativaCerta: "Vacúolos pulsáteis",
+    pergunta: "Qual é o nome da estrutura que se forma a partir dos centríolos durante a divisão celular?",
+    alternativaCerta: "Fuso mitótico",
     opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos digestivos",
-      "Vacúolos secretórios"
+      "Mitocôndria",
+      "Complexo de Golgi",
+      "Cloroplasto",
+      "Fuso mitótico"
     ]
   },
   {
-    pergunta: "Qual é a função dos vacúolos autofágicos nas células?",
-    alternativaCerta: "Degradação de componentes celulares",
+    pergunta: "Além da divisão celular, os centríolos têm outras funções?",
+    alternativaCerta: "Sim, eles também estão envolvidos na formação de cílios e flagelos",
     opcoes: [
-      "Produção de energia",
-      "Armazenamento de água",
-      "Secreção de enzimas",
-      "Degradação de componentes celulares"
+      "Não, os centríolos têm apenas a função de organizar os microtúbulos durante a divisão celular",
+      "Sim, eles também estão envolvidos na síntese de DNA",
+      "Sim, eles estão envolvidos na síntese de proteínas",
+      "Sim, eles também estão envolvidos na formação de cílios e flagelos"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos responsáveis pelo armazenamento de enzimas digestivas?",
-    alternativaCerta: "Vacúolos digestivos",
+    pergunta: "Quais são os dois tipos principais de estruturas formadas pelos centríolos?",
+    alternativaCerta: "Cílios e flagelos",
     opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos contráteis",
-      "Vacúolos digestivos"
+      "Mitocôndrias e lisossomos",
+      "Complexo de Golgi e núcleo",
+      "Retículo endoplasmático e cloroplastos",
+      "Cílios e flagelos"
     ]
   },
   {
-    pergunta: "Nos animais, os vacúolos podem desempenhar um papel importante em qual processo de desenvolvimento?",
-    alternativaCerta: "Fagocitose",
+    pergunta: "Os centríolos são compostos por quantos grupos de microtúbulos?",
+    alternativaCerta: "Nove grupos de três microtúbulos cada",
     opcoes: [
-      "Fotossíntese",
-      "Digestão intracelular",
-      "Respiração celular",
-      "Fagocitose"
+      "Um único microtúbulo",
+      "Cinco grupos de dois microtúbulos cada",
+      "Sete grupos de três microtúbulos cada",
+      "Nove grupos de três microtúbulos cada"
     ]
   },
   {
-    pergunta: "Quais são os vacúolos que se formam quando uma célula ingere partículas sólidas?",
-    alternativaCerta: "Vacúolos digestivos",
-    opcoes: [
-      "Vacúolos autofágicos",
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos digestivos"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos que se formam durante a fagocitose?",
-    alternativaCerta: "Vacúolos digestivos",
-    opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos secretórios",
-      "Vacúolos digestivos",
-      "Vacúolos autofágicos"
-    ]
-  },
-  {
-    pergunta: "Em que parte da célula os vacúolos geralmente são encontrados?",
-    alternativaCerta: "Citoplasma",
-    opcoes: [
-      "Núcleo",
-      "Mitocôndrias",
-      "Retículo endoplasmático",
-      "Citoplasma"
-    ]
-  },
-  {
-    pergunta: "Qual é o tamanho típico dos vacúolos em células vegetais?",
-    alternativaCerta: "Grandes e preenchendo a maior parte da célula",
-    opcoes: [
-      "Pequenos e localizados próximos ao núcleo",
-      "Grandes e preenchendo a maior parte da célula",
-      "Iguais em tamanho aos vacúolos de células animais",
-      "Inexistentes em células vegetais"
-    ]
-  },
-  {
-    pergunta: "Qual é a função dos vacúolos contráteis em protozoários?",
-    alternativaCerta: "Regulação do equilíbrio osmótico",
-    opcoes: [
-      "Digestão intracelular",
-      "Produção de energia",
-      "Regulação do equilíbrio osmótico",
-      "Secreção de enzimas"
-    ]
-  },  
-  {
-    pergunta: "Quais são os vacúolos que contêm pigmentos coloridos em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos",
-      "Vacúolos secretórios"
-    ]
-  },
-  {
-    pergunta: "Em células animais, qual é a função dos vacúolos?",
-    alternativaCerta: "Participar de processos excretórios e de secreção",
-    opcoes: [
-      "Armazenar água",
-      "Armazenar nutrientes",
-      "Participar de processos excretórios e de secreção",
-      "Síntese de proteínas"
-    ]
-  },
-  {
-    pergunta: "Qual é o processo pelo qual os vacúolos fagocitam e destroem partículas?",
-    alternativaCerta: "Fagocitose",
-    opcoes: [
-      "Fotossíntese",
-      "Digestão intracelular",
-      "Fagocitose",
-      "Excreção"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos responsáveis pela manutenção da pressão osmótica em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos digestivos",
-      "Vacúolos de suco celular",
-      "Vacúolos autofágicos"
-    ]
-  },
-  {
-    pergunta: "Qual é o papel dos vacúolos na regulação do pH da célula?",
-    alternativaCerta: "Acidificação e alcalinização",
-    opcoes: [
-      "Acidificação e alcalinização",
-      "Produção de íons hidrogênio",
-      "Armazenamento de íons hidroxila",
-      "Síntese de proteínas"
-    ]
-  },  
-  {
-    pergunta: "Nos vegetais, qual é a função dos vacúolos em relação ao armazenamento de substâncias?",
-    alternativaCerta: "Armazenar água e nutrientes",
-    opcoes: [
-      "Armazenar água e nutrientes",
-      "Armazenar enzimas e proteínas",
-      "Armazenar ácidos nucleicos",
-      "Armazenar glicose e lipídios"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos que podem auxiliar na proteção contra herbívoros?",
-    alternativaCerta: "Vacúolos com toxinas",
-    opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos com toxinas"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos presentes nas células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos contráteis",
-      "Vacúolos digestivos",
-      "Vacúolos de suco celular"
-    ]
-  },
-  {
-    pergunta: "Qual é a principal função dos vacúolos em células de protozoários?",
-    alternativaCerta: "Regulação osmótica",
-    opcoes: [
-      "Digestão intracelular",
-      "Produção de energia",
-      "Regulação osmótica",
-      "Secreção de enzimas"
-    ]
-  },
-  {
-    pergunta: "Em células vegetais, quais vacúolos podem acumular pigmentos coloridos?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos que desempenham um papel importante na fotossíntese das células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular"
-    ]
-  },
-  {
-    pergunta: "Os vacúolos são comuns em células animais?",
-    alternativaCerta: "Não, os vacúolos são mais comuns em células vegetais",
-    opcoes: [
-      "Sim, os vacúolos são comuns em células animais",
-      "Não, os vacúolos são mais comuns em células vegetais",
-      "Sim, os vacúolos são exclusivos de células animais",
-      "Sim, todos os tipos de células possuem vacúolos"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos com função de armazenar substâncias em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular"
-    ]
-  },
-  {
-    pergunta: "Qual é a relação dos vacúolos com a manutenção do pH intracelular?",
-    alternativaCerta: "Os vacúolos auxiliam na regulação do pH intracelular",
-    opcoes: [
-      "Os vacúolos aumentam a acidez do citoplasma",
-      "Os vacúolos diminuem a alcalinidade do núcleo",
-      "Os vacúolos auxiliam na regulação do pH intracelular",
-      "Os vacúolos são alcalinos e ácidos ao mesmo tempo"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos presentes em células animais?",
-    alternativaCerta: "Vacúolos contráteis",
-    opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos",
-      "Vacúolos contráteis"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos que atuam na regulação do equilíbrio osmótico em protozoários de água doce?",
-    alternativaCerta: "Vacúolos pulsáteis",
-    opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos digestivos",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos que podem conter toxinas para proteger a célula?",
-    alternativaCerta: "Vacúolos com toxinas",
-    opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular",
-      "Vacúolos com toxinas"
-    ]
-  },
-  {
-    pergunta: "Em células vegetais, quais vacúolos desempenham um papel importante na regulação do volume celular?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos que podem se fundir com lisossomos para degradar componentes celulares?",
-    alternativaCerta: "Vacúolos autofágicos",
-    opcoes: [
-      "Vacúolos digestivos",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular",
-      "Vacúolos autofágicos"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos presentes nas células de protozoários como a ameba?",
-    alternativaCerta: "Vacúolos digestivos",
-    opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos de suco celular",
-      "Vacúolos digestivos"
-    ]
-  },
-  {
-    pergunta: "Os vacúolos são estruturas exclusivas de células eucarióticas?",
-    alternativaCerta: "Sim, apenas células eucarióticas possuem vacúolos",
-    opcoes: [
-      "Sim, apenas células eucarióticas possuem vacúolos",
-      "Não, células procariontes também possuem vacúolos",
-      "Não, as células vegetais não possuem vacúolos",
-      "Sim, os vacúolos são encontrados apenas em células animais"
-    ]
-  },
-  {
-    pergunta: "Quais são os vacúolos presentes em células vegetais?",
-    alternativaCerta: "Vacúolos de suco celular",
-    opcoes: [
-      "Vacúolos com toxinas",
-      "Vacúolos contráteis",
-      "Vacúolos digestivos",
-      "Vacúolos de suco celular"
-    ]
-  },
-  {
-    pergunta: "Em células vegetais, quais vacúolos possuem enzimas digestivas para degradar materiais?",
-    alternativaCerta: "Vacúolos digestivos",
-    opcoes: [
-      "Vacúolos secretórios",
-      "Vacúolos pulsáteis",
-      "Vacúolos autofágicos",
-      "Vacúolos digestivos"
-    ]
-  },
-  {
-    pergunta: "Qual é a organela que armazena água, íons e algumas substâncias de reserva nas células vegetais?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Complexo de Golgis",
-      "Mitocôndrias",
-      "Vacúolos",
-      "Núcleo"
-    ]
-  },
-  {
-    pergunta: "Que organela desempenha um papel fundamental na regulação do equilíbrio de água e solutos nas células vegetais?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Lisossomos",
-      "Vacúolos",
-      "Retículo Endoplasmático",
-      "Núcleo"
-    ]
-  },
-  {
-    pergunta: "Qual é a organela que também pode conter pigmentos, toxinas e substâncias de reserva, além de água?",
-    alternativaCerta: "Vacúolos",
-    opcoes: [
-      "Mitocôndrias",
-      "Vacúolos",
-      "Ribossomos",
-      "Cloroplastos"
-    ]
-  },
-  {
-    pergunta: "Que organela possui uma função importante na manutenção da turgidez (rigidez) da célula vegetal?",
-    alternativaCerta: "Vacúolos",
+    pergunta: "Qual é a estrutura semelhante aos centríolos encontrada em células vegetais?",
+    alternativaCerta: "Corpo basal",
     opcoes: [
       "Complexo de Golgi",
-      "Vacúolos",
-      "Peroxissomos",
-      "Núcleo"
+      "Mitocôndria",
+      "Nucléolo",
+      "Corpo basal"
     ]
   },
   {
-    pergunta: "Qual é a organela que desempenha um papel crucial no armazenamento de substâncias como carboidratos e proteínas dentro das células?",
-    alternativaCerta: "Vacúolos",
+    pergunta: "Quando os centríolos começam a se duplicar durante o ciclo celular?",
+    alternativaCerta: "Durante a fase S da interfase",
     opcoes: [
-      "Lisossomos",
-      "Vacúolos",
-      "Retículo Endoplasmático",
-      "Mitocôndrias"
+      "Durante a fase G1 da interfase",
+      "Durante a fase M da mitose",
+      "Durante a fase G2 da interfase",
+      "Durante a fase S da interfase"
     ]
   },
   {
-    pergunta: "Que organela, nas células vegetais, é responsável por armazenar pigmentos, como a clorofila, que são essenciais para a fotossíntese?",
-    alternativaCerta: "Vacúolos",
+    pergunta: "Além das células animais, os centríolos também estão presentes em...",
+    alternativaCerta: "Alguns protistas",
     opcoes: [
-      "Vacúolos",
+      "Todas as células eucarióticas",
+      "Células bacterianas",
+      "Todas as células vegetais",
+      "Alguns protistas"
+    ]
+  },
+  {
+    pergunta: "Qual é o nome do processo pelo qual os centríolos migram para os polos da célula durante a divisão celular?",
+    alternativaCerta: "Centrossomo",
+    opcoes: [
+      "Centrocelular",
+      "Cêntuplo",
+      "Centróide",
+      "Centrossomo"
+    ]
+  },
+  {
+    pergunta: "Os centríolos estão envolvidos na síntese de...",
+    alternativaCerta: "Nenhum material genético",
+    opcoes: [
+      "DNA",
+      "RNA",
+      "Proteínas",
+      "Nenhum material genético"
+    ]
+  },
+  {
+    pergunta: "Qual é o papel dos centríolos na formação de cílios e flagelos?",
+    alternativaCerta: "Eles organizam os microtúbulos que compõem essas estruturas",
+    opcoes: [
+      "Eles produzem enzimas para cílios e flagelos",
+      "Eles armazenam energia para cílios e flagelos",
+      "Eles sintetizam proteínas para cílios e flagelos",
+      "Eles organizam os microtúbulos que compõem essas estruturas"
+    ]
+  },
+  {
+    pergunta: "Qual é a relação entre os centríolos e os cílios das células?",
+    alternativaCerta: "Os centríolos organizam os microtúbulos que formam os cílios",
+    opcoes: [
+      "Os centríolos armazenam lipídios para os cílios",
+      "Os centríolos realizam a fotossíntese nos cílios",
+      "Os centríolos produzem hormônios para os cílios",
+      "Os centríolos organizam os microtúbulos que formam os cílios"
+    ]
+  },
+  {
+    pergunta: "Qual é o nome da estrutura que se forma a partir dos centríolos e auxilia na divisão celular?",
+    alternativaCerta: "Fuso acromático",
+    opcoes: [
       "Núcleo",
-      "Mitocôndrias",
-      "Complexo de Golgi"
+      "Complexo de Golgi",
+      "Retículo endoplasmático",
+      "Fuso acromático"
     ]
   },
   {
-    pergunta: "Qual é a organela que pode estar envolvida no armazenamento de substâncias de defesa contra herbívoros e patógenos em algumas plantas?",
-    alternativaCerta: "Vacúolos",
+    pergunta: "Os centríolos também estão presentes em células...",
+    alternativaCerta: "Vegetais",
     opcoes: [
-      "Mitocôndrias",
-      "Vacúolos",
-      "Lisossomos",
-      "Cloroplastos"
+      "Animais",
+      "Bacterianas",
+      "Humanas",
+      "Vegetais"
     ]
   },
+  {
+    pergunta: "O que é um centrossomo?",
+    alternativaCerta: "Região próxima ao núcleo que contém dois centríolos",
+    opcoes: [
+      "Uma proteína",
+      "Uma enzima",
+      "Uma organela",
+      "Região próxima ao núcleo que contém dois centríolos"
+    ]
+  },
+  {
+    pergunta: "Os centríolos têm um papel na movimentação de...",
+    alternativaCerta: "Cílios e flagelos",
+    opcoes: [
+      "Lisossomos",
+      "Mitocôndrias",
+      "Nucléolos",
+      "Cílios e flagelos"
+    ]
+  },
+  {
+    pergunta: "Qual é a relação entre os centríolos e a doença de Parkinson?",
+    alternativaCerta: "Os centríolos não estão relacionados à doença de Parkinson",
+    opcoes: [
+      "Os centríolos produzem proteínas anormais na doença de Parkinson",
+      "Os centríolos regulam a produção de dopamina na doença de Parkinson",
+      "Os centríolos estão envolvidos na formação de agregados proteicos na doença de Parkinson",
+      "Os centríolos não estão relacionados à doença de Parkinson"
+    ]
+  },
+  {
+    pergunta: "Os centríolos têm um papel importante na...",
+    alternativaCerta: "Divisão celular e formação de cílios e flagelos",
+    opcoes: [
+      "Produção de energia",
+      "Digestão intracelular",
+      "Regulação do pH",
+      "Divisão celular e formação de cílios e flagelos"
+    ]
+  },
+  {
+    pergunta: "Em que fase da divisão celular os centríolos se separam e migram para os polos?",
+    alternativaCerta: "Prófase",
+    opcoes: [
+      "Metáfase",
+      "Anáfase",
+      "Telófase",
+      "Prófase"
+    ]
+  },
+  {
+    pergunta: "Qual é a relação entre os centríolos e a formação do fuso mitótico?",
+    alternativaCerta: "Os centríolos organizam os microtúbulos que formam o fuso mitótico",
+    opcoes: [
+      "Os centríolos produzem energia para o fuso mitótico",
+      "Os centríolos produzem RNA para o fuso mitótico",
+      "Os centríolos regulam o pH do fuso mitótico",
+      "Os centríolos organizam os microtúbulos que formam o fuso mitótico"
+    ]
+  },
+  {
+    pergunta: "Quando os centríolos começam a se duplicar durante a divisão celular?",
+    alternativaCerta: "Durante a fase S da interfase",
+    opcoes: [
+      "Durante a fase G1 da interfase",
+      "Durante a fase M da mitose",
+      "Durante a fase G2 da interfase",
+      "Durante a fase S da interfase"
+    ]
+  },
+  {
+    pergunta: "Qual é a função dos centríolos durante a divisão celular?",
+    alternativaCerta: "Organizar os microtúbulos do fuso mitótico",
+    opcoes: [
+      "Sintetizar DNA",
+      "Produzir RNA",
+      "Armazenar lipídios",
+      "Organizar os microtúbulos do fuso mitótico"
+    ]
+  },
+  {
+    pergunta: "Além da divisão celular, os centríolos têm outras funções?",
+    alternativaCerta: "Sim, eles também estão envolvidos na formação de cílios e flagelos",
+    opcoes: [
+      "Não, os centríolos têm apenas a função de organizar os microtúbulos durante a divisão celular",
+      "Sim, eles também estão envolvidos na síntese de DNA",
+      "Sim, eles estão envolvidos na síntese de proteínas",
+      "Sim, eles também estão envolvidos na formação de cílios e flagelos"
+    ]
+  },
+  {
+    pergunta: "Os centríolos também estão presentes em células...",
+    alternativaCerta: "Vegetais",
+    opcoes: [
+      "Animais",
+      "Bacterianas",
+      "Humanas",
+      "Vegetais"
+    ]
+  },
+  {
+    pergunta: "Qual é o nome da estrutura que se forma a partir dos centríolos e auxilia na divisão celular?",
+    alternativaCerta: "Fuso acromático",
+    opcoes: [
+      "Núcleo",
+      "Complexo de Golgi",
+      "Retículo endoplasmático",
+      "Fuso acromático"
+    ]
+  },
+  {
+    pergunta: "Qual é a relação entre os centríolos e a doença de Parkinson?",
+    alternativaCerta: "Os centríolos não estão relacionados à doença de Parkinson",
+    opcoes: [
+      "Os centríolos produzem proteínas anormais na doença de Parkinson",
+      "Os centríolos regulam a produção de dopamina na doença de Parkinson",
+      "Os centríolos estão envolvidos na formação de agregados proteicos na doença de Parkinson",
+      "Os centríolos não estão relacionados à doença de Parkinson"
+    ]
+  },
+  {
+    pergunta: "Os centríolos têm um papel importante na...",
+    alternativaCerta: "Divisão celular e formação de cílios e flagelos",
+    opcoes: [
+      "Produção de energia",
+      "Digestão intracelular",
+      "Regulação do pH",
+      "Divisão celular e formação de cílios e flagelos"
+    ]
+  },
+  {
+    pergunta: "Em que fase da divisão celular os centríolos se separam e migram para os polos?",
+    alternativaCerta: "Prófase",
+    opcoes: [
+      "Metáfase",
+      "Anáfase",
+      "Telófase",
+      "Prófase"
+    ]
+  },
+  {
+    pergunta: "Qual é a relação entre os centríolos e a formação do fuso mitótico?",
+    alternativaCerta: "Os centríolos organizam os microtúbulos que formam o fuso mitótico",
+    opcoes: [
+      "Os centríolos produzem energia para o fuso mitótico",
+      "Os centríolos produzem RNA para o fuso mitótico",
+      "Os centríolos regulam o pH do fuso mitótico",
+      "Os centríolos organizam os microtúbulos que formam o fuso mitótico"
+    ]
+  }
 ];
 
 // se o botão startQuiz for clicado

@@ -342,6 +342,76 @@ let perguntas = [
       "O pH ácido é importante apenas para a digestão dos lisossomos em ambiente externo"
     ]
   },
+  {
+    pergunta: "Que organela desempenha um papel importante na quebra do peróxido de hidrogênio e na conversão de substâncias tóxicas em menos prejudiciais?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Ribossomos",
+      "Mitocôndrias",
+      "Complexo de Golgi",
+      "Peroxissomos"
+    ]
+  },
+  {
+    pergunta: "Que organela está envolvida na degradação de ácidos graxos e ajuda a regular o nível de peróxido de hidrogênio na célula?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Ribossomos",
+      "Mitocôndrias",
+      "Núcleo",
+      "Peroxissomos"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que contribui para a produção de bile no fígado e está relacionada à desintoxicação de substâncias no organismo?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Retículo Endoplasmático",
+      "Lisossomos",
+      "Peroxissomos",
+      "Núcleo"
+    ]
+  },
+  {
+    pergunta: "Que organela contém enzimas que realizam a decomposição de peróxido de hidrogênio, um subproduto tóxico do metabolismo celular?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Mitocôndrias",
+      "Cloroplastos",
+      "Peroxissomos",
+      "Ribossomos"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela responsável por metabolizar compostos lipídicos e participar da síntese de ácidos graxos de cadeia longa?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Peroxissomos",
+      "Núcleo",
+      "Lisossomos",
+      "Retículo Endoplasmático"
+    ]
+  },
+  {
+    pergunta: "Qual organela desempenha um papel essencial na detoxificação de substâncias tóxicas na célula?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Mitocôndrias",
+      "Lisossomos",
+      "Complexo de Golgi",
+      "Peroxissomos"
+    ]
+  },
+  {
+    pergunta: "Qual é a organela que contém enzimas oxidativas e está envolvida no metabolismo de peróxido de hidrogênio?",
+    alternativaCerta: "Peroxissomos",
+    opcoes: [
+      "Lisossomos",
+      "Retículo Endoplasmático",
+      "Peroxissomos",
+      "Núcleo"
+    ]
+  },
 ];
 
 // se o botão startQuiz for clicado
