@@ -225,4 +225,8 @@ figcaption {
     max-width: 300px;
     /* Define a largura máxima para as imagens dentro do elemento com a classe .imagem-conteudo */
   }
+
+  .banner-conteudo>div h1 {
+    font-size: clamp(2rem, 2rem + 5vw, 2.5rem);
+  }
 }
