@@ -52,6 +52,21 @@
   /* Centraliza os itens (filhos) horizontalmente e verticalmente */
   place-content: center;
 }
+@keyframes sky {
+	0%,
+	100% {
+		background-position: center;
+	}
+	25% {
+		background-position: left;
+	}
+	70% {
+		background-position: bottom;
+	}
+	90% {
+		background-position: right;
+	}
+}
 
 /* Estilizando o DNA, que é o elemento animado */
 .material {
