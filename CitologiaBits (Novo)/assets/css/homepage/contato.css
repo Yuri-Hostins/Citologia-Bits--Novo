@@ -1,3 +1,8 @@
+ #contato{
+  text-align: center;
+  padding: 100px 30px 100px 20px;
+}
+
 /* Estilos para o contêiner de contato */
 .container-contato {
   display: flex;
@@ -10,10 +15,8 @@
   /* Permite que os elementos dentro do contêiner sejam organizados em várias linhas quando o espaço é insuficiente */
   height: 100%;
   /* Define a altura do contêiner como 100% */
-  margin-top: 2rem;
-  /* Adiciona um espaçamento de 2rem (aproximadamente 32 pixels) acima do contêiner */
-  margin-bottom: 3rem;
-  /* Adiciona um espaçamento de 3rem (aproximadamente 48 pixels) abaixo do contêiner */
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 /* Estilos para os botões de contato */
@@ -152,4 +155,8 @@
   /* Define a opacidade do texto como 0 (completamente transparente) */
   transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   /* Adiciona uma transição suave de 0,5 segundos com uma curva de aceleração personalizada para as propriedades que sofrerem alteração */
+}
+
+#texto-projeto{
+  margin-bottom: 2rem;
 }

@@ -6,7 +6,7 @@ footer {
   display: flex; /* Define o footer como um contêiner flexível */
   justify-content: center; /* Centraliza o conteúdo horizontalmente dentro do footer */
   align-items: center; /* Centraliza o conteúdo verticalmente dentro do footer */
-  flex-direction: column; /* Define a direção do fluxo de itens dentro do footer como coluna */
+  flex-direction: column; /* Define a direção do fluxo de itens dentro do footer como coluna */ 
 }
 
 /* Estilizando os parágrafos dentro do footer */

@@ -39,7 +39,7 @@ header {
 }
 
 /* Estilizando os links da navegação fixa */
-.navegacao-fixa .navegacao li a {
+.navegacao-fixa .navegacao li a{
   color: var(--color-navbar--preto);
   /* Define a cor do texto dos links na navegação fixa como um tom de cinza escuro (var(--color-navbar--preto)) */
 }
@@ -83,6 +83,7 @@ header .navegacao li a {
   text-decoration: none;
   /* Remove a decoração de texto (como sublinhado) nos links da navegação */
   color: var(--branco);
+  fill: var(--branco);
   /* Define a cor do texto dos links da navegação como branco */
   font-weight: 300;
   /* Define o peso da fonte dos links da navegação como 300 (mais leve) */
@@ -96,6 +97,11 @@ header .navegacao li a {
 header .navegacao li a:hover {
   color: var(--color-link);
   /* Define a cor do texto dos links da navegação quando o cursor do mouse passa por cima como rosa (var(--color-link)) */
+}
+
+.ativo{
+  border-bottom: 1px solid var(--color-link--secundarios);
+  transition: .2s;
 }
 
 /* Estilizando o título do conteúdo */
@@ -130,15 +136,25 @@ header .navegacao li a:hover {
   /* Centraliza o conteúdo verticalmente dentro do elemento título */
   flex-direction: column;
   /* Define a direção do fluxo de itens dentro do elemento título como coluna */
+  margin-top: 2.45rem;
 }
 
 
 
 
 
+.menuMobile{
+  display: none;
+}
+
+
 /* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
 @media screen and (max-width: 991px) {
 
+  .menuMobile{
+    display: block;
+  }
+  
   header,
   header .navegacao-fixa {
     padding: 10px 20px;
@@ -185,42 +201,131 @@ header .navegacao li a:hover {
     font-size: 1.6em;
     /* Define o tamanho da fonte dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como 1.6em (em relação ao tamanho da fonte padrão) */
   }
+  
 
-  /* Estilizando o botão de menu "hamburguer" */
-  .menutoggle {
-    position: relative;
-    /* Define a posição do elemento menutoggle como relativa */
-    width: 40px;
-    /* Define a largura do elemento menutoggle como 40 pixels */
-    height: 40px;
-    /* Define a altura do elemento menutoggle como 40 pixels */
-    background: url("../img/homepage/menu.png");
-    /* Define uma imagem de plano de fundo para o menutoggle */
-    background-size: 30px;
-    /* Define o tamanho da imagem de plano de fundo do menutoggle como 30 pixels */
-    background-repeat: no-repeat;
-    /* Impede a repetição da imagem de plano de fundo do menutoggle */
-    background-position: center;
-    /* Posiciona a imagem de plano de fundo do menutoggle no centro */
-    cursor: pointer;
-    /* Define o cursor do mouse como ponteiro para o menutoggle */
+  .svg-hamburguer {
+    height: 80px;
+    position: absolute;
+    width: 80px;
   }
 
-  /* Estilizando o botão de menu "hamburguer" quando ativado */
-  .menutoggle.active {
-    background: url("../img/homepage/close.png");
-    /* Define uma imagem de plano de fundo diferente para o menutoggle quando está ativo */
-    background-size: 25px;
-    /* Define o tamanho da imagem de plano de fundo do menutoggle ativo como 25 pixels */
-    background-repeat: no-repeat;
-    /* Impede a repetição da imagem de plano de fundo do menutoggle ativo */
-    background-position: center;
-    /* Posiciona a imagem de plano de fundo do menutoggle ativo no centro */
+  .placas {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 160px;
+    width: 640px;
+  }
+  @media (max-width: 640px) {
+    .placas {
+      width: 320px;
+    }
   }
 
-  .navegacao-fixa .menutoggle {
+  .placa {
+    height: 80px;
+    width: 80px;
+  }
+
+  .x {
+    transform: scale(0);
+    transition: transform 400ms;
+  }
+
+  .linha {
+    fill: none;
+    stroke: var(--branco);
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: 50%;
+    transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+  }
+
+  .x .linha {
+    stroke-width: 5.5px;
+  }
+
+  .ativo-menu .x {
+    transform: scale(1);
+    transition: transform 400ms 350ms;
+  }
+  
+  .placa8 .linha {
+    transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
+  }
+
+  .placa8 .linha1 {
+    stroke-dasharray: 21 201;
+  }
+
+  .placa8 .linha2 {
+    stroke-dasharray: 21 201;
+    transition-delay: 20ms;
+  }
+
+  .placa8 .linha3 {
+    stroke-dasharray: 21 201;
+    transition-delay: 40ms;
+  }
+
+  .placa8 .linha4 {
+    stroke-dasharray: 21 201;
+    transition-delay: 60ms;
+  }
+
+  .placa8 .linha5 {
+    stroke-dasharray: 21 201;
+    transition-delay: 80ms;
+  }
+
+  .placa8 .linha6 {
+    stroke-dasharray: 21 201;
+    transition-delay: 100ms;
+  }
+
+  .placa8 .x {
+    transition: transform 400ms 50ms;
+  }
+  
+  .ativo-menu.placa8 .linha {
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
+  }
+  .ativo-menu.placa8 .linha1 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+  }
+  .ativo-menu.placa8 .linha2 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 20ms;
+  }
+  .ativo-menu.placa8 .linha3 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 40ms;
+  }
+  .ativo-menu.placa8 .linha4 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 60ms;
+  }
+  .ativo-menu.placa8 .linha5 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 80ms;
+  }
+  .ativo-menu.placa8 .linha6 {
+    stroke-dasharray: 5 201;
+    stroke-dashoffset: -158px;
+    transition-delay: 100ms;
+  }
+  .ativo-menu.placa8 .x {
+    transition: transform 400ms 50ms;
+  }
+
+  .navegacao-fixa .menuMobile {
     filter: invert(1);
-    /* Inverte as cores do menutoggle quando está na navegação fixa */
+    /* Inverte as cores do menuMobile quando está na navegação fixa */
   }
 
   .titulo-texto {

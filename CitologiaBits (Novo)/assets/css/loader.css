@@ -52,6 +52,7 @@
   /* Centraliza os itens (filhos) horizontalmente e verticalmente */
   place-content: center;
 }
+
 @keyframes sky {
 	0%,
 	100% {
