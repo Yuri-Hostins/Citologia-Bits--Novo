@@ -47,6 +47,12 @@
   /* Adiciona um espaçamento de 1.70rem (aproximadamente 27 pixels) abaixo dos botões */
 }
 
+.botao-contato:hover,
+.botao-contato:focus{
+  fill: var(--color-link);
+  transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
 /* Estilos para os botões de contato no estado "wh-botao" */
 .botao-contato.wh-botao {
   box-shadow: 0 20px 20px -17px #128C7E;
@@ -56,7 +62,7 @@
 /* Estilos aplicados aos botões de contato no estado "wh-botao" quando o cursor do mouse passa por cima (hover) ou estão em foco (focus) */
 .botao-contato.wh-botao:hover,
 .botao-contato.wh-botao:focus {
-  transform: scale(1.2);
+  transform: scale(1.2); 
   /* Aumenta o tamanho dos botões em 20% quando o cursor do mouse passa por cima ou estão em foco */
   box-shadow: 0 30px 45px -15px #075E54;
   /* Adiciona uma sombra maior e mais escura quando o cursor do mouse passa por cima ou estão em foco */
@@ -91,6 +97,28 @@
   box-shadow: 0 30px 45px -15px rgba(255, 16, 39, 0.57);
   /* Adiciona uma sombra maior e mais escura quando o cursor do mouse passa por cima ou estão em foco */
 }
+
+
+.botao-contato.fi-botao {
+  box-shadow: 0 20px 20px -17px rgba(249, 76, 16, 0.502);
+}
+
+.botao-contato.fi-botao:hover,
+.botao-contato.fi-botao:focus {
+  transform: scale(1.2);
+  box-shadow: 0 30px 45px -15px rgba(249, 76, 16, 0.569);
+}
+
+.botao-contato.gq-botao {
+  box-shadow: 0 20px 20px -17px #0087517e;
+}
+
+.botao-contato.gq-botao:hover,
+.botao-contato.gq-botao:focus {
+  transform: scale(1.2);
+  box-shadow: 0 30px 45px -15px #008751;
+}
+
 
 /* Estilos para o texto que aparece quando o ícone está no estado de foco */
 .box-botao:hover .text-botao,
@@ -160,3 +188,4 @@
 #texto-projeto{
   margin-bottom: 2rem;
 }
+

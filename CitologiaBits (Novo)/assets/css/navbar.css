@@ -1,59 +1,40 @@
 /* Estilizando o cabeçalho fixo no topo da página */
 header {
   position: fixed;
-  /* Define a posição do cabeçalho como fixa */
   top: 0;
-  /* Posiciona o cabeçalho no topo da página */
   left: 0;
-  /* Posiciona o cabeçalho no lado esquerdo da página */
   width: 100%;
-  /* Define a largura do cabeçalho como 100% da largura da página */
   padding: 40px 100px;
-  /* Adiciona espaçamento interno de 40 pixels acima/abaixo e 100 pixels à direita/esquerda para o cabeçalho */
   z-index: 1;
-  /* Define a ordem de empilhamento do cabeçalho acima de outros elementos */
   display: flex;
-  /* Define o cabeçalho como um contêiner flexível */
   justify-content: space-between;
-  /* Distribui o espaço disponível entre os elementos filho, criando espaçamento igual entre eles */
   align-items: center;
-  /* Centraliza verticalmente o conteúdo do cabeçalho */
   transition: .5s;
-  /* Define uma transição suave de 0,5 segundos para as propriedades que sofrerem alteração */
 }
 
 /* Estilizando a navegação fixa */
 .navegacao-fixa {
   background: var(--branco);
-  /* Define o plano de fundo da navegação fixa como branco */
   padding: 10px 100px;
-  /* Adiciona espaçamento interno de 10 pixels acima/abaixo e 100 pixels à direita/esquerda para a navegação fixa */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  /* Adiciona uma sombra suave à navegação fixa */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.212);
 }
 
 /* Estilizando o logotipo da navegação fixa */
 .navegacao-fixa .logo {
   color: var(--color-navbar--preto);
-  /* Define a cor do texto do logotipo da navegação fixa como um tom de cinza escuro (var(--color-navbar--preto)) */
 }
 
 /* Estilizando os links da navegação fixa */
 .navegacao-fixa .navegacao li a{
   color: var(--color-navbar--preto);
-  /* Define a cor do texto dos links na navegação fixa como um tom de cinza escuro (var(--color-navbar--preto)) */
 }
 
 /* Estilizando o logotipo no cabeçalho */
 header .logo {
   color: var(--branco);
-  /* Define a cor do texto do logotipo como branco */
   font-weight: bold;
-  /* Define o peso da fonte do logotipo como negrito */
   font-size: 2.5em;
-  /* Define o tamanho da fonte do logotipo como 2.5em (em relação ao tamanho da fonte padrão) */
   text-decoration: none;
-  /* Remove a decoração de texto (como sublinhado) do logotipo */
 }
 
 /* Estilizando o texto dentro da tag span no logotipo */
@@ -149,7 +130,7 @@ header .navegacao li a:hover {
 
 
 /* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1048px) {
 
   .menuMobile{
     display: block;

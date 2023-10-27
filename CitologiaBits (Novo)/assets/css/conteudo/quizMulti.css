@@ -1,0 +1,622 @@
+/* Parte Multijogador  */
+
+
+.informacao-multi {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.caixa-informacao-multi,
+.caixa-quiz-multi,
+.caixa-resultado-multi {
+  position: absolute;
+  margin-top: -13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.caixa-informacao-multi.informacaoAtivoMulti,
+.caixa-quiz-multi.quizAtivoMulti,
+.caixa-resultado-multi.resultadoAtivoMulti {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+
+.caixa-informacao-multi {
+  width: 540px;
+  background: var(--branco);
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.caixa-informacao-multi .titulo-informacao-multi {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.caixa-informacao-multi .lista-informacao-multi {
+  padding: 15px 30px;
+}
+
+.caixa-informacao-multi .lista-informacao-multi .informacao-multi {
+  margin: 5px 0;
+  font-size: 17px;
+}
+
+.caixa-informacao-multi .lista-informacao-multi .informacao-multi span {
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+.caixa-informacao-multi .botoes-multi {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+  border-top: 1px solid #d3d3d3;
+}
+
+.caixa-informacao-multi .botoes-multi button {
+  margin: 0 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--color-link);
+  transition: all 0.3s ease;
+}
+
+.caixa-quiz-multi {
+  width: 550px;
+  background: var(--branco);
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.caixa-quiz-multi header {
+  position: relative;
+  z-index: 2;
+  height: 70px;
+  padding: 0 30px;
+  background: var(--branco);
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.caixa-quiz-multi header .title-multi {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.caixa-quiz-multi header .tempo-multi {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+}
+
+.caixa-quiz-multi header .tempo-multi .texto-esquerdo-tempo-multi {
+  font-weight: 400;
+  font-size: 17px;
+  user-select: none;
+}
+
+.caixa-quiz-multi header .tempo-multi .tempo-segundo-multi {
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+  width: 45px;
+  color: var(--branco);
+  border-radius: 5px;
+  line-height: 30px;
+  text-align: center;
+  background: #343a40;
+  border: 1px solid #343a40;
+  user-select: none;
+}
+
+.caixa-quiz-multi header .linha-tempo-multi {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  background: var(--color-link);
+}
+
+section .texto-perguntas-multi {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+section .lista-opcao-multi {
+  padding: 20px 0px;
+  display: block;
+}
+
+section .lista-opcao-multi .opcao-multi {
+  background: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 17px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .lista-opcao-multi .opcao-multi:last-child {
+  margin-bottom: 0px;
+}
+
+section .lista-opcao-multi .opcao-multi:hover {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+}
+
+section .lista-opcao-multi .opcao-multi.correto-multi {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+section .lista-opcao-multi .opcao-multi.incorreto-multi {
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+section .lista-opcao-multi .opcao-multi.disabled-multi {
+  pointer-events: none;
+}
+
+section .lista-opcao-multi .opcao-multi .icone-multi {
+  height: 26px;
+  width: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 13px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  line-height: 24px;
+}
+
+.lista-opcao-multi .opcao-multi .icone-multi.marcacao-multi {
+  color: #23903c;
+  border-color: #23903c;
+  background: #d4edda;
+}
+
+.lista-opcao-multi .opcao-multi .icone-multi.cruzar-multi {
+  color: #a42834;
+  background: #f8d7da;
+  border-color: #a42834;
+}
+
+.footer-quiz-multi {
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #d3d3d3;
+}
+
+.footer-quiz-multi .perguntas-total-multi span {
+  display: flex;
+  user-select: none;
+}
+
+.footer-quiz-multi .perguntas-total-multi span p {
+  font-weight: 500;
+  padding: 0 5px;
+}
+
+.footer-quiz-multi .perguntas-total-multi span p:first-child {
+  padding-left: 0px;
+}
+
+.footer-quiz-multi button {
+  height: 40px;
+  padding: 0 13px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: var(--branco);
+  border-radius: 5px;
+  background: var(--color-link);
+  border: 1px solid var(--color-link);
+  line-height: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.footer-quiz-multi button:hover {
+  background: var(--color-link--secundarios);
+  color: #212121;
+}
+
+.footer-quiz-multi button.mostrar-multi {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.caixa-resultado-multi {
+  background: var(--branco);
+  border-radius: 5px;
+  display: flex;
+  padding: 25px 30px;
+  width: 450px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.caixa-resultado-multi .icone-multi {
+  font-size: 100px;
+  color: var(--color-link);
+  margin-bottom: 10px;
+}
+
+.caixa-resultado-multi .texto-completo-multi {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.caixa-resultado-multi .pontos-textos-multi span {
+  display: flex;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.caixa-resultado-multi .pontos-textos-multi span p {
+  padding: 0 4px;
+  font-weight: 600;
+}
+
+.caixa-resultado-multi .botoes-multi {
+  display: flex;
+  margin: 20px 0;
+}
+
+.caixa-resultado-multi .botoes-multi button {
+  margin: 0 10px;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--color-link);
+  transition: all 0.3s ease;
+}
+
+.botoes-multi button.reiniciar-multi {
+  color: var(--branco);
+  background: var(--color-link);
+}
+
+.botoes-multi button.reiniciar-multi:hover {
+  background: var(--color-link--secundarios);
+  color: #212121;
+}
+
+.botoes-multi button.sair-multi {
+  color: var(--color-link);
+  background: var(--branco);
+}
+
+.botoes-multi button.sair-multi:hover {
+  color: var(--branco);
+  background: var(--color-link);
+}
+
+@media screen and (max-width: 550px) {
+  .caixa-informacao-multi {
+    width: 363px;
+    height: 545px;
+  }
+
+  .caixa-informacao-multi .botoes-multi {
+    justify-content: center;
+  }
+
+  .caixa-quiz-multi {
+    width: 357px;
+    background: var(--branco);
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .caixa-resultado-multi {
+    background: var(--branco);
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 353px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+}
+
+
+/* Estilo para esconder o modal inicialmente */
+.caixa-nomes-multi {
+  display: none;
+  position: relative;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--branco);
+  padding: 7rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.container-equipes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.caixa-nomes-multi .titulo-nomes {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.caixa-nomes-multi input {
+  display: block;
+  padding: 8px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.equipe {
+  border: solid 1px var(--equipe-1); /* Cor de fundo da equipe 1 */
+  color: var(--branco); /* Cor do texto da equipe 1 */
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para equipes */
+.equipe:nth-child(2) {
+  border: solid 1px var(--equipe-2); /* Cor de fundo da equipe 3 */
+}
+.equipe:nth-child(3) {
+  border: solid 1px var(--equipe-3); /* Cor de fundo da equipe 3 */
+}
+
+.equipe:nth-child(4) {
+  border: solid 1px var(--equipe-4); /* Cor de fundo da equipe 4 */
+}
+
+.equipe:nth-child(5) {
+  border: solid 1px var(--equipe-5); /* Cor de fundo da equipe 5 */
+}
+
+.equipe:nth-child(6) {
+  border: solid 1px var(--equipe-6); /* Cor de fundo da equipe 6 */
+}
+
+.equipe:nth-child(7) {
+  border: solid 1px var(--equipe-7); /* Cor de fundo da equipe 7 */
+}
+
+.equipe:nth-child(8) {
+  border: solid 1px var(--equipe-8); /* Cor de fundo da equipe 8 */
+}
+
+/* Estilos para o modal de número de equipes */
+.caixa-numero-equipes {
+  display: none;
+  position: relative;
+  height: 500px;
+  width: 500px;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--branco);
+  padding: 7rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.container-botoes-numeros{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#numero-equipes {
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+#botao-escolher-equipes {
+  padding: 10px 20px;
+  background-color: var(--color-link);
+  color: var(--branco);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#botao-escolher-equipes:hover {
+  background-color: var(--color-link--secundarios);
+}
+
+.mensagem-erro {
+  color: #ff0000;
+  font-size: 14px;
+  display: none;
+  margin-top: 10px;
+}
+
+.mensagem-erro-nome {
+  color: #ff0000;
+  font-size: 14px;
+  display: none;
+  margin-top: 10px;
+}
+
+
+
+.caixa-nomes-multi .comecar-jogo {
+  background-color: var(--color-link);
+  color: var(--branco);
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.caixa-nomes-multi .comecar-jogo:hover {
+  background-color: var(--color-link--secundarios);
+  transition: .3s;
+}
+
+.turno-container {
+  text-align: center;
+}
+
+#turno-atual {
+  font-size: 16px;
+}
+
+#turno {
+  font-weight: bold;
+}
+
+.opcao-multi.selecionada-multi {
+  background-color: #f0f0f0;
+  /* Altere a cor de fundo para a cor desejada */
+  border: 1px solid #ccc;
+  /* Adicione uma borda à opção selecionada */
+}
+
+.informacao-multi {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #333;
+}
+
+
+
+
+.caixa-informacao-multi,
+.caixa-quiz-multi,
+.caixa-resultado-multi {
+  position: absolute;
+  margin-top: -13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.caixa-informacao-multi.informacaoAtivoMulti,
+.caixa-quiz-multi.quizAtivoMulti,
+.caixa-resultado-multi.resultadoAtivoMulti {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.botao-multiplayer button {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--color-link);
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--branco);
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2rem;
+  transition: 0.25s ease;
+}
+
+.botao-multiplayer button:hover,
+.botao-multiplayer button:focus {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--branco);
+  padding: 15px 30px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-link);
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 2rem;
+  transition: .25s ease;
+}

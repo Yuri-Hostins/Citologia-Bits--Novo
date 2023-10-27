@@ -88,6 +88,8 @@ figcaption {
 
 .imagem-conteudo {
   max-width: 600px;
+  border: solid 1px var #000;
+  border-radius: 5%;
   /* Define a largura máxima para as imagens dentro do elemento com a classe .imagem-conteudo */
 }
 

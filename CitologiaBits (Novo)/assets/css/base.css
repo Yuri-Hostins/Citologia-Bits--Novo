@@ -9,12 +9,15 @@
 @import url("homepage/homepage.css"); /* Importa o arquivo "homepage.css" específico para a página inicial */
 @import url("conteudo/conteudo.css"); /* Importa o arquivo "conteudo.css" específico para a página inicial */
 @import url("conteudo/quiz.css"); /* Importa o arquivo "quiz.css" específico para a página inicial */
+@import url("conteudo/quizMulti.css"); /* Importa o arquivo "quiz.css" específico para a página inicial */
+@import url("conteudo/puzzle.css"); /* Importa o arquivo "quiz.css" específico para a página inicial */
 @import url("footer.css"); /* Importa o arquivo "footer.css" para estilizar o rodapé */
 
 /* Definição de variáveis de cores */
 :root {
   /* Define a variável "branco" como branco (#fff) */
   --branco: #fff;
+  --preto: #000;
 
   /* Define variáveis de cores utilizadas no conteúdo da página */
   --color-titulo--conteudo: #005baa; /* Cor do título do conteúdo */
@@ -28,10 +31,28 @@
   --color-loader--ciano--depois: #0079FF; /* Cor ciano depois da animação do loader */
   --color-loader--branco: #585656; /* Cor de fundo do loader em tom de branco */ 
 
+  --cor-forca: #ffd857;
+
   /* Define a cor do texto da barra de navegação */
   --color-navbar--preto: #111;
+
+  /* Cores das equipes do quiz */
+
+  --equipe-1: #3498db;
+  --equipe-2: #2eccc4;
+  --equipe-3: #2ecc71;
+  --equipe-4: #f1c40f;
+  --equipe-5: #9b59b6;
+  --equipe-6: #e67e22;
+  --equipe-7: #1abc9c;
+  --equipe-8: #e74c3c;
 
   /* Define a cor dos links na página */
   --color-link: #ff0157; /* Cor rosa para os links */
   --color-link--secundarios: #fc3e7e; /* Cor rosa para os links secundários*/
+}
+
+::selection {
+  color: var(--branco);
+  background: var(--color-link);
 }
