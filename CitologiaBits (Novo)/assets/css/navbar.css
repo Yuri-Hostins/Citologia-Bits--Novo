@@ -40,7 +40,6 @@ header .logo {
 /* Estilizando o texto dentro da tag span no logotipo */
 header .logo span {
   color: var(--color-link);
-  /* Define a cor do texto dentro da tag span do logotipo como rosa (var(--color-link)) */
 }
 
 /* Estilizando a navegação no cabeçalho */
@@ -128,6 +127,15 @@ header .navegacao li a:hover {
   display: none;
 }
 
+
+@media screen and (max-width: 350px) {
+  header .logo {
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+  }
+}  
 
 /* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
 @media screen and (max-width: 1048px) {

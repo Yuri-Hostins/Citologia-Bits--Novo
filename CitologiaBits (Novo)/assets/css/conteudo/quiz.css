@@ -109,7 +109,7 @@
   height: 60px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 30px;
   border-top: 1px solid lightgrey;
 }

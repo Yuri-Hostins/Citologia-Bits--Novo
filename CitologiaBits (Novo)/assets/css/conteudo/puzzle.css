@@ -1,159 +1,214 @@
 #botao-comeca {
-	background-color: var(--branco);
-	padding: 1em 2em;
-	border-radius: 2em;
-	border: none;
-	border: 3px solid var(--preto);
-	box-shadow: 0 5px var(--preto);
-	cursor: pointer;
+  background-color: var(--branco);
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: none;
+  border: 3px solid var(--preto);
+  box-shadow: 0 5px var(--preto);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#botao-envio {
+  display: block;
+  background-color: var(--color-link);
+  color: var(--preto);
+  border: 3px solid var(--preto);
+  box-shadow: 0 5px var(--preto);
+  padding: 1em 2em;
+  border-radius: 2em;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 #botao-comeca:hover,
 #botao-envio:hover {
-	box-shadow: none;
-	transform: translateY(5px);
+  box-shadow: none;
+  transform: translateY(5px);
   background-color: var(--color-link);
+  transition: all 0.3s ease;
+
 }
 
 .container-jogo-dois {
-	width: min(90%, 31.25em);
-	position: absolute;
-  transform: translate(-50%, 22%) scale(1);
-	top: 50%;
-	left: 50%;
+  width: min(90%, 31.25em);
+  position: absolute;
+  transform: translate(-50%, 5%) scale(1);
+  top: 50%;
+  left: 50%;
 }
 
 .involucro {
-	border-radius: 0.8em;
-	padding: 4em 2em;
-	background-color: var(--branco);
-	border: 5px solid var(--preto);
-	box-shadow: 0 10px var(--preto);
+  border-radius: 0.8em;
+  padding: 4em 2em;
+  background-color: var(--branco);
+  border: 5px solid var(--preto);
+  box-shadow: 0 10px var(--preto);
+  
 }
 
 .exibicao-palavras {
-	width: 70%;
-	display: flex;
+  width: 70%;
+  display: flex;
   flex-wrap: wrap;
-	justify-content: space-around;
-	margin: 0 auto 2em auto;
+  justify-content: space-around;
+  margin: 0 auto 2em auto;
 }
 
 .letras {
-	background-color: var(--branco);
-	height: 3em;
-	width: 3em;
-	border-radius: 0.5em;
-	box-shadow: 0 0.4em var(--preto);
-	border: 2px solid var(--preto);
-	cursor: pointer;
-	margin-top: 0.45rem;
+  background-color: var(--branco);
+  height: 3em;
+  width: 3em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.4em var(--preto);
+  border: 2px solid var(--preto);
+  cursor: pointer;
+  margin-top: 0.45rem;
+  transition: all 0.3s ease;
 }
 
 .letras:hover {
-	background-color: var(--color-link);
+  background-color: var(--color-link);
+  transition: all 0.3s ease;
 }
 
 .input-container {
-	text-align: center;
-	margin-bottom: 2em 0;
+  text-align: center;
+  margin-bottom: 2em 0;
 }
 
-#botao-envio {
-	display: block;
-	background-color: var(--color-link);
-	color: var(--preto);
-	border: 3px solid var(--preto);
-	box-shadow: 0 5px var(--preto);
-	padding: 1em 2em;
-	border-radius: 2em;
-	margin: auto;
+.telaDerrota{
+  background-color: rgba(255, 0, 0, 0.178);
+
 }
 
 .palavras-validas {
-	text-align: center;
-	margin-top: 1.5em;
+  text-align: center;
+  margin-top: 1.5em;
 }
 
 .esconder {
-	display: none;
+  display: none;
+}
+
+.subitulo-informacao {
+  font-size: 1.2rem;
+  font: bold;
+  text-align: center;
+}
+
+.caixa-informacao-puzzle {
+  width: 540px;
+  background: var(--branco);
+  border-radius: 5px;
+  transform: translate(-50%, -50%) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.caixa-informacao-puzzle .titulo-informacao {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #d3d3d3;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.caixa-informacao-puzzle .lista-informacao {
+  padding: 15px 30px;
+}
+
+.caixa-informacao-puzzle .lista-informacao .informacao {
+  margin: 5px 0;
+  font-size: 17px;
+}
+
+.caixa-informacao-puzzle .lista-informacao .informacao span {
+  font-weight: 600;
+  color: var(--color-link);
+}
+
+.caixa-informacao-puzzle .botoes-puzzle {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-top: 1px solid #d3d3d3;
+}
+
+.caixa-informacao-puzzle .botoes-puzzle button {
+  margin: 0 5px;
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid var(--color-link);
+  transition: all 0.3s ease;
+}
+
+.caixa-informacao-puzzle {
+  position: absolute;
+  margin-top: -13rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.caixa-informacao-puzzle.informacaoAtivo {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.botoes-puzzle button.reiniciar-puzzle {
+  color: var(--branco);
+  background: var(--color-link);
+}
+
+.botoes-puzzle button.reiniciar-puzzle:hover {
+  background: var(--color-link--secundarios);
+}
+
+.botoes-puzzle button.sair-puzzle {
+  color: var(--color-link);
+  background: var(--branco);
+}
+
+.botoes-puzzle button.sair-puzzle:hover {
+  color: var(--branco);
+  background: var(--color-link);
+}
+
+@media screen and (max-width: 550px) {
+  .caixa-informacao-puzzle {
+    width: 363px;
+  }
+
+  .caixa-informacao-puzzle .botoes-puzzle {
+    justify-content: center;
+  }
 }
 
 .ativo-forca {
-	color: var(--preto);
-	background-color: var(--color-link);
-	box-shadow: none;
-	transform: translateY(0.4em);
+  color: var(--preto);
+  background-color: var(--color-link);
+  box-shadow: none;
+  transform: translateY(0.4em);
 }
 
 #mensagem-erro {
-	color: #ff0000;
-	text-align: center;
-	margin-bottom: 2em;
-}
-
-/* Estilo do modal */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background-color: var(--branco);
-  padding: 20px;
-  border-radius: 10px;
-  width: 60%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ff0000;
   text-align: center;
-  position: relative;
-}
-
-/* Botão de fechar no modal (X) */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Estilo para o cabeçalho do modal */
-.modal-content h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Estilo para a pergunta */
-#pergunta {
-  font-size: 18px;
-}
-
-/* Estilo para o campo de resposta */
-#resposta {
-  width: 100%;
-  padding: 10px;
-  margin: 20px 0;
-}
-
-/* Estilo para o botão "Enviar Resposta" */
-#submit-resposta {
-  background-color: #007BFF;
-  color: var(--branco);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Estilo para o botão "Enviar Resposta" quando hover */
-#submit-resposta:hover {
-  background-color: #0056b3;
+  margin-bottom: 2em;
 }

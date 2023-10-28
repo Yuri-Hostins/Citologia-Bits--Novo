@@ -8,11 +8,140 @@ const inputContainer = document.querySelector(".input-container");
 const palavrasValidas = document.querySelector(".palavras-validas");
 const botaoEnvio = document.querySelector("#botao-envio");
 const mensagemErro = document.getElementById("mensagem-erro");
+const caixaInformacaoPuzzle = document.querySelector(".caixa-informacao-puzzle");
+const botaoContinuarPuzzle = caixaInformacaoPuzzle.querySelector(".reiniciar-puzzle");
+const containerJogoDois = document.querySelector(".container-jogo-dois");
+const caixaInformacao = document.querySelector(".caixa-informacao");
+const botaoSair = caixaInformacao.querySelector(".botoes .sair");
+const botaoSairPuzzle = caixaInformacaoPuzzle.querySelector(".botoes-puzzle .sair-puzzle");
+const botaoContinuar = caixaInformacao.querySelector(".botoes .reiniciar");
+const caixaQuiz = document.querySelector(".caixa-quiz");
+const caixaResultado = document.querySelector(".caixa-resultado");
+const listaOpcao = document.querySelector(".lista-opcao");
+const linhaTempo = document.querySelector("header .linha-tempo");
+const textoTempo = document.querySelector(".tempo .texto-esquerdo-tempo");
+const contagemTempo = document.querySelector(".tempo .tempo-segundo");
 
 // Definir objetos de palavras com suas saídas esperadas
 let palavrasObj = {
-	CITOPLASMA: ["TA", ],
-  ORGANELAS: ["SAL", "NELAS", "ALGAS",],
+	CITOPLASMA: ["AMA", "COLA", "CITO", "ASMA", "CITOPLASMA"],
+  ORGANELAS: ["SAL", "SELA", "NELAS", "ALGAS", "ORGANELAS"],
+  RIBOSSOMOS: ["RIO", "RISO", "ROBO", "SOMBRIO", "RIBOSSOMOS"],
+  LISOSSOMOS: ["SOS", "LIMO", "LISO", "SOMOS", "LISOSSOMOS"],
+  PEROXISSOMOS: ["OXE", "ROSE", "PISO", "PROXIMOS", "PEROXISSOMOS"],
+  VACUOLOS: ["LUVA", "CALO", "VASCO", "LOUCOS", "VACUOLOS"],
+  RETICULOS_ENDOPLASMATICOS: ["RETO", "MIRA", "SAMIRA", "PLASTICO", "RETICULOS_ENDOPLASMATICOS"],
+  COMPLEXO_GOLGIENSE: ["GOL", "PEGO", "GENES", "COMPLEXO", "COMPLEXO_GOLGIENSE"],
+  CENTRIOLOS: ["NETO", "SELO", "TRIO", "CENTRO", "CENTRIOLOS"],
+  MITOCONDRIAS: ["DIA", "MITO", "MATO", "CONTAS", "MITOCONDRIAS"],
+};
+
+let perguntasPorPalavra = {
+  CITOPLASMA: [
+    {
+      pergunta: "Qual é a função principal do citoplasma?",
+      alternativaCerta: "Realizar várias funções celulares.",
+      opcoes: [
+        "Armazenar o núcleo da célula.",
+        "Sintetizar proteínas.",
+        "Realizar várias funções celulares.",
+        "Controlar o tráfego de substâncias na célula.",
+      ],
+    },
+    {
+      pergunta: "Qual é a principal função do citoplasma nas células?",
+      alternativaCerta: "Abrigar organelas celulares e desempenhar funções celulares.",
+      opcoes: [
+        "Armazenar informações genéticas",
+        "Realizar a fotossíntese.",
+        "Abrigar organelas celulares e desempenhar funções celulares.",
+        "Controlar o fluxo de substâncias para dentro e para fora da célula."
+      ]
+    }
+  ],
+  ORGANELAS: [
+    {
+      pergunta: "O que são as mitocôndrias?",
+      alternativaCerta: "As usinas de energia da célula.",
+      opcoes: [
+        "Estruturas de suporte celular.",
+        "As usinas de energia da célula.",
+        "Locais de armazenamento de informações genéticas.",
+        "Estruturas de digestão celular.",
+      ],
+    },
+    {
+      pergunta: "Qual organela é conhecida como o 'centro de controle' da célula e abriga informações genéticas?",
+      alternativaCerta: "Núcleo.",
+      opcoes: [
+        "Mitocôndria.",
+        "Cloroplasto.",
+        "Núcleo.",
+        "Complexo de Golgi."
+      ],
+    },
+  ],
+  RIBOSSOMOS:[
+    {
+      pergunta: "Qual é a função principal dos peroxissomos nas células?",
+      alternativaCerta: "Metabolizar ácidos graxos e decompor peróxidos tóxicos.",
+      opcoes: [
+        "Síntese de proteínas.",
+        "Armazenar glicose.",
+        "Metabolizar ácidos graxos e decompor peróxidos tóxicos.",
+        "Produzir energia através da fotossíntese."
+      ],
+    },
+  ],
+  LISOSSOMOS:[
+    {
+      pergunta: "Qual é a função principal dos lisossomos nas células?",
+      alternativaCerta: "Realizar a digestão intracelular de substâncias e organelas danificadas.",
+      opcoes: [
+        "Síntese de proteínas.",
+        "Armazenar informações genéticas.",
+        "Realizar a digestão intracelular de substâncias e organelas danificadas.",
+        "Produzir ATP (trifosfato de adenosina)."
+      ]
+    },
+  ],
+  PEROXISSOMOS:[
+    {
+      pergunta: "Qual é a função principal dos peroxissomos nas células?",
+      alternativaCerta: "Metabolizar ácidos graxos e decompor peróxidos tóxicos.",
+      Opcoes: [
+        "Síntese de proteínas.",
+        "Armazenar glicose.",
+        "Metabolizar ácidos graxos e decompor peróxidos tóxicos.",
+        "Produzir energia através da fotossíntese."
+      ]
+    },
+  ],
+  VACUOLOS:[
+    {
+      pergunta: "Qual é a função principal dos vacúolos nas células vegetais?",
+      alternativaCerta: "Armazenar água, nutrientes e manter a turgidez da célula.",
+      Opcoes: [
+        "Síntese de proteínas.",
+        "Produzir energia através da fotossíntese.",
+        "Realizar a digestão intracelular de substâncias.",
+        "Armazenar água, nutrientes e manter a turgidez da célula."
+      ]
+    }
+  ],
+  RETICULOS_ENDOPLASMATICOS:[
+    {
+      pergunta: "Qual é a função do retículo endoplasmático rugoso (granular) nas células?",
+      alternativaCerta: "Síntese de proteínas e processamento pós-traducional.",
+      Opcoes: [
+        "Armazenar glicose.",
+        "Produzir ATP (trifosfato de adenosina).",
+        "Realizar a digestão intracelular de substâncias.",
+        "Síntese de proteínas e processamento pós-traducional."
+      ]
+    }
+  ],
+  
 };
 
 let palavraAleatoria = "",
@@ -30,6 +159,8 @@ const valorAleatorio = (arr, obj = false) => {
 		return arr[Math.floor(Math.random() * arr.length)];
 	}
 };
+
+let tentativas = 5;
 
 // Ouvinte de evento para o botão de envio
 botaoEnvio.addEventListener("click", async () => {
@@ -55,22 +186,23 @@ botaoEnvio.addEventListener("click", async () => {
 		if (palavrasEncontradas.includes(palavraDeEntrada)) {
 			mensagemErro.innerText = "Já inserida!";
 		} else {
-			// Entrada incorreta
-			mensagemErro.innerText = "Palavra inválida!!";
-		}
-	}
+      // Entrada incorreta
+      tentativas--; // Reduza o número de tentativas restantes
+      mensagemErro.innerText = "Palavra inválida!! Você perdeu uma tentativa. Tentativas restantes: " + tentativas;
+    }
+  }
 
-	// Verificar se todas as palavras esperadas foram encontradas
+  // Verificar se todas as palavras esperadas foram encontradas
   if (contador == saidasEsperadas.length) {
-  // Ocultar elementos do jogo de adivinhação
-  telaCobertura.style.display = "none";
-  container.style.display = "none";
-  botaoEnvio.disabled = true;
+    // Ocultar elementos do jogo de adivinhação
+    telaCobertura.style.display = "none";
+    container.style.display = "none";
+    botaoEnvio.disabled = true;
 
-    // Exibir o modal "caixa-informacao" após uma pequena pausa (por exemplo, após 2 segundos)
+    // Exibir o modal "caixa-informacao" após uma pequena pausa (por exemplo, após 1 segundo)
     setTimeout(() => {
       caixaInformacao.classList.add("informacaoAtivo");
-    }, 2000); // 2000 milissegundos = 2 segundos
+    }, 1000); // 1000 milissegundos = 1 segundo
   }
 
   // Restaurar letras como inativas e habilitá-las para uma nova entrada
@@ -81,10 +213,32 @@ botaoEnvio.addEventListener("click", async () => {
   });
 
   // Restaurar a palavra de entrada
+
   palavraDeEntrada = "";
 
+  // Verificar se o jogador perdeu todas as tentativas
+  if (tentativas <= 0) {
 
-  });
+    botaoEnvio.style.display = "none";
+
+    // Criar um elemento de áudio
+    const audioDerrota = new Audio('../audio/gameover.mp3');
+    
+    // Reproduzir o áudio
+    audioDerrota.play();
+
+    document.body.classList.add("telaDerrota");
+    
+    // Recarregar a página após algum tempo (por exemplo, após a reprodução do áudio)
+    setTimeout(() => {
+      // Mostrar um alerta indicando que o jogador perdeu
+      alert("Você perdeu o jogo. A página será recarregada.");
+      location.reload();
+
+    }, 1000); // Recarregar após 2 segundos (ajuste conforme necessário)
+  }
+});
+
 
 // Função para lidar com a seleção de letras
 const selecionarLetra = (e) => {
@@ -104,33 +258,46 @@ const exibirTracos = () => {
 	});
 };
 
-// Ouvinte de evento para o botão de início
 botaoComeca.addEventListener("click", () => {
-	// Ocultar tela de cobertura e mostrar contêiner do jogo
-	container.classList.remove("esconder");
-	telaCobertura.classList.add("esconder");
-	mensagemErro.innerText = "";
-	inputContainer.innerText = "";
-	exibicaoPalavras.innerHTML = "";
-	palavraDeEntrada = "";
-	contador = 0;
-	botaoEnvio.disabled = false;
-	palavrasValidas.innerHTML = "";
-
-	// Obter uma palavra aleatória
-	palavraAtual = valorAleatorio(palavrasObj, true);
-
-	// Embaralhar as letras da palavra atual
-	palavraAleatoria = palavraAtual.split("").sort(() => 0.5 - Math.random());
-
-	// Exibir traços para as palavras esperadas
-	exibirTracos();
-
-	// Exibir letras nos botões
-	palavraAleatoria.forEach((letra) => {
-		exibicaoPalavras.innerHTML += `<button class="letras" onclick="selecionarLetra(event)">${letra}</button>`;
-	});
+  caixaInformacaoPuzzle.classList.add("informacaoAtivo"); // mostrar info box
+  botaoComeca.classList.add("esconder"); // ocultar o botão
 });
+
+
+// Ouvinte de evento para o botão de início
+botaoContinuarPuzzle.addEventListener("click", () => {
+  // Remover a classe "informacaoAtivo" para ocultar o modal
+  caixaInformacaoPuzzle.classList.remove("informacaoAtivo");
+
+  // Agendar a exibição do jogo após um atraso de 1 segundos
+  setTimeout(() => {
+    // Mostrar o contêiner do jogo e ocultar a tela de cobertura
+    container.classList.remove("esconder");
+    telaCobertura.classList.add("esconder");
+    mensagemErro.innerText = "";
+    inputContainer.innerText = "";
+    exibicaoPalavras.innerHTML = "";
+    palavraDeEntrada = "";
+    contador = 0;
+    botaoEnvio.disabled = false;
+    palavrasValidas.innerHTML = "";
+
+    // Obter uma palavra aleatória
+    palavraAtual = valorAleatorio(palavrasObj, true);
+
+    // Embaralhar as letras da palavra atual
+    palavraAleatoria = palavraAtual.split("").sort(() => 0.5 - Math.random());
+
+    // Exibir traços para as palavras esperadas
+    exibirTracos();
+
+    // Exibir letras nos botões
+    palavraAleatoria.forEach((letra) => {
+      exibicaoPalavras.innerHTML += `<button class="letras" onclick="selecionarLetra(event)">${letra}</button>`;
+    });
+  }, 1000); // Atraso de 1000 milissegundos (1 segundos) para a exibição do jogo
+});
+
 
 // Inicializar a tela do jogo ao carregar a janela
 window.onload = () => {
@@ -139,16 +306,28 @@ window.onload = () => {
 };
 
 
-// selecionando todos os elementos necessários
-const caixaInformacao = document.querySelector(".caixa-informacao");
-const botaoSair = caixaInformacao.querySelector(".botoes .sair");
-const botaoContinuar = caixaInformacao.querySelector(".botoes .reiniciar");
-const caixaQuiz = document.querySelector(".caixa-quiz");
-const caixaResultado = document.querySelector(".caixa-resultado");
-const listaOpcao = document.querySelector(".lista-opcao");
-const linhaTempo = document.querySelector("header .linha-tempo");
-const textoTempo = document.querySelector(".tempo .texto-esquerdo-tempo");
-const contagemTempo = document.querySelector(".tempo .tempo-segundo");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // criando um array e passando o número, perguntas, opções e respostas
 let perguntas = [
@@ -185,18 +364,73 @@ let perguntas = [
 ];
 
 // se o botão exitQuiz for clicado
+botaoSairPuzzle.onclick = () => {
+  caixaInformacaoPuzzle.classList.remove("informacaoAtivo"); // Esconder a caixa de informação do quiz de palavras cruzadas
+  botaoComeca.classList.remove("esconder"); // ocultar o botão
+};
+
+
+// se o botão exitQuiz for clicado
 botaoSair.onclick = () => {
   caixaInformacao.classList.remove("informacaoAtivo"); // esconder info box
 };
 
 // se o botão continueQuiz for clicado
 botaoContinuar.onclick = () => {
-  caixaInformacao.classList.remove("informacaoAtivo"); // esconder info box
-  caixaQuiz.classList.add("quizAtivo"); // mostrar quiz box
-  mostrarPerguntas(0); // chamando a função showperguntas
-  contadorPerguntas(1); // passando 1 parâmetro para contadorPerguntas
-  iniciarTempo(10); // chamando a função iniciarTempo
-  iniciarLinhaTemporizador(0); // chamando a função iniciarLinhaTemporizador
+  caixaInformacao.classList.remove("informacaoAtivo"); // Esconder a caixa de informações
+  caixaQuiz.classList.add("quizAtivo"); // Mostrar a caixa do quiz
+   // Obtenha todas as palavras-chave disponíveis
+   const palavrasChaveDisponiveis = Object.keys(palavrasObj);
+
+   // Selecione uma palavra-chave aleatória
+   const palavraChaveSelecionada = palavrasChaveDisponiveis[Math.floor(Math.random() * palavrasChaveDisponiveis.length)];
+ 
+   // Obtenha as perguntas relacionadas à palavra-chave selecionada
+   const perguntas = perguntasPorPalavra[palavraChaveSelecionada];
+  mostrarPerguntas(0); // Chamar a função showperguntas
+  contadorPerguntas(1); // Passar 1 parâmetro para contadorPerguntas
+  iniciarTempo(10); // Chamar a função iniciarTempo
+  iniciarLinhaTemporizador(0); // Chamar a função iniciarLinhaTemporizador
+
+  // Inicie o quiz com a palavra-chave e as perguntas
+  iniciarQuiz(palavraChaveSelecionada, perguntas);
+};
+
+function iniciarQuiz(palavraChave, perguntas) {
+  let pontoUsuario = 0;
+
+  // Embaralhe as perguntas para tornar o quiz mais variado
+  shuffleperguntas(perguntas);
+
+  // Exiba a primeira pergunta
+  mostrarPergunta(contagemPerguntas);
+
+  // Função para exibir uma pergunta
+  function mostrarPergunta(indice) {
+    if (indice < perguntas.length) {
+      const perguntaAtual = perguntas[indice];
+
+      // Limpe as opções anteriores
+      listaOpcao.innerHTML = "";
+
+      // Exiba a pergunta e opções
+      textoPerguntas.innerText = `${indice + 1}. ${perguntaAtual.pergunta}`;
+
+      perguntaAtual.opcoes.forEach((opcao, index) => {
+        const opcaoElement = document.createElement("div");
+        opcaoElement.classList.add("opcao");
+        opcaoElement.textContent = opcao;
+        opcaoElement.addEventListener("click", () => responderPergunta(index));
+        listaOpcao.appendChild(opcaoElement);
+      });
+
+      // Atualize o contador de perguntas
+      contadorPerguntas(indice + 1);
+    } else {
+      // Todas as perguntas foram respondidas, mostrar resultado
+      mostrarResultado();
+    }
+  }
 };
 
 let tempoValor = 10;
@@ -207,12 +441,17 @@ let contadorQuiz;
 let contadorLinha;
 let valorLargura = 0;
 
-const sairQuiz = caixaResultado.querySelector(".botoes .sair");
+// Função para recarregar a página
+function recarregarPagina() {
+  window.location.reload(); // recarrega a página atual
+}
 
-// se o botão quitQuiz for clicado
-sairQuiz.onclick = () => {
-  window.location.reload(); // recarregar a página atual
-};
+// Associar a função aos botões "Sair" na caixa de informação e na caixa de resultado
+const botaoSairQuiz = document.querySelectorAll(".botoes .sair");
+
+botaoSairQuiz.forEach((botao) => {
+  botao.addEventListener("click", recarregarPagina);
+});
 
 const botaoProximo = document.querySelector(".footer-quiz .botao-proximo");
 const contadorPerguntasInferior = document.querySelector(
@@ -255,7 +494,7 @@ function mostrarPerguntas(index) {
     perguntas[index].opcoes[1] +
     "</span></div>" +
     '<div class="opcao"><span>' +
-    perguntas[index].opcoes[2] +
+    perguntas[index].opcoes[1] +
     "</span></div>" +
     '<div class="opcao"><span>' +
     perguntas[index].opcoes[3] +
