@@ -42,7 +42,7 @@
 .caixa-informacao-multi .titulo-informacao-multi {
   height: 60px;
   width: 100%;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 1px solid var(--caixa-infomacao-border);
   display: flex;
   align-items: center;
   padding: 0 30px;
@@ -71,7 +71,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 30px;
-  border-top: 1px solid #d3d3d3;
+  border-top: 1px solid var(--caixa-infomacao-border);
 }
 
 .caixa-informacao-multi .botoes-multi button {
@@ -237,7 +237,7 @@ section .lista-opcao-multi .opcao-multi .icone-multi {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #d3d3d3;
+  border-top: 1px solid var(--caixa-infomacao-border);
 }
 
 .footer-quiz-multi .perguntas-total-multi span {
