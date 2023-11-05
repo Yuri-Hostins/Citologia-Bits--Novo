@@ -1,37 +1,3 @@
-// criando um array e passando o número, perguntas, opções e respostas
-let perguntas = [
-  { 
-    pergunta: "Qual é o instrumento musical tradicional mais popular da África?",
-    alternativaCerta: "Tambores",
-    opcoes: [
-      "Djembe",
-      "Tambores",
-      "Kalimba",
-      "Violão",
-    ],
-  },
-  {
-    pergunta: 'Qual é o significado simbólico das máscaras africanas?',
-    alternativaCerta: "Proteção contra espíritos malignos",
-    opcoes: [
-      "Proteção contra espíritos malignos",
-      "Status social do usuário",
-      "Expressão de emoções humanas",
-      "Representação de animais sagrados",
-    ],
-  },
-  {
-    pergunta: 'Em qual região da África as máscaras são mais proeminentes na cultura?',
-    alternativaCerta: "África Ocidental",
-    opcoes: [
-      "África Austral",
-      "África Oriental",
-      "África Central",
-      "África Ocidental",
-    ],
-  },
-];
-
 // se o botão exitQuiz for clicado
 botaoSairPuzzle.onclick = () => {
   caixaInformacaoPuzzle.classList.remove("informacaoAtivo"); // Esconder a caixa de informação do quiz de palavras cruzadas
@@ -151,9 +117,9 @@ function mostrarPerguntas(index) {
   const textoPerguntas = document.querySelector(".texto-perguntas");
 
   // criando uma nova tag span e div para a pergunta e opção e passando o valor usando o índice do array
-  let perguntasMarcada =
-    "<span>" + (index + 1) + ". " + perguntas[index].pergunta + "</span>";
+  let perguntasMarcada = "<span>" + (index + 1) + ". " + perguntas[index].pergunta + "</span>";
   let opcaoMarcada =
+    //<p class="prefixo-escolha">A</p>
     '<div class="opcao"><span>' +
     perguntas[index].opcoes[0] +
     "</span></div>" +
@@ -178,10 +144,8 @@ function mostrarPerguntas(index) {
 }
 
 // criando as novas tags div para os ícones
-let iconeCerto =
-  '<div class="icone marcacao"><i class="fas fa-check"></i></div>';
-let iconeErrado =
-  '<div class="icone cruzar"><i class="fas fa-times"></i></div>';
+let iconeCerto = '<div class="icone marcacao"><i class="fas fa-check"></i></div>';
+let iconeErrado = '<div class="icone cruzar"><i class="fas fa-times"></i></div>';
 
 // se o usuário clicar em uma opção
 function opcaoSelecionada(alternativaCerta) {
@@ -223,36 +187,29 @@ function mostrarResultado() {
   caixaQuiz.classList.remove("quizAtivo"); // esconder quiz box
   caixaResultado.classList.add("resultadoAtivo"); // mostrar result box
   const pontosTexto = caixaResultado.querySelector(".pontos-textos");
-  if (pontoUsario > 3) {
-    // se o usuário acertar mais de 3 perguntas
-    // criando uma nova tag span e passando o número de pontos do usuário e o número total de perguntas
+  const numeroMaximoPerguntas = 3; // Definir o número máximo de perguntas
+
+  if (pontoUsario === numeroMaximoPerguntas) {
+    // Se o usuário acertar todas as 3 perguntas
     let scoreTag =
-      "<span>Parabéns! Você acertou <p>" +
-      pontoUsario +
-      "</p> de <p>" +
-      perguntas.length +
-      "</p></span>";
-      
-    pontosTexto.innerHTML = scoreTag; // adicionando a nova tag span dentro de pontosTexto
-  } else if (pontoUsario > 1) {
-    // se o usuário acertar mais de 1 pergunta
+      "<span>Parabéns! Você acertou todas as " +
+      numeroMaximoPerguntas +
+      " perguntas!</span>";
+    audioVitoria.play();
+    containerConfetes.classList.remove("esconder");
+    pontosTexto.innerHTML = scoreTag;
+  } else if (pontoUsario > 0) {
+    // Se o usuário acertar pelo menos uma pergunta
     let scoreTag =
       "<span>Legal! Você acertou <p>" +
       pontoUsario +
       "</p> de <p>" +
-      perguntas.length +
-      "</p></span>";
+      numeroMaximoPerguntas +
+      "</p> perguntas.</span>";
     pontosTexto.innerHTML = scoreTag;
-    audioVitoria.play();
-    containerConfetes.classList.remove("esconder");
   } else {
-    // se o usuário acertar menos de 1 pergunta
-    let scoreTag =
-      "<span>Desculpe, você acertou apenas <p>" +
-      pontoUsario +
-      "</p> de <p>" +
-      perguntas.length +
-      "</p></span>";
+    // Se o usuário não acertar nenhuma pergunta
+    let scoreTag = "<span>Desculpe, você não acertou nenhuma pergunta.</span>";
     pontosTexto.innerHTML = scoreTag;
   }
 }
@@ -322,7 +279,7 @@ function shuffleperguntas(array) {
 // Função para gerar um conjunto aleatório de perguntas do conjunto maior
 function gerarPerguntasAleatorias() {
   shuffleperguntas(perguntas); // Embaralhar as perguntas
-  return perguntas.slice(0, 10); // Selecionar as primeiras 10 perguntas
+  return perguntas.slice(0, 3); // Selecionar as primeiras 3 perguntas
 }
 
 // se o botão continueQuiz for clicado

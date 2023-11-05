@@ -132,17 +132,17 @@ function mostrarPerguntas(index) {
   // criando uma nova tag span e div para a pergunta e opção e passando o valor usando o índice do array
   let perguntasMarcada =
     "<span>" + (index + 1) + ". " + perguntas[index].pergunta + "</span>";
-  let opcaoMarcada =
-    '<div class="opcao"><span>' +
+    let opcaoMarcada =
+    '<div class="opcao"><p class="prefixo-escolha">A</p><span>' +
     perguntas[index].opcoes[0] +
     "</span></div>" +
-    '<div class="opcao"><span>' +
+    '<div class="opcao"><p class="prefixo-escolha">B</p><span>' +
     perguntas[index].opcoes[1] +
     "</span></div>" +
-    '<div class="opcao"><span>' +
+    '<div class="opcao"><p class="prefixo-escolha">C</p><span>' +
     perguntas[index].opcoes[2] +
     "</span></div>" +
-    '<div class="opcao"><span>' +
+    '<div class="opcao"><p class="prefixo-escolha">D</p><span>' +
     perguntas[index].opcoes[3] +
     "</span></div>";
   textoPerguntas.innerHTML = perguntasMarcada; // adicionando a nova tag span dentro de perguntasMarcada

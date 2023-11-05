@@ -128,6 +128,14 @@
   transition: all 0.3s ease;
 }
 
+.prefixo-escolha {
+  padding: 0.5rem 1rem;
+  background-color: var(--color-link);
+  color: var(--branco);
+  margin-right: 1rem;
+  display: inline-block; 
+}
+
 .caixa-quiz {
   width: 550px;
   background: var(--branco);
@@ -208,7 +216,7 @@ section .lista-opcao {
 }
 
 section .lista-opcao .opcao {
-  background: aliceblue;
+  background: #f0f8ff;
   border: 1px solid #84c5fe;
   border-radius: 5px;
   padding: 8px 15px;
