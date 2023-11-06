@@ -22,22 +22,28 @@ const linhaTempo = document.querySelector("header .linha-tempo");
 const textoTempo = document.querySelector(".tempo .texto-esquerdo-tempo");
 const contagemTempo = document.querySelector(".tempo .tempo-segundo");
 const containerConfetes = document.querySelector(".container-confetes");
+const ondaAudio = document.querySelector(".onda-audio");
 const audioVitoria = new Audio("../audio/vitoria.mp3");
 const audioDerrota = new Audio("../audio/gameover.mp3");
+const audioCertaResposta = new Audio("../audio/audioCertaResposta.mp3");
+const audioNinguemAcertou = new Audio("../audio/audioNinguem.mp3");
+const audioTaBom = new Audio("../audio/audioTaBom.mp3");
+const audioErrou = new Audio("../audio/audioErrou.mp3");
+const audioTempo = new Audio("../audio/audioTempo.mp3");
 
 
 // Definir objetos de palavras com suas saídas esperadas
 let palavrasObj = {
-	CITOPLASMA: ["AMA", "COLA", "CITO", "ASMA", "CITOPLASMA"], // JÁ FOI
-  ORGANELAS: ["LA", "SELA", "NELAS", "ALGAS", "ORGANELAS"], // JÁ FOI
-  RIBOSSOMOS: ["RIO", "RISO", "ROBO", "SOMBRIO", "RIBOSSOMOS"], // JÁ FOI
-  LISOSSOMOS: ["SOS", "ISSO", "LISO", "SOMOS", "LISOSSOMOS"], // JÁ FOI
-  PEROXISSOMOS: ["OXE", "ROSE", "PESO", "PROXIMOS", "PEROXISSOMOS"], // !!
-  VACUOLOS: ["LUVA", "CALO", "VASCO", "LOUCOS", "VACUOLOS"], // JÁ FOI
-  RETICULOS_ENDOPLASMATICOS: ["RATO", "MIRA", "RESPEITO", "PLASTICO", "RETICULOS_ENDOPLASMATICOS"], // JÁ FOI
-  COMPLEXO_GOLGIENSE: ["GOL", "PEGO", "GENES", "COMPLEXO", "COMPLEXO_GOLGIENSE"], // JÁ FOI
-  CENTRIOLOS: ["TRIO", "SELO", "CERTO", "CENTRO", "CENTRIOLOS"], // JÁ FOI
-  MITOCONDRIAS: ["DIA", "RICA", "MITO", "CONTAS", "MITOCONDRIAS"], // JÁ FOI 
+	CITOPLASMA: ["AMA", "COLA", "CITO", "ASMA", "CITOPLASMA"],
+  ORGANELAS: ["LA", "SELA", "NELAS", "ALGAS", "ORGANELAS"],
+  RIBOSSOMOS: ["RIO", "RISO", "ROBO", "SOMBRIO", "RIBOSSOMOS"],
+  LISOSSOMOS: ["SOS", "ISSO", "LISO", "SOMOS", "LISOSSOMOS"],
+  PEROXISSOMOS: ["OXE", "ROSE", "PESO", "PROXIMOS", "PEROXISSOMOS"],
+  VACUOLOS: ["LUVA", "CALO", "VASCO", "LOUCOS", "VACUOLOS"],
+  RETICULOS_ENDOPLASMATICOS: ["RATO", "MIRA", "RESPEITO", "PLASTICO", "RETICULOS_ENDOPLASMATICOS"],
+  COMPLEXO_GOLGIENSE: ["GOL", "PEGO", "GENES", "COMPLEXO", "COMPLEXO_GOLGIENSE"],
+  CENTRIOLOS: ["TRIO", "SELO", "CERTO", "CENTRO", "CENTRIOLOS"],
+  MITOCONDRIAS: ["DIA", "RICA", "MITO", "CONTAS", "MITOCONDRIAS"], 
 };
 
 let perguntasPorPalavra = {
@@ -627,12 +633,23 @@ botaoEnvio.addEventListener("click", async () => {
     let indice = saidasEsperadas.indexOf(palavraDeEntrada);
     secaoEsperada[indice].innerHTML = palavraDeEntrada;
 
+    // Antes de reproduzir o áudio
     if (palavrasESons[palavraDeEntrada]) {
-      // Se a palavra de entrada estiver no objeto, reproduza o som correspondente
-      palavrasESons[palavraDeEntrada].play();
-    }
-  
+      const audio = palavrasESons[palavraDeEntrada];
 
+      // Adicione um ouvinte de evento "ended" ao áudio
+      audio.addEventListener("ended", () => {
+        // Remova a classe de animação "onda-audio" após o áudio terminar
+        ondaAudio.style.display = "none";
+      });
+
+      // Reproduza o áudio
+      audio.play();
+
+      ondaAudio.style.display = "flex";
+    }
+
+  
     // Verificar se todas as palavras esperadas foram encontradas
     if (contador == saidasEsperadas.length) {
       // Ocultar elementos do jogo de adivinhação

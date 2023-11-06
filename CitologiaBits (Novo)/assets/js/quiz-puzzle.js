@@ -160,11 +160,13 @@ function opcaoSelecionada(alternativaCerta) {
     pontoUsario += 1; // incrementar o valor do pontoUsario em 1
     alternativaCerta.classList.add("correct"); // adicionar a cor verde à opção selecionada correta
     alternativaCerta.insertAdjacentHTML("beforeend", iconeCerto); // adicionar o ícone de marca de seleção à opção selecionada correta
+    audioCertaResposta.play();
     console.log("Resposta Correta");
     console.log("Suas respostas corretas = " + pontoUsario);
   } else {
     alternativaCerta.classList.add("incorrect"); // adicionar a cor vermelha à opção selecionada correta
     alternativaCerta.insertAdjacentHTML("beforeend", iconeErrado); // adicionar o ícone de cruz à opção selecionada correta
+    audioErrou.play();
     console.log("Resposta Errada");
 
     for (i = 0; i < todasOpcoes; i++) {
@@ -206,10 +208,12 @@ function mostrarResultado() {
       "</p> de <p>" +
       numeroMaximoPerguntas +
       "</p> perguntas.</span>";
+    audioTaBom.play();
     pontosTexto.innerHTML = scoreTag;
   } else {
     // Se o usuário não acertar nenhuma pergunta
     let scoreTag = "<span>Desculpe, você não acertou nenhuma pergunta.</span>";
+    audioNinguemAcertou.play();
     pontosTexto.innerHTML = scoreTag;
   }
 }
@@ -240,6 +244,7 @@ function iniciarTempo(time) {
           console.log(
             "Tempo Esgotado: Resposta corretaselecionada automaticamente."
           );
+          audioTempo.play();
         }
       }
       for (i = 0; i < todasOpcoes; i++) {

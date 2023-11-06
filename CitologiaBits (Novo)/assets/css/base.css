@@ -9,8 +9,9 @@
 @import url("homepage/homepage.css"); /* Importa o arquivo "homepage.css" específico para a página inicial */
 @import url("conteudo/conteudo.css"); /* Importa o arquivo "conteudo.css" específico para a página inicial */
 @import url("conteudo/quiz.css"); /* Importa o arquivo "quiz.css" específico para a página inicial */
-@import url("conteudo/quizMulti.css"); /* Importa o arquivo "quiz.css" específico para a página inicial */
-@import url("conteudo/puzzle.css"); /* Importa o arquivo "quiz.css" específico para a página inicial */
+@import url("conteudo/quizMulti.css"); /* Importa o arquivo "quizMulti.css" específico para a página inicial */
+@import url("conteudo/puzzle.css"); /* Importa o arquivo "puzzle.css" específico para a página inicial */
+@import url("conteudo/confetes.css"); /* Importa o arquivo "confetes.css" específico para a página inicial */
 @import url("footer.css"); /* Importa o arquivo "footer.css" para estilizar o rodapé */
 
 /* Definição de variáveis de cores */
@@ -58,3 +59,4 @@
   color: var(--branco);
   background: var(--color-link);
 }
+

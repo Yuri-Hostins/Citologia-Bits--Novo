@@ -16,7 +16,7 @@
     <script src="../js/navbar.js" defer></script>
     <script src="../js/puzzle.js" defer></script>
     <script src="../js/quiz-puzzle.js" defer></script>
-    <script src="../js/confetti-puzzle.js" defer></script>
+    <script src="../js/confeti.js" defer></script>
     
     <!-- Título -->
     <title>CitoPuzzle | CitologiaBits</title>
@@ -25,7 +25,7 @@
   
   <body>
     <!-- Loader -->
-    <!-- <section id="preloader">
+    <section id="preloader">
       <div class="inner">
         <div class="loader"></div>
         <div class="container--loader">
@@ -52,7 +52,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- Cabeçalho -->
     <header>
@@ -111,6 +111,7 @@
     <main>
       <section class="container-conteudo">
         <div class="background-conteudo">
+         
           <div class="conteudo">
             <div class="tela-cobertura">
               <button id="botao-comeca">Iniciar o jogo</button>
@@ -144,6 +145,16 @@
             </div>
             <div class="container-jogo-dois">
               <div class="involucro">
+                <div class="container-audio">
+                  <div class="onda-audio">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
                 <div class="exibicao-palavras"></div>
                 <div class="input-container"></div>
                 <p id="mensagem-erro"></p>
@@ -155,37 +166,39 @@
           </div>
           
           <!-- Caixa de informação  -->
-          <div class="caixa-informacao-quiz-puzzle">
-            <div class="titulo-informacao">
-              <strong class="subitulo-informacao">
-                Parabéns por chegar até aqui! Agora, faça o quiz da sua palavra-chave.
-              </strong>
-            </div>
-            <div class="lista-informacao">
-              <div class="informacao">
-                <p>
-                  <strong>Regras deste Quiz Game:</strong>
-                </p>
+          <div class="container-caixa">
+            <div class="caixa-informacao-quiz-puzzle">
+              <div class="titulo-informacao">
+                <strong class="subitulo-informacao">
+                  Parabéns por chegar até aqui! Agora, faça o quiz da sua palavra-chave.
+                </strong>
               </div>
-              <div class="informacao">
-                <p><strong>1-)</strong> Você só tem <span>10 segundos</span> para responder a palavra.</p>
+              <div class="lista-informacao">
+                <div class="informacao">
+                  <p>
+                    <strong>Regras deste Quiz Game:</strong>
+                  </p>
+                </div>
+                <div class="informacao">
+                  <p><strong>1-)</strong> Você só tem <span>10 segundos</span> para responder a palavra.</p>
+                </div>
+                <div class="informacao">
+                  <p><strong>2-)</strong> Depois de selecionar sua resposta, ela não pode ser desfeita.</p>
+                </div>
+                <div class="informacao">
+                  <p><strong>3-)</strong> Você não pode selecionar nenhuma opção quando o tempo acabar.</p>
+                </div>
+                <div class="informacao">
+                  <p><strong>4-)</strong> Você não pode sair do Quiz Game enquanto estiver jogando.</p>
+                </div>
+                <div class="informacao">
+                  <p><strong>5-)</strong> Você receberá pontos com base em suas respostas corretas.</p>
+                </div>
               </div>
-              <div class="informacao">
-                <p><strong>2-)</strong> Depois de selecionar sua resposta, ela não pode ser desfeita.</p>
+              <div class="botoes">
+                <button class="sair">Sair do jogo</button>
+                <button class="reiniciar">Continuar</button>
               </div>
-              <div class="informacao">
-                <p><strong>3-)</strong> Você não pode selecionar nenhuma opção quando o tempo acabar.</p>
-              </div>
-              <div class="informacao">
-                <p><strong>4-)</strong> Você não pode sair do Quiz Game enquanto estiver jogando.</p>
-              </div>
-              <div class="informacao">
-                <p><strong>5-)</strong> Você receberá pontos com base em suas respostas corretas.</p>
-              </div>
-            </div>
-            <div class="botoes">
-              <button class="sair">Sair do jogo</button>
-              <button class="reiniciar">Continuar</button>
             </div>
           </div>
           
