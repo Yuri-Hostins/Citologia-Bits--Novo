@@ -54,7 +54,7 @@
     <!-- Cabeçalho -->
     <header>
       <a href="#" class="logo">Citologia<span>Bits</span></a>
-      <div class="menuMobile" onclick="menuMobile();">
+      <div class="menuMobile" onclick="toggleMenu()" onclick="menuMobile();">
         <div class="placa placa8" onclick="this.classList.toggle('ativo-menu')">
           <svg class="svg-hamburguer burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
             <path class="linha linha1" d="M 50,35 H 30 C 30,35 20,33.951333 20,25 C 20,16.048667 30,15 30,15 C 38.261288,15 35.285955,25 40,25 C 44.714045,25 45.285955,15 50,15 C 54.714045,15 55.285955,25 60,25 C 64.714045,25 65.285955,15 70,15 C 74.714045,15 75.285955,25 80,25 C 84.714045,25 85.285955,15 90,15 C 94.714045,15 95.285955,25 100,25 C 104.71405,25 105.28595,15 110,15 C 114.71405,15 115.28595,25 120,25 C 124.71405,25 125.33898,15 130,15" />
@@ -68,9 +68,28 @@
             <path class="linha" d="M 34,32 L 66,68" />
             <path class="linha" d="M 66,32 L 34,68" />
           </svg>
+        
+          <span class="overlay"></span>
+          <nav class="navbar" id="navbar">
+            <ul class="menu" id="menu">
+              <li class="menu-item">
+                <a class="menu-link" href="../../index.html#banner">Home</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="../../index.html#sobre">Sobre</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="../../index.html#conteudos">Conteúdos</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="../../index.html#curiosidades">Curiosidades</a>
+              </li>
+              <li class="menu-item">
+                <a class="menu-link" href="../../index.html#contato">Contato</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </div>
-
       </div>
       <ul class="navegacao">
         <li>
@@ -80,7 +99,7 @@
           <a href="../../index.html#sobre">Sobre</a>
         </li>
         <li>
-          <a href="../../index.html#menu">Conteúdos</a>
+          <a href="../../index.html#conteudos">Conteúdos</a>
         </li>
         <li>
           <a href="../../index.html#curiosidades">Curiosidades</a>

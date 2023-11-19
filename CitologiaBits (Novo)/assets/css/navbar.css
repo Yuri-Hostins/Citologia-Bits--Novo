@@ -25,7 +25,7 @@ header {
 }
 
 /* Estilizando os links da navegação fixa */
-.navegacao-fixa .navegacao li a{
+.navegacao-fixa .navegacao li a {
   color: var(--color-navbar--preto);
 }
 
@@ -79,7 +79,7 @@ header .navegacao li a:hover {
   /* Define a cor do texto dos links da navegação quando o cursor do mouse passa por cima como rosa (var(--color-link)) */
 }
 
-.ativo{
+.ativo {
   border-bottom: 1px solid var(--color-link--secundarios);
   transition: .2s;
 }
@@ -120,10 +120,7 @@ header .navegacao li a:hover {
 }
 
 
-
-
-
-.menuMobile{
+.menuMobile {
   display: none;
 }
 
@@ -135,15 +132,15 @@ header .navegacao li a:hover {
     font-size: 2em;
     text-decoration: none;
   }
-}  
+}
 
 /* Estilizando a navegação fixa e o cabeçalho em telas com largura máxima de 991 pixels (media query) */
 @media screen and (max-width: 1048px) {
 
-  .menuMobile{
+  .menuMobile {
     display: block;
   }
-  
+
   header,
   header .navegacao-fixa {
     padding: 10px 20px;
@@ -155,47 +152,11 @@ header .navegacao li a:hover {
     /* Oculta a navegação */
   }
 
-  /* Estilizando a navegação quando ativada em telas menores */
-  header .navegacao.active {
-    width: 100%;
-    /* Define a largura da navegação ativa como 100% */
-    height: calc(100% - 68px);
-    /* Define a altura da navegação ativa como 100% menos 68 pixels (considerando a altura do cabeçalho) */
-    position: fixed;
-    /* Define a posição da navegação ativa como fixa */
-    top: 68px;
-    /* Posiciona a navegação ativa abaixo do cabeçalho */
-    left: 0;
-    /* Posiciona a navegação ativa no lado esquerdo da página */
-    display: flex;
-    /* Define a navegação ativa como um contêiner flexível */
-    justify-content: center;
-    /* Centraliza o conteúdo horizontalmente dentro da navegação ativa */
-    align-items: center;
-    /* Centraliza o conteúdo verticalmente dentro da navegação ativa */
-    flex-direction: column;
-    /* Define a direção do fluxo de itens dentro da navegação ativa como coluna */
-    background: var(--branco);
-    /* Define o plano de fundo da navegação ativa como branco */
-  }
-
-  header .navegacao li {
-    margin-left: 0;
-    /* Remove o espaçamento à esquerda para os itens da navegação quando a largura da tela é igual ou inferior a 991 pixels */
-  }
-
-  header .navegacao li a {
-    color: var(--color-navbar--preto);
-    /* Define a cor do texto dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como um tom de cinza escuro (var(--color-navbar--preto)) */
-    font-size: 1.6em;
-    /* Define o tamanho da fonte dos links da navegação quando a largura da tela é igual ou inferior a 991 pixels como 1.6em (em relação ao tamanho da fonte padrão) */
-  }
-  
-
   .svg-hamburguer {
     height: 80px;
     position: absolute;
     width: 80px;
+    cursor: pointer;
   }
 
   .placas {
@@ -204,6 +165,7 @@ header .navegacao li a:hover {
     max-height: 160px;
     width: 640px;
   }
+
   @media (max-width: 640px) {
     .placas {
       width: 320px;
@@ -238,7 +200,7 @@ header .navegacao li a:hover {
     transform: scale(1);
     transition: transform 400ms 350ms;
   }
-  
+
   .placa8 .linha {
     transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms;
   }
@@ -275,46 +237,56 @@ header .navegacao li a:hover {
   .placa8 .x {
     transition: transform 400ms 50ms;
   }
-  
+
   .ativo-menu.placa8 .linha {
     transition: stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms;
   }
+
   .ativo-menu.placa8 .linha1 {
     stroke-dasharray: 5 201;
     stroke-dashoffset: -158px;
   }
+
   .ativo-menu.placa8 .linha2 {
     stroke-dasharray: 5 201;
     stroke-dashoffset: -158px;
     transition-delay: 20ms;
   }
+
   .ativo-menu.placa8 .linha3 {
     stroke-dasharray: 5 201;
     stroke-dashoffset: -158px;
     transition-delay: 40ms;
   }
+
   .ativo-menu.placa8 .linha4 {
     stroke-dasharray: 5 201;
     stroke-dashoffset: -158px;
     transition-delay: 60ms;
   }
+
   .ativo-menu.placa8 .linha5 {
     stroke-dasharray: 5 201;
     stroke-dashoffset: -158px;
     transition-delay: 80ms;
   }
+
   .ativo-menu.placa8 .linha6 {
     stroke-dasharray: 5 201;
     stroke-dashoffset: -158px;
     transition-delay: 100ms;
   }
+
   .ativo-menu.placa8 .x {
     transition: transform 400ms 50ms;
   }
 
-  .navegacao-fixa .menuMobile {
+  /* .navegacao-fixa .menuMobile{
     filter: invert(1);
-    /* Inverte as cores do menuMobile quando está na navegação fixa */
+  } */
+  
+  .cor-alterada {
+    background-color: #000;
   }
 
   .titulo-texto {
@@ -327,5 +299,108 @@ header .navegacao li a:hover {
   .navegacao-fixa {
     padding: 10px 30px;
     /* Adiciona um espaçamento interno reduzido para a navegação fixa quando a largura da tela é igual ou inferior a 991 pixels */
+  }
+
+  /* Estilos para a barra de navegação */
+  .navbar {
+    @media screen and (max-width: 1050px) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 75%;
+      height: 100%;
+      z-index: 10;
+      opacity: 0;
+      overflow-y: auto;
+      visibility: hidden;
+      box-shadow: var(--shadow-medium);
+      background-color: var(--color-white-100);
+      transition: all 0.5s ease;
+    }
+
+    &.active {
+      display: flex;
+      align-items: center;
+      left: 0rem;
+      opacity: 1;
+      visibility: visible;
+      background-color: var(--branco);
+    }
+  }
+
+  /* Estilos para um item de menu */
+  .menu-item {
+    position: relative;
+    display: inline-block;
+    margin-left: 1.5rem;
+  }
+
+  /* Estilos para o link do menu */
+  .menu-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: inherit;
+    cursor: pointer;
+    color: var(--color-black-500);
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Estilos para o ícone bx dentro do link do menu */
+  .menu-link>i.bx {
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: inherit;
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    outline: none;
+    color: var(--color-link);
+  }
+
+  @media only screen and (max-width: 1050px) {
+    .navbar {
+      width: 55%;
+      height: 100%;
+      padding: 1rem 0;
+    }
+
+    .menu-item {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .menu-link {
+      justify-content: space-between;
+      padding: 1.5rem 1.25rem;
+    }
+
+    /* Estilos para o overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 9;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s ease-in-out;
+      background-color: rgba(0, 0, 0, 0.65);
+    }
+
+    @media only screen and (max-width: 1050px) {
+      .overlay.active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
   }
 }

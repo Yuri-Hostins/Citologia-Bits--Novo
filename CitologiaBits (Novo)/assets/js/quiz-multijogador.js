@@ -113,28 +113,29 @@ const contadorPerguntasInferiorMulti = document.querySelector(".footer-quiz-mult
 
 // se o botão Next Que for clicado
 botaoProximoMulti.onclick = () => {
-  if (equipeAtual < numeroEquipes - 1) {
-    equipeAtual++;
+  // Lógica para passar para a próxima equipe
+  equipeAtual = (equipeAtual + 1);
+
+  if (contagemPerguntasMulti < perguntasMulti.length - 1) {
+    // Se houver mais perguntas, avance para a próxima pergunta
+    contagemPerguntasMulti++;
+    numeroPerguntasMulti++;
+    mostrarPerguntasMulti(contagemPerguntasMulti);
+    contadorPerguntasMulti(numeroPerguntasMulti);
+    clearInterval(contadorMulti);
+    clearInterval(contadorLinhaMulti);
+    iniciarTempoMulti(tempoValorMulti);
+    iniciarLinhaTemporizadorMulti(valorLarguraMulti);
+    textoTempoMulti.textContent = "Tempo Restante";
+    botaoProximoMulti.classList.remove("mostrar-multi");
   } else {
-    equipeAtual = 0;
-    if (contagemPerguntasMulti < perguntasMulti.length - 1) {
-      contagemPerguntasMulti++;
-      numeroPerguntasMulti++;
-      mostrarPerguntasMulti(contagemPerguntasMulti);
-      contadorPerguntasMulti(numeroPerguntasMulti);
-      clearInterval(contadorMulti);
-      clearInterval(contadorLinhaMulti);
-      iniciarTempoMulti(tempoValorMulti);
-      iniciarLinhaTemporizadorMulti(valorLarguraMulti);
-      textoTempoMulti.textContent = "Tempo Restante";
-      botaoProximoMulti.classList.remove("mostrar-multi");
-    } else {
-      clearInterval(contadorMulti);
-      clearInterval(contadorLinhaMulti);
-      mostrarResultadoMulti();
-    }
+    // Se não houver mais perguntas, mostrar o resultado
+    clearInterval(contadorMulti);
+    clearInterval(contadorLinhaMulti);
+    mostrarResultadoMulti();
   }
-  // Adicione esta linha para atualizar o nome da equipe atual
+
+  // Atualizar o turno da equipe atual
   atualizarTurno(equipeAtual, nomesEquipes);
 };
 
@@ -512,9 +513,9 @@ function configurarEquipes() {
 }
 
 // Função para atualizar o turno
-function atualizarTurno(turno, equipeNomes) {
-  const turnoAtual = document.getElementById("turno");
-  turnoAtual.textContent = equipeNomes[turno];
+function atualizarTurno(equipeAtual, equipeNomes) {
+  const turnoAtual = document.getElementById("turno-atual");
+  turnoAtual.textContent = equipeNomes[equipeAtual];
 }
 
 

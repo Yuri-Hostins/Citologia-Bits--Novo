@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
         preloader.style.display = "none";
 
         // Permite que o conteúdo da página seja visível definindo a propriedade 'overflow' do corpo para 'visible'.
-        body.style.overflow = "visible";
+        body.style.overflowX = "hidden";
 
         // Adiciona uma transição suave à opacidade do corpo da página com duração de 0,3 segundos (300 milissegundos) e uma função de aceleração.
         body.style.transition = "opacity 0.3s ease";

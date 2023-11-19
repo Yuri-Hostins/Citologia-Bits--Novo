@@ -694,16 +694,14 @@ function mostrarResultado() {
   if (pontoUsario === perguntas.length) {
     // Se o usuário acertar todas as perguntas
     let scoreTag =
-      "<span>Parabéns! Você acertou todas as <p>" +
-      pontoUsario +
-      "</p> de <p>" +
-      perguntas.length +
-      "</p> perguntas!</span>";
+      "<p>Parabéns! Você acertou todas as Perguntas</p>";
+    containerConfetes.classList.remove("esconder");
+    audioVitoria.play();
     pontosTexto.innerHTML = scoreTag;
   } else if (pontoUsario > 6) {
     // Se o usuário acertar mais de 6 perguntas
     let scoreTag =
-      "<span>Ótimo trabalho! Você acertou mais de 6 perguntas. Acertou <p>" +
+      "<span>Ótimo trabalho!<p>" +
       pontoUsario +
       "</p> de <p>" +
       perguntas.length +
